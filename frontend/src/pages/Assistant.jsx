@@ -1,0 +1,183 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Stethoscope, ShieldAlert, Sparkles, Search, MapPinned, ArrowLeftRight, BadgeInfo } from "lucide-react";
+import client from "../api/client";
+import { useToast } from "../context/ToastContext.jsx";
+
+const QUICK_SYMPTOMS = ["Fever", "Headache", "Acidity", "Allergy", "Cold", "Loose motion"];
+
+export default function Assistant() {
+  const navigate = useNavigate();
+  const toast = useToast();
+  const [symptom, setSymptom] = useState("");
+  const [result, setResult] = useState(null);
+  const [busy, setBusy] = useState(false);
+
+  const ask = async (e) => {
+    e?.preventDefault();
+    const term = typeof e === "string" ? e : symptom;
+    if (!term.trim()) return;
+    setSymptom(term);
+    setBusy(true);
+    try {
+      const { data } = await client.post("/assistant/query/", { symptom: term });
+      setResult(data);
+    } catch {
+      toast.error("Couldn't look that up. Please try again.");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <div className="page stack" style={{ gap: 24 }}>
+      <div className="hero-search">
+        <div className="section-eyebrow">Medicine info</div>
+        <h2 style={{ fontSize: 22, marginBottom: 6 }}>What are you experiencing?</h2>
+        <p className="muted" style={{ marginTop: 0, marginBottom: 16 }}>
+          General OTC category information — not a diagnosis, and not a substitute for a
+          pharmacist or doctor.
+        </p>
+        <form className="row" onSubmit={ask}>
+          <input
+            className="input"
+            placeholder="Describe what you're experiencing, e.g. stomach pain and loose motion"
+            value={symptom}
+            onChange={(e) => setSymptom(e.target.value)}
+          />
+          <button className="btn" disabled={busy}>
+            <span className="row" style={{ gap: 6 }}><Search className="h-4 w-4" /> {busy ? "Looking up..." : "Get info"}</span>
+          </button>
+        </form>
+        <div className="search-tags">
+          <span className="tag-label">Quick search:</span>
+          {QUICK_SYMPTOMS.map((s) => (
+            <button key={s} className="search-tag" onClick={() => ask(s)}>{s}</button>
+          ))}
+        </div>
+      </div>
+
+      {busy && (
+        <div className="card">
+          <div className="stack">
+            <div className="skeleton" style={{ height: 14, width: "30%" }} />
+            <div className="skeleton" style={{ height: 12, width: "90%" }} />
+            <div className="skeleton" style={{ height: 12, width: "70%" }} />
+          </div>
+        </div>
+      )}
+
+      {!busy && result && (
+        <div className="stack" style={{ gap: 20 }}>
+          <div className="medical-alert">
+            <div className="icon-badge"><ShieldAlert className="h-4 w-4" /></div>
+            <p>{result.disclaimer}</p>
+          </div>
+
+          {result.matches.map((m, i) => (
+            <div key={i} className="card stack" style={{ gap: 16 }}>
+              <div className="row spread" style={{ alignItems: "flex-start" }}>
+                <div>
+                  {result.query && (
+                    <p className="muted" style={{ margin: 0, fontSize: 12, marginBottom: 2 }}>
+                      Showing results for
+                    </p>
+                  )}
+                  <h2 style={{ margin: 0 }}>{m.category}</h2>
+                </div>
+                {m.matched_via === "ai" && (
+                  <span className="badge teal row" style={{ gap: 4, flexShrink: 0 }}>
+                    <Sparkles className="h-3 w-3" /> Understood by AI
+                  </span>
+                )}
+              </div>
+              <p style={{ margin: 0 }}>{m.info}</p>
+
+              {m.salt_groups?.length === 0 && (
+                <p className="muted" style={{ margin: 0 }}>
+                  No matching medicines found in the catalog right now.
+                </p>
+              )}
+
+              {m.salt_groups?.map((g) => (
+                <div key={g.salt_name} className="stack" style={{ gap: 12, borderTop: "1px solid rgb(226 232 240 / 0.6)", paddingTop: 16 }}>
+                  <div className="row spread" style={{ alignItems: "baseline" }}>
+                    <h3 style={{ margin: 0, fontSize: 16 }}>{g.salt_name}</h3>
+                    <span className="muted" style={{ fontSize: 12 }}>{g.salt_category}</span>
+                  </div>
+
+                  {(g.usage_purpose || g.usage_info) && (
+                    <div className="stack" style={{ gap: 2 }}>
+                      {g.usage_purpose && <p style={{ margin: 0, fontWeight: 600, fontSize: 13 }}>{g.usage_purpose}</p>}
+                      {g.usage_info && <p className="muted" style={{ margin: 0, fontSize: 13 }}>{g.usage_info}</p>}
+                      {g.info_source && (
+                        <p className="muted row" style={{ margin: 0, fontSize: 11, gap: 4 }}>
+                          <BadgeInfo className="h-3 w-3" /> Source: {g.info_source}
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  <div className="med-compare-grid">
+                    {g.medicines.map((med) => (
+                      <div key={med.medicine_id} className={`med-card${med.is_generic ? " generic" : ""}`}>
+                        <div className="row spread" style={{ alignItems: "flex-start", gap: 8 }}>
+                          <div>
+                            <div className="name">{med.brand_name}</div>
+                            <div className="meta">{med.manufacturer}</div>
+                          </div>
+                          {med.is_generic && g.generic_savings_pct != null && (
+                            <span className="savings-tag" style={{ flexShrink: 0 }}>💚 Save ~{g.generic_savings_pct}%</span>
+                          )}
+                        </div>
+                        <dl className="med-meta-grid">
+                          <dt>Unit weight</dt>
+                          <dd>{med.strength || "—"}</dd>
+                          <dt>Starting price</dt>
+                          <dd>₹{med.from_price}</dd>
+                          <dt>Pharmacies</dt>
+                          <dd>{med.pharmacy_count} nearby</dd>
+                          <dt>Type</dt>
+                          <dd>{med.is_generic ? "Generic" : "Branded"}</dd>
+                        </dl>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="cta-group">
+                    <button
+                      className="btn"
+                      style={{ flex: 1 }}
+                      onClick={() => navigate(`/search?q=${encodeURIComponent(g.salt_name)}`)}
+                    >
+                      <span className="row" style={{ gap: 6, justifyContent: "center" }}>
+                        <ArrowLeftRight className="h-4 w-4" /> Compare Nearby Prices
+                      </span>
+                    </button>
+                    <button className="btn secondary" onClick={() => navigate("/")}>
+                      <span className="row" style={{ gap: 6 }}>
+                        <MapPinned className="h-4 w-4" /> Locate Pharmacies
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {!busy && !result && (
+        <div className="card">
+          <div className="empty-state">
+            <Stethoscope className="h-7 w-7" />
+            <p className="muted" style={{ marginTop: 0 }}>
+              Describe a symptom above to see general OTC category information and real, in-stock
+              medicines from the catalog.
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

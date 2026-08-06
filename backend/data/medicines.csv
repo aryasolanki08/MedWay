@@ -1,0 +1,501 @@
+id,salt_id,brand_name,manufacturer,is_generic,strength,form
+627418a2-bcf5-4b20-bacc-a05fd9527464,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Dolo 650,Mankind,False,650mg,tablet
+37003fb1-66b0-4ce3-98c0-baeda2fb5739,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Crocin 500,Abbott,False,500mg,tablet
+4bd848a0-9a74-4b2e-be45-78111c85084a,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracip,Abbott,False,500mg,capsule
+ce9de554-abc4-41f8-a0b0-f10fda5c29a9,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol,Abbott,True,500mg,tablet
+fdbc52a6-228d-49c4-8ca0-ca12863ac138,09b7fe99-9ce7-47b2-9d2d-10294b402164,Azee 500,Sun Pharma,False,500mg,syrup
+ba6eb11f-4a73-40a9-b0bd-ce480ff17b8e,09b7fe99-9ce7-47b2-9d2d-10294b402164,Azax,Zydus,False,500mg,capsule
+bf22bb15-7c8b-423a-bcd5-7c0e3d7e0779,09b7fe99-9ce7-47b2-9d2d-10294b402164,Azithromycin,Zydus,True,500mg,capsule
+96c87989-9860-48e4-b8c6-af481341f297,43fd034b-3103-40d6-a31b-87087f08fe4e,Mox,Lupin,False,500mg,syrup
+beb9040b-ad8e-4de7-96e8-245eb98247f3,43fd034b-3103-40d6-a31b-87087f08fe4e,Amoxyclav,Mankind,False,625mg,capsule
+9cfe3e0d-c889-456a-aa93-88a762eb893e,43fd034b-3103-40d6-a31b-87087f08fe4e,Amoxicillin,Sun Pharma,True,500mg,tablet
+095c676a-305a-443b-a972-090d2900a7f3,f82a97a8-9947-421e-a00e-57e77630d8be,Pantocid,Alkem,False,40mg,tablet
+332e5920-c0d3-43a2-b9a9-708c24a33d94,f82a97a8-9947-421e-a00e-57e77630d8be,Pantop,Torrent,False,40mg,capsule
+081d2530-7b4a-473f-aa4c-95e29580cba6,f82a97a8-9947-421e-a00e-57e77630d8be,Pantoprazole,Zydus,True,40mg,syrup
+02253439-c585-4b64-af65-7dee30dde81e,2e1945d3-7e94-4048-8640-37776799e756,Cetzine,Lupin,False,10mg,tablet
+a767ab5c-e469-45a6-8e70-7e9a8f20946f,2e1945d3-7e94-4048-8640-37776799e756,Cetirizine,Sun Pharma,True,10mg,syrup
+2649cd8f-0fa3-4791-8d46-b8b2635d5b20,0d3ac8c3-8b20-4f84-8d56-68da58bc59d8,Glycomet,Sun Pharma,False,500mg,syrup
+7233aa7d-7d61-4772-9e25-80aa8c68a27d,0d3ac8c3-8b20-4f84-8d56-68da58bc59d8,Metformin,Cipla,True,500mg,tablet
+0cd6ba30-4aca-4097-aba0-6addced65e09,8cf907a0-914a-4394-a6d0-f9889e01101a,Telma,Abbott,False,40mg,syrup
+718e12eb-2c73-44f0-bdae-929686db49f2,8cf907a0-914a-4394-a6d0-f9889e01101a,Telmisartan,Cipla,True,40mg,syrup
+795f0c4d-afa8-44a3-a67d-94d896447a4b,60b69b3a-5e6c-4139-8c1b-af82c97c63ba,Atorlip,Torrent,False,10mg,syrup
+0fbf5dc8-ddba-4a70-a193-c7381554404c,60b69b3a-5e6c-4139-8c1b-af82c97c63ba,Atorvastatin,Alkem,True,10mg,tablet
+0f054347-4d30-45dc-89f4-697010ddfa57,e3bcf7e3-e9bb-4190-be5b-90b27e7cfa2f,Esomeprazole Plus 1,Mankind,True,650mg,tablet
+ba5aa5ef-5e2b-434b-9bf8-0125200e1608,30dda595-9d18-48f2-aae9-bbe14b044a37,Naproxen Plus 2,Lupin,True,100mg,capsule
+d40538af-6e68-4c93-92b3-93a32b8af0cf,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 3,Abbott,False,250mg,tablet
+3eafcf5c-72a8-4cc1-89b6-f96dfbc2cc89,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 4,Sun Pharma,True,100mg,syrup
+9a6fb512-4629-4f61-812d-9bf6ca211671,7a10bc04-0557-4786-b511-5c94991de048,Fexofenadine Plus 5,Zydus,True,40mg,capsule
+151a650e-890f-42f3-a4a6-a9dc3c6856bc,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 6,Torrent,False,40mg,capsule
+ad0d77d7-57d9-4cd7-b979-c4eb458d4ec4,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 7,Cipla,True,100mg,capsule
+6e926819-77da-4be3-88a2-b2c9ad7b4f6d,412796be-56b0-4d1b-b55d-228c9bbfdb9d,Rabeprazole Plus 8,Torrent,True,10mg,syrup
+c45b0b6b-abe2-4b50-b762-8760c1265994,1652061b-9f8f-4f69-b42c-bf2536844105,Nitrofurantoin Plus 9,Abbott,False,100mg,tablet
+52ef831f-5f77-429b-9fe9-b46a195fce36,1652061b-9f8f-4f69-b42c-bf2536844105,Nitrofurantoin Plus 10,Alkem,False,250mg,tablet
+1e27829d-10a6-41c4-af7b-4dbd2c380cf6,0d3ac8c3-8b20-4f84-8d56-68da58bc59d8,Metformin Plus 11,Alkem,True,40mg,tablet
+c01a2439-8194-4557-90d9-1261835a67a8,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 12,Torrent,True,650mg,capsule
+6409a080-3a3d-4c98-be28-43ebbdcf2e0a,c0435b23-f357-4d96-bc0f-8c5970b09f1e,Bisoprolol Plus 13,Sun Pharma,True,250mg,syrup
+6e1642b1-c7db-4e66-9c10-7475bb2f1e0c,c58ae13e-08fe-455f-865c-41e6dacbab7d,Aspirin Plus 14,Cipla,True,500mg,capsule
+f58c535d-41fc-4b53-b5aa-ba8a555ddaa4,5337ff7f-5be9-41ef-bdef-fc3794dad024,Rosuvastatin Plus 15,Lupin,False,250mg,capsule
+048d60a5-66d4-4b1a-9ba8-43ea3652ff61,37c7ed0d-cef4-4292-9728-7ff028b2ba7e,Domperidone Plus 16,Sun Pharma,False,40mg,syrup
+7817343c-c56e-4607-843c-00ccd8878a0c,30dda595-9d18-48f2-aae9-bbe14b044a37,Naproxen Plus 17,Zydus,False,100mg,syrup
+c50fecce-5a40-4db2-ac76-214a54edd28f,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 18,Dr. Reddy's,False,10mg,capsule
+9215def3-4c53-4a65-8d5b-2211cba3ffa1,b21c5a4c-7198-4623-abb0-8fb229a34527,Pregabalin Plus 19,Sun Pharma,False,250mg,capsule
+d61564b4-1dae-4279-acf5-ff91b80b0696,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 20,Alkem,False,650mg,syrup
+4b20281e-6eb2-4f14-8895-239046d189b5,2e1945d3-7e94-4048-8640-37776799e756,Cetirizine Plus 21,Glenmark,True,650mg,tablet
+761d7026-3826-485e-a28c-6cabe83224ae,8ae2b8bc-46ad-4578-808e-de16c0345524,Ivermectin Plus 22,Sun Pharma,True,500mg,tablet
+10aa4cec-1879-44fe-b9bb-62c799638319,5ecd24a4-6421-4a50-9727-7d68916511f2,Losartan Plus 23,Abbott,True,250mg,capsule
+fa36d4ac-1726-41bc-b381-e45114932736,8ae2b8bc-46ad-4578-808e-de16c0345524,Ivermectin Plus 24,Glenmark,True,500mg,capsule
+8fbf5b96-e100-4e6f-9d66-d72e3e36192c,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 25,Mankind,True,250mg,tablet
+7215227c-7e3a-4a72-8755-007aec189f0d,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 26,Lupin,True,10mg,tablet
+751e3139-15d6-4327-9229-5fa36f754e71,f645b47d-320d-45b8-875a-f99a61abb519,Omeprazole Plus 27,Mankind,True,40mg,syrup
+ce87ff95-dad1-4136-9866-5a428678c4e6,43fd034b-3103-40d6-a31b-87087f08fe4e,Amoxicillin Plus 28,Lupin,False,500mg,capsule
+b0850e9f-6a7a-4300-bea1-4c0d9ac11524,75b22f3f-ce8f-45d2-980c-6d365831e3d7,Montelukast Plus 29,Mankind,False,650mg,tablet
+ddc7a64e-cf6d-40f8-8eb2-782c62832bd6,60b69b3a-5e6c-4139-8c1b-af82c97c63ba,Atorvastatin Plus 30,Cipla,False,100mg,capsule
+4bb336a1-afdd-4cc0-945f-c993de3cc338,9e19c5f1-2b7f-4db2-9d5e-197ed73cdf65,Cefuroxime Plus 31,Alkem,True,650mg,tablet
+2d58984d-1aad-4bd6-9f4e-d4780039dee2,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 32,Abbott,False,10mg,syrup
+2f27f007-feee-4f24-8503-be954d50b694,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 33,Mankind,False,650mg,syrup
+685101a7-4b4b-4760-9f2f-ff02064aa5ee,7a832121-3395-4ab7-9983-23e334aa04d2,Ondansetron Plus 34,Alkem,False,40mg,tablet
+0be9b4d6-cdb1-4792-b7bf-f3f357a74fb5,5f569565-9868-499f-b652-cfb12c2c9e83,Tramadol Plus 35,Zydus,False,650mg,tablet
+bcb2e217-e601-4100-95be-83da2ffbe7c7,9e19c5f1-2b7f-4db2-9d5e-197ed73cdf65,Cefuroxime Plus 36,Zydus,False,40mg,tablet
+7a219369-c243-46a7-8571-4d596e62d100,f58bc71d-670d-418e-bea6-71ee747dca4f,Vitamin D3 Plus 37,Cipla,False,40mg,syrup
+c3ffd7e1-5595-440f-bcc4-48f2ec1dd9d0,37c7ed0d-cef4-4292-9728-7ff028b2ba7e,Domperidone Plus 38,Abbott,True,40mg,tablet
+db280fd7-19d6-4adc-86d2-e77642cbbe55,7a832121-3395-4ab7-9983-23e334aa04d2,Ondansetron Plus 39,Cipla,False,500mg,tablet
+7e537de3-7fba-4357-ba9f-9690b3b1f28d,d6efa1e6-53e9-4915-afe8-746b55428d06,Fluconazole Plus 40,Torrent,False,10mg,capsule
+a688e146-9338-49ae-a7a7-208275c67432,5de10187-f4b2-4694-8b47-0be0a14d193b,Doxycycline Plus 41,Dr. Reddy's,False,250mg,capsule
+8fc3c4dc-4aa9-462c-aeaf-97601f21055f,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 42,Mankind,True,250mg,syrup
+e6d0a8ca-efce-44ea-811f-6a0b0ce978cd,0bccc8cc-0d32-4020-8bef-95c478edc444,Aceclofenac Plus 43,Lupin,False,500mg,syrup
+5c0a9ee7-d62f-4a7a-9d48-fb857b864d3c,c58ae13e-08fe-455f-865c-41e6dacbab7d,Aspirin Plus 44,Zydus,False,10mg,capsule
+5111a903-b7b3-4050-9057-0e32dfeee323,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 45,Mankind,False,500mg,syrup
+2c1aacc9-998c-4247-99ef-5a7f3ad86ea0,66491fdf-17ac-4743-be36-3742d4ea7f96,Levofloxacin Plus 46,Sun Pharma,False,40mg,syrup
+7412ed27-2162-456c-a95f-db08c473e9f1,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 47,Glenmark,True,650mg,capsule
+7271216b-5a19-49f7-b349-d3cb83a96fa9,a87a3923-67b3-4dd0-a9fc-a2651fcb6d8b,Insulin Human Plus 48,Lupin,False,250mg,tablet
+6873cad2-9131-4faa-a0e3-b7d8004ec03c,c58ae13e-08fe-455f-865c-41e6dacbab7d,Aspirin Plus 49,Cipla,True,40mg,tablet
+f2aaa614-1c65-47c2-9cb6-8c0e3a405a66,98520093-14a0-4150-b5bc-b5ffbc95e891,Ticagrelor Plus 50,Zydus,True,250mg,capsule
+cdee9105-5e6a-47bb-8a68-d5c8bc2953f9,a87a3923-67b3-4dd0-a9fc-a2651fcb6d8b,Insulin Human Plus 51,Glenmark,False,10mg,syrup
+722bdf3b-20c8-49e9-8cbc-0d3700b53b09,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 52,Sun Pharma,False,650mg,capsule
+54cecc44-5419-4344-ac18-2676ab2131f8,08b4b6bd-21d6-45e8-95b3-1595a5a86ca1,Magnesium Hydroxide Plus 53,Zydus,False,100mg,capsule
+a6e97ba9-7fb3-44f7-aeb3-89550ff91c87,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 54,Torrent,False,10mg,capsule
+2b6618fc-55f8-433b-9663-3cf8f4f8d549,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 55,Cipla,True,100mg,capsule
+e9280b27-e12e-43ec-a0c8-b3339a53b8dd,b26ef324-45f4-40e5-ab90-f5de842a88fd,Artesunate Plus 56,Mankind,True,10mg,syrup
+dabff13f-c4f2-4d1e-bf7d-73adc065a5a2,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 57,Mankind,False,10mg,capsule
+c2add66b-7d9b-4faa-aec1-fcdd0731f79b,c0435b23-f357-4d96-bc0f-8c5970b09f1e,Bisoprolol Plus 58,Lupin,True,100mg,tablet
+d7df92e1-bef3-4508-bfdb-75dbebb7c11d,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 59,Dr. Reddy's,False,10mg,syrup
+dbdb8c34-08c3-4bfc-a108-112bd585decc,412796be-56b0-4d1b-b55d-228c9bbfdb9d,Rabeprazole Plus 60,Mankind,True,250mg,capsule
+3acdc38e-b063-42a4-824f-78dd7f4e4820,8dc86ef9-b34a-4356-aaa8-7f66e67edacc,Salbutamol Plus 61,Zydus,False,650mg,capsule
+919bd449-ddd5-4e00-b54b-4ea890d2e713,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 62,Mankind,False,10mg,syrup
+8267995c-b756-4520-8545-a1ce6a12797d,0d3ac8c3-8b20-4f84-8d56-68da58bc59d8,Metformin Plus 63,Lupin,True,650mg,capsule
+df9b8261-f26e-48ba-a02d-0cd1a89233b1,08b4b6bd-21d6-45e8-95b3-1595a5a86ca1,Magnesium Hydroxide Plus 64,Glenmark,True,650mg,syrup
+e88d981e-2263-43b0-b4ea-698bc647538c,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 65,Cipla,True,10mg,capsule
+4cc0f675-47b6-411a-9597-5c4bec4cfd9b,7a10bc04-0557-4786-b511-5c94991de048,Fexofenadine Plus 66,Mankind,True,40mg,tablet
+a8ad45f9-8772-452d-954c-9825e4b948fa,8cf907a0-914a-4394-a6d0-f9889e01101a,Telmisartan Plus 67,Cipla,True,500mg,syrup
+f17325e6-56e1-42bd-a338-f930d8865d61,c0435b23-f357-4d96-bc0f-8c5970b09f1e,Bisoprolol Plus 68,Abbott,False,40mg,tablet
+bb4ee79a-085a-42e0-a81c-3efdbe12d9fa,0bccc8cc-0d32-4020-8bef-95c478edc444,Aceclofenac Plus 69,Glenmark,True,40mg,capsule
+88726111-6a87-45f8-9216-3b66f9d296d8,f82a97a8-9947-421e-a00e-57e77630d8be,Pantoprazole Plus 70,Glenmark,False,10mg,tablet
+dd7b455f-37ed-4200-8af1-30281aab722f,0bccc8cc-0d32-4020-8bef-95c478edc444,Aceclofenac Plus 71,Torrent,False,10mg,syrup
+17847bfa-20d0-4e6b-b004-3ba7d27968b2,9e55524d-50b9-45b6-9cde-c3450fd66aed,Cefixime Plus 72,Glenmark,True,250mg,capsule
+bf6903e3-5d45-4544-8583-05680877f3e5,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 73,Glenmark,True,500mg,capsule
+1713b1ac-2c7e-4f49-adad-f2d92dfcbb5d,75b22f3f-ce8f-45d2-980c-6d365831e3d7,Montelukast Plus 74,Torrent,False,500mg,syrup
+108667c2-4152-4252-93b0-2cb98240661f,c0435b23-f357-4d96-bc0f-8c5970b09f1e,Bisoprolol Plus 75,Lupin,True,40mg,capsule
+91809ffd-2133-464a-aa72-ac533f6faa72,ba8d35b5-dfbc-4ef0-af98-7689effc09a9,Sitagliptin Plus 76,Dr. Reddy's,False,500mg,tablet
+afd17312-04df-4fc7-b683-997b8bbfe074,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 77,Lupin,True,100mg,tablet
+af5dcac9-6116-4d9f-8c2a-ddf7693d6621,2660c6c3-290d-4954-a230-8c538cbfebd7,Loratadine Plus 78,Torrent,False,650mg,capsule
+34bb723b-9d9b-420b-b799-066505f3e391,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 79,Cipla,False,10mg,tablet
+015553a4-26e3-4de5-957c-50c12b23fd95,5337ff7f-5be9-41ef-bdef-fc3794dad024,Rosuvastatin Plus 80,Glenmark,False,100mg,capsule
+77ad28d9-7da1-411c-93b2-b4ba6b39f94d,d6efa1e6-53e9-4915-afe8-746b55428d06,Fluconazole Plus 81,Zydus,True,250mg,capsule
+d2805d57-77b3-4c36-880a-6a1f225ec843,1652061b-9f8f-4f69-b42c-bf2536844105,Nitrofurantoin Plus 82,Abbott,True,250mg,tablet
+99728dbd-63b6-4378-83f7-9f702d9e7420,9e55524d-50b9-45b6-9cde-c3450fd66aed,Cefixime Plus 83,Glenmark,True,650mg,syrup
+58df2f01-cd57-4c4f-91fa-8bb35c61ede2,b26ef324-45f4-40e5-ab90-f5de842a88fd,Artesunate Plus 84,Lupin,True,650mg,capsule
+28888c00-dd5c-458b-b9e3-afc25745c42d,44704ea6-eb2d-4539-a8e9-784f7a1dcb9a,Albendazole Plus 85,Sun Pharma,False,500mg,tablet
+6b2432a0-229f-48f5-954d-fc45437e5ea6,09b7fe99-9ce7-47b2-9d2d-10294b402164,Azithromycin Plus 86,Lupin,True,100mg,syrup
+fd782da0-2cae-458c-a3cd-6360a9eca8e3,5f569565-9868-499f-b652-cfb12c2c9e83,Tramadol Plus 87,Sun Pharma,False,10mg,syrup
+e96c6126-f615-4b27-938d-df582b007e96,9e55524d-50b9-45b6-9cde-c3450fd66aed,Cefixime Plus 88,Zydus,True,650mg,syrup
+fc85da12-0643-45d1-bcee-2e3875afb3a7,0722843b-e299-4407-b837-3df6e1715d87,Cyanocobalamin Plus 89,Dr. Reddy's,True,500mg,capsule
+a5c1d58d-05bb-4e98-8fc2-b7e621aabb95,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 90,Alkem,True,10mg,syrup
+9fb94336-8578-4b6a-84c3-c8eb1b8d0f33,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 91,Torrent,False,40mg,syrup
+7fd47706-4c01-48f9-9718-7229e511d4e7,5ecd24a4-6421-4a50-9727-7d68916511f2,Losartan Plus 92,Cipla,True,40mg,syrup
+3f04a53b-066f-46f3-a896-bb10129d99a8,2e1945d3-7e94-4048-8640-37776799e756,Cetirizine Plus 93,Cipla,False,500mg,capsule
+dd1898c9-96f4-4b94-af9e-4a9f812e2866,7a832121-3395-4ab7-9983-23e334aa04d2,Ondansetron Plus 94,Alkem,False,650mg,capsule
+a1af27d9-0299-46d0-bfd9-ab11936dcb56,c0435b23-f357-4d96-bc0f-8c5970b09f1e,Bisoprolol Plus 95,Glenmark,False,10mg,syrup
+5a637482-4f11-40e5-b678-9c79024ca03b,43fd034b-3103-40d6-a31b-87087f08fe4e,Amoxicillin Plus 96,Glenmark,True,650mg,tablet
+52fb4251-3799-4343-b8a1-65ffabfbedb3,c58ae13e-08fe-455f-865c-41e6dacbab7d,Aspirin Plus 97,Lupin,True,500mg,capsule
+cb44f7bb-5286-45c3-afd6-7f249eae3649,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 98,Torrent,False,10mg,syrup
+104b6797-1847-483a-9c65-134eab550998,30dda595-9d18-48f2-aae9-bbe14b044a37,Naproxen Plus 99,Dr. Reddy's,False,10mg,syrup
+d4149552-553f-43ac-94c0-acc3f6990070,f58bc71d-670d-418e-bea6-71ee747dca4f,Vitamin D3 Plus 100,Zydus,False,10mg,tablet
+09d480db-67a3-474b-bc3c-eed3d6eabe56,412796be-56b0-4d1b-b55d-228c9bbfdb9d,Rabeprazole Plus 101,Abbott,True,10mg,capsule
+bfb504ec-030d-41fe-acb5-586357783e20,f645b47d-320d-45b8-875a-f99a61abb519,Omeprazole Plus 102,Sun Pharma,True,10mg,capsule
+ddaea761-c8da-4a75-ba6a-5c79398a63d1,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 103,Alkem,True,100mg,capsule
+15cba5d1-bdb0-4008-95a8-70978425ec24,b26ef324-45f4-40e5-ab90-f5de842a88fd,Artesunate Plus 104,Glenmark,False,250mg,capsule
+109ed12d-11b8-4ea1-835d-26e71c853056,9dc1ff5d-2590-4cae-9dd5-1df0888e62af,Diclofenac Plus 105,Zydus,False,650mg,capsule
+0fedf45f-2c95-4069-ad04-a23326d95360,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 106,Alkem,True,650mg,syrup
+4f5aec56-041d-441f-ab57-e56172ae1aae,5f569565-9868-499f-b652-cfb12c2c9e83,Tramadol Plus 107,Zydus,True,100mg,syrup
+b73bfebc-c48e-43a5-8d4a-c4e24c7f5111,08b4b6bd-21d6-45e8-95b3-1595a5a86ca1,Magnesium Hydroxide Plus 108,Alkem,False,40mg,syrup
+9cf542e1-f438-428a-9fba-adc263b2c607,412796be-56b0-4d1b-b55d-228c9bbfdb9d,Rabeprazole Plus 109,Lupin,False,10mg,capsule
+c7c39212-166e-4529-b378-d56db2486d90,3d1acc09-06e3-4b2f-b33d-cb3b1934d48a,Ambroxol Plus 110,Dr. Reddy's,False,650mg,tablet
+345cf9ac-fe12-43be-89bf-53de05691527,e3bcf7e3-e9bb-4190-be5b-90b27e7cfa2f,Esomeprazole Plus 111,Abbott,False,650mg,capsule
+ccb86018-b644-49c8-b3e5-c00a38755a58,f645b47d-320d-45b8-875a-f99a61abb519,Omeprazole Plus 112,Cipla,True,250mg,tablet
+962e54b5-5aee-42f5-ab97-aa4a9713752b,5ecd24a4-6421-4a50-9727-7d68916511f2,Losartan Plus 113,Mankind,True,100mg,tablet
+9ce3d1fb-4f30-4e4d-95ee-e3f27d0ec403,5ecd24a4-6421-4a50-9727-7d68916511f2,Losartan Plus 114,Alkem,False,100mg,tablet
+e18e295d-9b77-4211-b044-674f4f37e6f4,a4664740-ec2e-4a46-9f14-c6452da1eb35,Dextromethorphan Plus 115,Abbott,True,650mg,capsule
+eafe02fc-b2ba-4bef-8a67-58a1fdcab6c3,08b4b6bd-21d6-45e8-95b3-1595a5a86ca1,Magnesium Hydroxide Plus 116,Torrent,False,500mg,syrup
+9bfd0bf3-abb6-4edb-a6ec-2a4abd7a9875,1652061b-9f8f-4f69-b42c-bf2536844105,Nitrofurantoin Plus 117,Alkem,True,650mg,tablet
+4eeebdb2-921d-4659-a37c-6dbc2eefa357,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 118,Sun Pharma,False,250mg,tablet
+f28eb180-9d57-4118-89ce-4f3f90ae8182,0d3ac8c3-8b20-4f84-8d56-68da58bc59d8,Metformin Plus 119,Lupin,False,250mg,syrup
+19af98ab-154c-4a95-b005-337ed6da2684,b21c5a4c-7198-4623-abb0-8fb229a34527,Pregabalin Plus 120,Torrent,True,250mg,tablet
+79c14b06-ef6b-4e59-847f-d9cc0a5cef00,75b22f3f-ce8f-45d2-980c-6d365831e3d7,Montelukast Plus 121,Cipla,False,250mg,syrup
+07af6e57-d1d3-4590-84f5-394be94c90ae,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 122,Mankind,True,10mg,tablet
+b364d38b-6227-4e0c-8df7-d112f37cb874,5de10187-f4b2-4694-8b47-0be0a14d193b,Doxycycline Plus 123,Glenmark,True,10mg,syrup
+d957910d-f501-4165-b085-ce3749de5d12,8dc86ef9-b34a-4356-aaa8-7f66e67edacc,Salbutamol Plus 124,Alkem,False,250mg,capsule
+22e4fb39-48ff-4a4f-a10e-ba359150e29a,a4664740-ec2e-4a46-9f14-c6452da1eb35,Dextromethorphan Plus 125,Cipla,True,250mg,syrup
+df722119-bec5-4e30-bc10-f857d3d6e16b,43fd034b-3103-40d6-a31b-87087f08fe4e,Amoxicillin Plus 126,Lupin,False,10mg,syrup
+d09eba77-5a51-4e9c-932d-9ed6f80fb194,f82a97a8-9947-421e-a00e-57e77630d8be,Pantoprazole Plus 127,Mankind,False,250mg,tablet
+8a39015a-1a66-4fd2-aee2-6b5588dd259c,2e1945d3-7e94-4048-8640-37776799e756,Cetirizine Plus 128,Alkem,True,100mg,syrup
+08c8e817-acf3-4bd2-99a3-9a11912ae45f,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 129,Zydus,False,10mg,syrup
+d3be4271-7c92-4cff-a572-da37bb568b30,c58ae13e-08fe-455f-865c-41e6dacbab7d,Aspirin Plus 130,Abbott,False,650mg,syrup
+7aba96dc-56bd-4f9e-a56d-e4682b469d00,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 131,Alkem,False,40mg,tablet
+f9eef15a-1ede-43da-9c77-f510395372a0,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 132,Dr. Reddy's,True,40mg,tablet
+882aecd3-2003-4e2f-85d0-aa38964dc27e,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 133,Dr. Reddy's,True,650mg,tablet
+4cb65e26-22e2-431e-a03d-225d8b6703a0,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 134,Cipla,True,100mg,syrup
+eb28e9c9-1a2f-45ee-b312-5caccad8dac8,5de10187-f4b2-4694-8b47-0be0a14d193b,Doxycycline Plus 135,Alkem,False,250mg,tablet
+a37ecbb0-4b2d-4888-b8e6-06526ef8550b,5de10187-f4b2-4694-8b47-0be0a14d193b,Doxycycline Plus 136,Mankind,False,100mg,tablet
+a04ceab6-2018-4f85-9b24-426eb044f790,1652061b-9f8f-4f69-b42c-bf2536844105,Nitrofurantoin Plus 137,Dr. Reddy's,False,40mg,capsule
+4f11b13b-cf6b-44bf-8a93-8e59470db988,0d3ac8c3-8b20-4f84-8d56-68da58bc59d8,Metformin Plus 138,Lupin,True,650mg,capsule
+79e13948-13ab-4bf2-8f83-d6442373d226,0bccc8cc-0d32-4020-8bef-95c478edc444,Aceclofenac Plus 139,Alkem,True,100mg,capsule
+52b35faa-8a7b-4d56-82c0-48b1f06f7dec,8cf907a0-914a-4394-a6d0-f9889e01101a,Telmisartan Plus 140,Zydus,True,650mg,tablet
+dc6f8b02-339b-45dd-a508-340942095424,0722843b-e299-4407-b837-3df6e1715d87,Cyanocobalamin Plus 141,Alkem,False,40mg,capsule
+9169cd65-ee57-45be-9b0e-d24ae7f14786,a4664740-ec2e-4a46-9f14-c6452da1eb35,Dextromethorphan Plus 142,Lupin,True,500mg,capsule
+6a3a1178-d738-4257-b4e8-8e9249544def,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 143,Sun Pharma,False,100mg,tablet
+2abe8cce-4348-4f1a-befa-e44ac7cb9d57,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 144,Dr. Reddy's,True,500mg,capsule
+db09ab33-5720-4222-aa67-a70e454f4588,60b69b3a-5e6c-4139-8c1b-af82c97c63ba,Atorvastatin Plus 145,Mankind,False,500mg,capsule
+5eb16255-c302-4559-986a-4f89cfea3508,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 146,Sun Pharma,False,650mg,tablet
+e864c96e-f1c6-4852-bcfb-24ef1e717b13,ce64ed7f-f40d-4669-ab96-d4c6a551b8cd,Linezolid Plus 147,Torrent,False,100mg,tablet
+a827b08f-8b7f-44cf-af17-c38a54f26c6f,c58ae13e-08fe-455f-865c-41e6dacbab7d,Aspirin Plus 148,Alkem,True,500mg,syrup
+33c09e12-69f6-4da4-86d1-e12722626afe,9e55524d-50b9-45b6-9cde-c3450fd66aed,Cefixime Plus 149,Zydus,False,100mg,tablet
+7c50c50b-47fb-4e2c-85c1-8aa55ed6bc33,3d1acc09-06e3-4b2f-b33d-cb3b1934d48a,Ambroxol Plus 150,Dr. Reddy's,True,500mg,capsule
+de825347-6237-4c8e-8269-00ff256c33c8,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 151,Torrent,False,40mg,tablet
+62db6bcb-53aa-42c1-a648-3028dd27e932,5f569565-9868-499f-b652-cfb12c2c9e83,Tramadol Plus 152,Lupin,True,650mg,syrup
+257d59b5-4ebc-468b-8a5d-6751b286a089,60b69b3a-5e6c-4139-8c1b-af82c97c63ba,Atorvastatin Plus 153,Cipla,True,500mg,syrup
+400072fc-a5f9-4f76-8b12-77651cc7f7a3,c58ae13e-08fe-455f-865c-41e6dacbab7d,Aspirin Plus 154,Cipla,False,40mg,syrup
+964c93a3-daf7-48d4-a4bc-77ca1b1cc23f,5337ff7f-5be9-41ef-bdef-fc3794dad024,Rosuvastatin Plus 155,Abbott,True,10mg,capsule
+48f1d57b-6756-4d2b-ac93-8e49190f25a5,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 156,Abbott,False,650mg,tablet
+2d86af32-1b98-4d29-869b-721f1c1224dd,98520093-14a0-4150-b5bc-b5ffbc95e891,Ticagrelor Plus 157,Sun Pharma,True,40mg,syrup
+f9b29bad-8b11-4946-8d31-613ec4812b50,d79f65f5-9b81-4af9-b0b9-64b373d6a516,Ciprofloxacin Plus 158,Glenmark,False,650mg,capsule
+58f6cfe2-3392-40b6-89b4-29db276e3cfa,1652061b-9f8f-4f69-b42c-bf2536844105,Nitrofurantoin Plus 159,Lupin,True,100mg,capsule
+bfeb729e-ce6a-47dc-a1fb-559c23184562,f82a97a8-9947-421e-a00e-57e77630d8be,Pantoprazole Plus 160,Mankind,False,40mg,capsule
+774132d5-4a04-406e-a954-6197136ba193,b1c42bb4-98e7-4f11-ab12-66b9b91634e6,Clotrimazole Plus 161,Alkem,False,500mg,capsule
+e0f807b6-c8a7-41f2-8702-6fda713acbc3,98520093-14a0-4150-b5bc-b5ffbc95e891,Ticagrelor Plus 162,Cipla,True,650mg,syrup
+ef9665d5-1d63-463e-844a-741977ce679d,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 163,Dr. Reddy's,False,500mg,tablet
+63be8c4a-b3ad-4dff-9d88-d79af7fa884b,76a39933-bd21-4e06-91e9-4a1b42247cb5,Glimepiride Plus 164,Torrent,False,40mg,syrup
+cb32ad4d-422a-4a67-9ea2-35bb25ec56af,3d1acc09-06e3-4b2f-b33d-cb3b1934d48a,Ambroxol Plus 165,Mankind,True,10mg,capsule
+d16ce77e-b375-496b-bd71-10ed1e928b3b,c58ae13e-08fe-455f-865c-41e6dacbab7d,Aspirin Plus 166,Sun Pharma,True,40mg,capsule
+3f15559a-09a2-403a-9ed3-680a8b47a5aa,a4664740-ec2e-4a46-9f14-c6452da1eb35,Dextromethorphan Plus 167,Glenmark,True,250mg,syrup
+65698116-c36f-45ac-873d-0627f71d1b77,f82a97a8-9947-421e-a00e-57e77630d8be,Pantoprazole Plus 168,Mankind,False,40mg,capsule
+2614206c-267b-4396-86d3-b2a7a820c0fb,27bbce8b-66c7-429d-acec-5cc40ad1d7e9,Levocetirizine Plus 169,Cipla,True,650mg,tablet
+0d11cb1b-d006-4f3f-82f2-3b868b4351f1,ce64ed7f-f40d-4669-ab96-d4c6a551b8cd,Linezolid Plus 170,Alkem,False,650mg,capsule
+6358f7d2-78d9-4271-928a-466a0074d4bf,d6efa1e6-53e9-4915-afe8-746b55428d06,Fluconazole Plus 171,Dr. Reddy's,False,500mg,capsule
+c3d07399-7474-41e5-9b91-3b18e782c6f5,37c7ed0d-cef4-4292-9728-7ff028b2ba7e,Domperidone Plus 172,Zydus,False,100mg,syrup
+4ce89d79-4fea-4c16-aaf1-d1818afe2f13,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 173,Cipla,False,500mg,syrup
+5887b47b-2ce6-4c1f-90c5-adf630d1ef8d,9dc1ff5d-2590-4cae-9dd5-1df0888e62af,Diclofenac Plus 174,Dr. Reddy's,True,250mg,tablet
+633dca83-449d-4d59-97a8-20ea4d759770,44704ea6-eb2d-4539-a8e9-784f7a1dcb9a,Albendazole Plus 175,Dr. Reddy's,True,650mg,tablet
+62960f39-7305-43b7-bb5e-ce60baead0d8,8dc86ef9-b34a-4356-aaa8-7f66e67edacc,Salbutamol Plus 176,Abbott,True,40mg,syrup
+39559878-342c-4338-adfc-0040f250ebc7,8cf907a0-914a-4394-a6d0-f9889e01101a,Telmisartan Plus 177,Torrent,False,100mg,capsule
+61861937-0c3d-4a52-9f37-3b1a0618ce3d,1652061b-9f8f-4f69-b42c-bf2536844105,Nitrofurantoin Plus 178,Torrent,True,500mg,capsule
+20bdaa09-0457-4553-8936-314d2125abb4,7a10bc04-0557-4786-b511-5c94991de048,Fexofenadine Plus 179,Zydus,False,250mg,syrup
+000583d1-8739-42ec-8f4d-cbd6836da4b9,d6efa1e6-53e9-4915-afe8-746b55428d06,Fluconazole Plus 180,Lupin,False,650mg,capsule
+2cb50f92-d220-4492-b056-b036053c4c1d,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 181,Glenmark,True,250mg,capsule
+d3532cdc-7f57-422d-a3a4-96a4bb409c04,0722843b-e299-4407-b837-3df6e1715d87,Cyanocobalamin Plus 182,Zydus,True,250mg,tablet
+04a52a3b-c451-45f4-b2d7-fe441ba02db8,0bccc8cc-0d32-4020-8bef-95c478edc444,Aceclofenac Plus 183,Abbott,True,40mg,tablet
+f42ae7c4-9965-40ec-be94-e1c01e0aabf3,27bbce8b-66c7-429d-acec-5cc40ad1d7e9,Levocetirizine Plus 184,Mankind,False,250mg,capsule
+e5ebcd0b-aa15-4ba5-a270-d771b22cea71,0722843b-e299-4407-b837-3df6e1715d87,Cyanocobalamin Plus 185,Lupin,False,650mg,syrup
+46f5ff9a-7a50-4117-a5c7-e4db92fc9e39,30dda595-9d18-48f2-aae9-bbe14b044a37,Naproxen Plus 186,Mankind,True,650mg,syrup
+e91d9a15-39b2-47f4-8052-96530f2f6158,f82a97a8-9947-421e-a00e-57e77630d8be,Pantoprazole Plus 187,Mankind,True,40mg,tablet
+05d8a268-8224-4a62-8ab3-bb7094e7a76c,b26ef324-45f4-40e5-ab90-f5de842a88fd,Artesunate Plus 188,Zydus,True,250mg,capsule
+3f094491-064b-4f0b-8036-935630b38a52,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 189,Cipla,False,100mg,tablet
+12605a49-dee0-4c22-97be-ee93931056a2,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 190,Abbott,False,40mg,capsule
+8b306110-2224-477e-83a2-373c98914965,2e1945d3-7e94-4048-8640-37776799e756,Cetirizine Plus 191,Alkem,False,500mg,syrup
+2206d490-0e95-4cb3-a919-f1c04dde63bd,ce64ed7f-f40d-4669-ab96-d4c6a551b8cd,Linezolid Plus 192,Glenmark,False,10mg,syrup
+534a2cf4-7aa4-4b69-9241-5607ba8ec4f7,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 193,Alkem,True,500mg,capsule
+d2e66e14-34a9-4f1a-a5b0-5dba762a8ea0,c58ae13e-08fe-455f-865c-41e6dacbab7d,Aspirin Plus 194,Abbott,False,250mg,capsule
+857bdd7f-6995-49c2-baa2-0ad8d9778d2f,f58bc71d-670d-418e-bea6-71ee747dca4f,Vitamin D3 Plus 195,Lupin,True,650mg,syrup
+1c88f53d-c6fa-4634-ae28-e964ac483855,5f569565-9868-499f-b652-cfb12c2c9e83,Tramadol Plus 196,Torrent,False,10mg,tablet
+af9ecbdf-4217-48c6-90c1-88862ddc71d9,5ecd24a4-6421-4a50-9727-7d68916511f2,Losartan Plus 197,Alkem,True,100mg,capsule
+272350c3-4175-4541-8e2c-8b10e4653b87,ba8d35b5-dfbc-4ef0-af98-7689effc09a9,Sitagliptin Plus 198,Lupin,False,10mg,tablet
+e58861ff-d25f-4b52-93fc-e1f5973a6790,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 199,Alkem,True,40mg,capsule
+1f196e33-3b62-4dbc-b9ff-00b50c2129b6,0bccc8cc-0d32-4020-8bef-95c478edc444,Aceclofenac Plus 200,Cipla,False,10mg,capsule
+0df12237-23d0-4f16-bdfc-27ebe4834f26,d6efa1e6-53e9-4915-afe8-746b55428d06,Fluconazole Plus 201,Lupin,False,250mg,tablet
+d5ab78cc-a63f-4ddb-b854-59f3827c5b50,9e55524d-50b9-45b6-9cde-c3450fd66aed,Cefixime Plus 202,Lupin,True,250mg,syrup
+7cbbb076-a78f-472f-a471-e638e9d3b19e,3d1acc09-06e3-4b2f-b33d-cb3b1934d48a,Ambroxol Plus 203,Abbott,False,500mg,capsule
+94c67f25-766d-4bf1-84c3-422509f8df72,08b4b6bd-21d6-45e8-95b3-1595a5a86ca1,Magnesium Hydroxide Plus 204,Lupin,True,10mg,syrup
+b8d8688d-d0a9-4bb5-bbdf-e24815276ae1,1652061b-9f8f-4f69-b42c-bf2536844105,Nitrofurantoin Plus 205,Torrent,False,500mg,capsule
+03c9b81a-364d-4280-a412-970c149e2616,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 206,Abbott,True,40mg,capsule
+357b213c-c590-4a84-ab39-267d719ab8eb,98520093-14a0-4150-b5bc-b5ffbc95e891,Ticagrelor Plus 207,Alkem,False,40mg,capsule
+369cb38b-5727-492d-9dfe-eb8ea1910504,f82a97a8-9947-421e-a00e-57e77630d8be,Pantoprazole Plus 208,Cipla,True,100mg,tablet
+2c0fb16c-18b0-4758-bea9-5310a9c69c4f,90590b46-a093-4065-bea3-22535338c34b,Hydroxychloroquine Plus 209,Torrent,True,10mg,tablet
+faa1241d-9fa3-4968-b03d-c7da7e2a170a,8ae2b8bc-46ad-4578-808e-de16c0345524,Ivermectin Plus 210,Cipla,False,650mg,tablet
+16d158ca-6dc7-463a-a1eb-2906e6d768b0,b1c42bb4-98e7-4f11-ab12-66b9b91634e6,Clotrimazole Plus 211,Torrent,False,500mg,tablet
+f6b8ae37-e67e-4587-8786-b835d174d7a1,ba8d35b5-dfbc-4ef0-af98-7689effc09a9,Sitagliptin Plus 212,Lupin,True,100mg,syrup
+40bd98ef-bd4e-4995-8fca-0ff804a09ef4,66491fdf-17ac-4743-be36-3742d4ea7f96,Levofloxacin Plus 213,Sun Pharma,False,250mg,syrup
+795ef045-842f-43d4-82f9-d5b6d70f59af,5337ff7f-5be9-41ef-bdef-fc3794dad024,Rosuvastatin Plus 214,Zydus,True,650mg,capsule
+dae915e0-0822-492c-9a18-819e3ff51bfb,27bbce8b-66c7-429d-acec-5cc40ad1d7e9,Levocetirizine Plus 215,Abbott,False,10mg,syrup
+bf95cb31-0b0d-4c11-b2b6-0bdea5b24770,37c7ed0d-cef4-4292-9728-7ff028b2ba7e,Domperidone Plus 216,Glenmark,True,250mg,tablet
+5a192a40-7b3e-4b6d-a6af-9643dd1c58f2,8dc86ef9-b34a-4356-aaa8-7f66e67edacc,Salbutamol Plus 217,Sun Pharma,True,500mg,tablet
+36fb5e27-b767-42a4-b828-d121225b08b2,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 218,Mankind,True,650mg,tablet
+eaac4abb-3132-4610-8756-38fdf4bb3e66,a4664740-ec2e-4a46-9f14-c6452da1eb35,Dextromethorphan Plus 219,Alkem,False,250mg,capsule
+c63e27f2-3832-4df2-b1c8-e68026e7907d,5de10187-f4b2-4694-8b47-0be0a14d193b,Doxycycline Plus 220,Lupin,True,10mg,syrup
+31519a25-659c-495f-a5d3-38195b10f6fb,27bbce8b-66c7-429d-acec-5cc40ad1d7e9,Levocetirizine Plus 221,Sun Pharma,False,10mg,tablet
+bd18dbff-cd69-4a21-9860-cd2eeb323a4b,a87a3923-67b3-4dd0-a9fc-a2651fcb6d8b,Insulin Human Plus 222,Lupin,True,500mg,tablet
+60151831-f979-47ab-867b-9610be154aa1,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 223,Alkem,True,250mg,capsule
+f45df94e-f7e4-4cde-a622-d3b56c550a66,60b69b3a-5e6c-4139-8c1b-af82c97c63ba,Atorvastatin Plus 224,Mankind,True,500mg,tablet
+93567db4-4894-4b81-8ef6-64e653673e38,ba8d35b5-dfbc-4ef0-af98-7689effc09a9,Sitagliptin Plus 225,Glenmark,True,40mg,tablet
+201e2b29-24ef-4b68-af1e-74b7c9d48077,9e55524d-50b9-45b6-9cde-c3450fd66aed,Cefixime Plus 226,Zydus,True,500mg,capsule
+9fabb32d-3a86-4825-bde0-ab485be28755,b21c5a4c-7198-4623-abb0-8fb229a34527,Pregabalin Plus 227,Alkem,True,250mg,tablet
+76ec2582-4c76-43a5-8d43-ea1fc034276f,5f569565-9868-499f-b652-cfb12c2c9e83,Tramadol Plus 228,Mankind,False,40mg,capsule
+fb470a31-da91-4ccb-adf1-c68f6c861b73,5de10187-f4b2-4694-8b47-0be0a14d193b,Doxycycline Plus 229,Cipla,False,650mg,tablet
+f2977186-6b08-4df1-9360-950886610f67,a953aee1-b70e-4312-b0f2-1fafa8bd5383,Amlodipine Plus 230,Cipla,False,40mg,tablet
+40c773a3-e07b-424d-8811-bff153831bd7,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 231,Alkem,True,100mg,capsule
+9033ec2b-fafa-4f1c-a78b-00356f960b0e,08b4b6bd-21d6-45e8-95b3-1595a5a86ca1,Magnesium Hydroxide Plus 232,Zydus,False,100mg,syrup
+140bca88-065b-4edc-ba27-9cc389745ced,a953aee1-b70e-4312-b0f2-1fafa8bd5383,Amlodipine Plus 233,Lupin,True,10mg,capsule
+2ea0c55d-0da0-42ed-8ec8-3c14621dc78e,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 234,Lupin,False,500mg,capsule
+76df73f5-26dd-4abf-bebe-8c758c1f52aa,e3bcf7e3-e9bb-4190-be5b-90b27e7cfa2f,Esomeprazole Plus 235,Cipla,True,650mg,syrup
+3b388583-3fa2-4872-b968-b68faf8416c1,c58ae13e-08fe-455f-865c-41e6dacbab7d,Aspirin Plus 236,Sun Pharma,False,40mg,syrup
+d5aff057-f7d1-4b4d-a926-41c4318c3717,b26ef324-45f4-40e5-ab90-f5de842a88fd,Artesunate Plus 237,Zydus,False,100mg,capsule
+5fa6fd14-e7e4-4cf7-b91e-a94141d311b7,44704ea6-eb2d-4539-a8e9-784f7a1dcb9a,Albendazole Plus 238,Abbott,False,40mg,tablet
+9153b32f-c85f-41a9-83f1-b63a1c74340a,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 239,Glenmark,True,650mg,syrup
+6cefe353-b9b1-456c-bbc3-4f3be084b572,37c7ed0d-cef4-4292-9728-7ff028b2ba7e,Domperidone Plus 240,Mankind,True,100mg,capsule
+b884a72b-cb99-4133-96ba-b628a6d6ea68,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 241,Torrent,True,10mg,capsule
+91072fce-7efc-4b72-938e-41740e529bb9,90590b46-a093-4065-bea3-22535338c34b,Hydroxychloroquine Plus 242,Alkem,False,100mg,capsule
+50195a29-77f1-4ef8-9a79-34f7816b9108,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 243,Glenmark,True,40mg,syrup
+1e0ddf1f-1314-4755-88f1-121e0fd44871,8ae2b8bc-46ad-4578-808e-de16c0345524,Ivermectin Plus 244,Mankind,False,40mg,capsule
+c5ba57e9-4f27-4878-93e1-af643b04c412,c0435b23-f357-4d96-bc0f-8c5970b09f1e,Bisoprolol Plus 245,Sun Pharma,True,500mg,syrup
+a0a29c34-5960-4172-9a3c-896603776488,2c63adc9-c2c7-4065-8c08-8501edb1e5ca,Calcium Carbonate Plus 246,Cipla,False,650mg,capsule
+760fad50-656a-4163-a2e4-604283848687,f82a97a8-9947-421e-a00e-57e77630d8be,Pantoprazole Plus 247,Zydus,False,40mg,tablet
+ac75c557-6958-4bbb-989c-56ad94848089,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 248,Dr. Reddy's,True,650mg,syrup
+6dfd2d4e-7262-4dd8-9ad5-87127a652aca,8dc86ef9-b34a-4356-aaa8-7f66e67edacc,Salbutamol Plus 249,Lupin,False,100mg,syrup
+68e92e13-4246-46ef-bacc-a237df95a61b,9e19c5f1-2b7f-4db2-9d5e-197ed73cdf65,Cefuroxime Plus 250,Dr. Reddy's,True,650mg,tablet
+b5cb7dae-d578-4202-96af-61a277301d1d,3d1acc09-06e3-4b2f-b33d-cb3b1934d48a,Ambroxol Plus 251,Cipla,False,500mg,tablet
+31372f0b-bdac-4652-a760-2c89c34bb878,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 252,Lupin,True,100mg,syrup
+3904d5d4-676a-426b-913f-b317d8ea66c7,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 253,Zydus,True,100mg,tablet
+430b68c7-5d42-4cc1-9299-1f25a745ecc7,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 254,Torrent,False,500mg,capsule
+c26f0a25-1961-4056-bd01-c2b113c46a4f,3d1acc09-06e3-4b2f-b33d-cb3b1934d48a,Ambroxol Plus 255,Dr. Reddy's,True,40mg,tablet
+1f74090e-4491-46db-8957-5355fca0d1f6,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 256,Mankind,True,250mg,tablet
+a9822e4b-d5a4-44a0-af0e-01ed0743994b,0722843b-e299-4407-b837-3df6e1715d87,Cyanocobalamin Plus 257,Alkem,True,10mg,tablet
+17944036-6730-4655-b05e-55877ce9f18f,8dc86ef9-b34a-4356-aaa8-7f66e67edacc,Salbutamol Plus 258,Lupin,True,100mg,capsule
+1cf47d0a-17a1-4ada-a580-c061c5ac6ce5,0d3ac8c3-8b20-4f84-8d56-68da58bc59d8,Metformin Plus 259,Cipla,False,650mg,tablet
+01cc3fbd-d30a-4fe7-b46a-6cdeac4008a5,90590b46-a093-4065-bea3-22535338c34b,Hydroxychloroquine Plus 260,Sun Pharma,True,40mg,tablet
+46bacdbb-1a57-4c20-be3e-28811e97d365,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 261,Abbott,False,650mg,tablet
+4aa83940-4be2-455d-8773-b14d34a916e4,9dc1ff5d-2590-4cae-9dd5-1df0888e62af,Diclofenac Plus 262,Abbott,False,100mg,syrup
+99fe4d09-d8a1-4ce7-951a-de5bec11504b,1652061b-9f8f-4f69-b42c-bf2536844105,Nitrofurantoin Plus 263,Cipla,True,40mg,tablet
+28dd2cce-08c7-4b92-9ff5-405ab9b40717,2c63adc9-c2c7-4065-8c08-8501edb1e5ca,Calcium Carbonate Plus 264,Lupin,False,100mg,tablet
+6737b524-5b29-4497-af93-6f710b495925,a9a25272-d818-494d-9d16-ae63f8e7aa65,Gabapentin Plus 265,Glenmark,False,40mg,tablet
+8a043413-f514-4d8c-9947-64efa9bff150,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 266,Dr. Reddy's,False,250mg,tablet
+eb068415-e4e7-4ddf-b1a3-86a40a388013,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 267,Zydus,False,500mg,syrup
+0a924d4e-31d4-481c-a7cd-1396d196ca29,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 268,Alkem,True,100mg,capsule
+bc20daf4-635f-4dc8-ab1f-dda87536d5a3,44704ea6-eb2d-4539-a8e9-784f7a1dcb9a,Albendazole Plus 269,Torrent,False,650mg,capsule
+0224e675-6109-45e1-ac05-f58e58ca10aa,b1c42bb4-98e7-4f11-ab12-66b9b91634e6,Clotrimazole Plus 270,Dr. Reddy's,False,10mg,capsule
+f0a17266-13c2-443b-afbe-f20e6b629a82,1652061b-9f8f-4f69-b42c-bf2536844105,Nitrofurantoin Plus 271,Torrent,True,250mg,capsule
+7702e1d9-9147-4c13-82ff-f704fc4808ac,9e55524d-50b9-45b6-9cde-c3450fd66aed,Cefixime Plus 272,Abbott,False,650mg,tablet
+e44fec82-297e-46ca-8a26-78485daa5e73,9e19c5f1-2b7f-4db2-9d5e-197ed73cdf65,Cefuroxime Plus 273,Mankind,False,650mg,syrup
+a810bd73-7a7e-4e29-a935-d28e69165841,7a832121-3395-4ab7-9983-23e334aa04d2,Ondansetron Plus 274,Lupin,True,250mg,tablet
+cba98d2c-634e-421a-a731-0eb7e9ce8fde,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 275,Zydus,False,650mg,capsule
+0a091fdf-59fb-4dc8-8809-1d3d05c23573,44704ea6-eb2d-4539-a8e9-784f7a1dcb9a,Albendazole Plus 276,Lupin,True,650mg,syrup
+73bfcbdb-2bc1-42c3-986b-34972705b99c,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 277,Abbott,True,10mg,tablet
+4cbd86ec-0967-4bff-8357-42794d2e37e0,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 278,Cipla,False,500mg,capsule
+d6799e39-46a1-4222-9021-e6cfd37860d5,ba8d35b5-dfbc-4ef0-af98-7689effc09a9,Sitagliptin Plus 279,Dr. Reddy's,False,100mg,tablet
+296f13f3-6556-4ce8-af1d-977f2a2a1530,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 280,Zydus,True,100mg,tablet
+73efa668-8a01-4835-a1a7-5776d0c1221c,d6efa1e6-53e9-4915-afe8-746b55428d06,Fluconazole Plus 281,Lupin,True,650mg,syrup
+f805760f-d32a-40c8-b7fe-613b3307d2a9,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 282,Abbott,False,100mg,capsule
+98b5c267-b4bf-4c72-b16b-1b8fe0b82980,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 283,Cipla,True,650mg,tablet
+66cf5be4-a0a6-473b-b8c1-895b72fe07fd,d6efa1e6-53e9-4915-afe8-746b55428d06,Fluconazole Plus 284,Sun Pharma,True,100mg,capsule
+9998050b-eb52-4c4f-a487-b7dddbc99ea3,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 285,Mankind,False,650mg,tablet
+221b3281-7d5f-4e66-9fe4-4c4fa48b5a06,43fd034b-3103-40d6-a31b-87087f08fe4e,Amoxicillin Plus 286,Mankind,False,10mg,tablet
+bc187a6e-c9ea-4008-9324-b5c95e6211e4,a9a25272-d818-494d-9d16-ae63f8e7aa65,Gabapentin Plus 287,Lupin,False,500mg,tablet
+5c364ca7-c33d-4af3-8d99-2b641d708f2a,9dc1ff5d-2590-4cae-9dd5-1df0888e62af,Diclofenac Plus 288,Alkem,True,100mg,tablet
+6e23fa3d-017f-4959-b645-dd24e246f386,b26ef324-45f4-40e5-ab90-f5de842a88fd,Artesunate Plus 289,Glenmark,False,100mg,syrup
+4f4edd0b-1b6d-4882-b9d1-362b63760677,37c7ed0d-cef4-4292-9728-7ff028b2ba7e,Domperidone Plus 290,Cipla,False,500mg,tablet
+c9a8f10e-bc02-4a92-b79e-e899b4c89a3d,b1c42bb4-98e7-4f11-ab12-66b9b91634e6,Clotrimazole Plus 291,Lupin,True,40mg,capsule
+65bade79-8f96-4bc4-b676-bd01573bcaf5,5ecd24a4-6421-4a50-9727-7d68916511f2,Losartan Plus 292,Abbott,False,10mg,capsule
+3e6e4c10-2fdb-4940-a0e2-ec56b1f064f5,5de10187-f4b2-4694-8b47-0be0a14d193b,Doxycycline Plus 293,Torrent,False,500mg,tablet
+0b557d52-d2d1-4671-8a68-df72e98e7d9a,2e1945d3-7e94-4048-8640-37776799e756,Cetirizine Plus 294,Torrent,True,10mg,capsule
+dcbe7045-ea48-4038-8e7b-b5dd3e3b7360,30dda595-9d18-48f2-aae9-bbe14b044a37,Naproxen Plus 295,Lupin,True,40mg,tablet
+c59e3ec5-640e-4f02-87b6-e339754da0aa,30dda595-9d18-48f2-aae9-bbe14b044a37,Naproxen Plus 296,Zydus,False,10mg,tablet
+2910ce11-3353-4d09-98f4-82a7ee55101b,2e1945d3-7e94-4048-8640-37776799e756,Cetirizine Plus 297,Sun Pharma,False,650mg,capsule
+eadcba14-c209-4e6d-8582-dddaa4c8a935,37c7ed0d-cef4-4292-9728-7ff028b2ba7e,Domperidone Plus 298,Abbott,True,250mg,syrup
+8e84655b-1131-441e-9b19-1bf73b122755,8cf907a0-914a-4394-a6d0-f9889e01101a,Telmisartan Plus 299,Alkem,False,250mg,tablet
+bec24570-a379-48d4-be43-69d035e6e129,0bccc8cc-0d32-4020-8bef-95c478edc444,Aceclofenac Plus 300,Glenmark,False,500mg,syrup
+053fa897-e1f3-4a37-adaa-360c92e78215,30dda595-9d18-48f2-aae9-bbe14b044a37,Naproxen Plus 301,Sun Pharma,True,250mg,capsule
+c884d4db-c827-4e1a-b9a0-423c3a8075b2,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 302,Glenmark,False,650mg,capsule
+fabb0e3e-f716-46e7-acb7-f44bdcf17023,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 303,Zydus,True,250mg,syrup
+c40b6dd9-9a51-453e-8c45-6dbe5a4aea7a,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 304,Sun Pharma,False,650mg,tablet
+678a4fdb-a9b5-4487-aeb2-117eafda7889,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 305,Lupin,False,40mg,tablet
+e0e15ddb-8c74-4f19-a527-d7e8b17ab6c7,9e55524d-50b9-45b6-9cde-c3450fd66aed,Cefixime Plus 306,Mankind,True,40mg,syrup
+65920b26-faba-4915-8e2d-05db5f8b9c9f,7a832121-3395-4ab7-9983-23e334aa04d2,Ondansetron Plus 307,Abbott,True,250mg,capsule
+ca9d0e78-02ff-43cb-b8b1-64016936d6cd,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 308,Lupin,True,40mg,tablet
+49a46e24-d6db-46b2-a06d-3aaa4b6aaf79,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 309,Torrent,True,10mg,tablet
+2e955466-49b3-4e1f-8577-0ea8fe432ec7,7a832121-3395-4ab7-9983-23e334aa04d2,Ondansetron Plus 310,Lupin,True,250mg,syrup
+426eedd9-1912-4659-b86f-5204d281eb3e,7a10bc04-0557-4786-b511-5c94991de048,Fexofenadine Plus 311,Glenmark,True,100mg,tablet
+9496e640-7654-47fb-9a26-763d503f01c0,3d1acc09-06e3-4b2f-b33d-cb3b1934d48a,Ambroxol Plus 312,Sun Pharma,True,650mg,tablet
+4c07f3ca-598f-4727-a36b-99e027de4e85,8dc86ef9-b34a-4356-aaa8-7f66e67edacc,Salbutamol Plus 313,Alkem,True,500mg,syrup
+beedd8cd-79cf-4937-ad53-24dc311a48a6,27bbce8b-66c7-429d-acec-5cc40ad1d7e9,Levocetirizine Plus 314,Abbott,True,40mg,tablet
+9c99c637-d4c6-45c1-86cc-b67d0dc8bf70,a953aee1-b70e-4312-b0f2-1fafa8bd5383,Amlodipine Plus 315,Glenmark,True,250mg,syrup
+b747750c-967b-4e31-a14f-39b4451fb04a,0bccc8cc-0d32-4020-8bef-95c478edc444,Aceclofenac Plus 316,Sun Pharma,False,500mg,syrup
+41f9c9f9-08f6-49d3-81f5-b59f44cdadb0,9e55524d-50b9-45b6-9cde-c3450fd66aed,Cefixime Plus 317,Sun Pharma,False,650mg,tablet
+98632737-3830-410f-885c-741113e75fb6,5ecd24a4-6421-4a50-9727-7d68916511f2,Losartan Plus 318,Sun Pharma,False,250mg,capsule
+bb3c748d-c9e4-4f1b-b6e6-4808081f52d4,2660c6c3-290d-4954-a230-8c538cbfebd7,Loratadine Plus 319,Mankind,False,650mg,capsule
+92f5bc73-8f06-4e82-aa3b-f356775d718f,7a10bc04-0557-4786-b511-5c94991de048,Fexofenadine Plus 320,Abbott,True,40mg,capsule
+d374580b-4c04-4c51-a2be-ef69395e76af,90590b46-a093-4065-bea3-22535338c34b,Hydroxychloroquine Plus 321,Torrent,True,100mg,tablet
+ad0b4a2d-9e72-49ca-bc0a-2a0577180fd7,37c7ed0d-cef4-4292-9728-7ff028b2ba7e,Domperidone Plus 322,Mankind,True,250mg,syrup
+639c6815-2a99-4c46-a920-9335fbee0c17,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 323,Alkem,False,10mg,syrup
+df5293c4-b4b0-4513-b50b-a648b38ecfe0,98520093-14a0-4150-b5bc-b5ffbc95e891,Ticagrelor Plus 324,Lupin,False,100mg,syrup
+abc729a9-a7fb-4e6f-a17b-e88e8e9fc459,8dc86ef9-b34a-4356-aaa8-7f66e67edacc,Salbutamol Plus 325,Glenmark,False,10mg,capsule
+90bcf7fb-5b13-4282-808e-9dbac459951c,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 326,Sun Pharma,False,10mg,syrup
+51b11b40-7d52-434b-a895-3d9ebb301ffd,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 327,Dr. Reddy's,False,40mg,syrup
+b868f90c-f4a5-40dd-887f-bd0ebedd694f,9dc1ff5d-2590-4cae-9dd5-1df0888e62af,Diclofenac Plus 328,Lupin,False,500mg,tablet
+07dbe210-89ef-437e-8c3c-5871f9aae45b,27bbce8b-66c7-429d-acec-5cc40ad1d7e9,Levocetirizine Plus 329,Mankind,True,500mg,capsule
+fe6443b1-29fa-4721-954a-7fa0338c529d,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 330,Dr. Reddy's,True,100mg,syrup
+85ee5dcd-588f-4775-baa6-8acf01b72812,98520093-14a0-4150-b5bc-b5ffbc95e891,Ticagrelor Plus 331,Dr. Reddy's,False,250mg,capsule
+e071774f-6ae6-401f-b950-81cc8f97c201,d79f65f5-9b81-4af9-b0b9-64b373d6a516,Ciprofloxacin Plus 332,Sun Pharma,True,100mg,tablet
+54e9f352-eeaf-47c5-bfbd-7e4b26dda22e,7a10bc04-0557-4786-b511-5c94991de048,Fexofenadine Plus 333,Sun Pharma,False,500mg,syrup
+3551ccaf-0e51-49c9-b1d9-42a09f04cf15,60b69b3a-5e6c-4139-8c1b-af82c97c63ba,Atorvastatin Plus 334,Cipla,True,250mg,capsule
+82789897-8c27-41d4-b891-6082d4cfdbeb,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 335,Glenmark,True,650mg,tablet
+ac34f3a4-7a2c-4f6b-b26a-5b9d2788deb2,9e19c5f1-2b7f-4db2-9d5e-197ed73cdf65,Cefuroxime Plus 336,Torrent,True,650mg,tablet
+7be0c337-9fda-4660-8a80-f2458f640f27,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 337,Glenmark,True,10mg,capsule
+60eea7da-5972-461b-ac37-73de830d1f73,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 338,Glenmark,True,500mg,tablet
+51c7743d-3653-40a3-9f28-979d0f3b4661,b1c42bb4-98e7-4f11-ab12-66b9b91634e6,Clotrimazole Plus 339,Glenmark,False,40mg,tablet
+a479892f-170f-4467-a40a-594207809ff4,a953aee1-b70e-4312-b0f2-1fafa8bd5383,Amlodipine Plus 340,Glenmark,True,40mg,syrup
+73a5d234-6efb-4c7f-8e5d-236eaac5538d,37c7ed0d-cef4-4292-9728-7ff028b2ba7e,Domperidone Plus 341,Torrent,False,250mg,syrup
+2af35399-9085-4db9-9600-cb729d891a95,0722843b-e299-4407-b837-3df6e1715d87,Cyanocobalamin Plus 342,Glenmark,False,650mg,tablet
+9e3dc59f-3691-4a1a-bae0-de9724327d9b,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 343,Lupin,False,100mg,tablet
+be57b9da-4584-4119-ad7b-3a3c398b8dd2,37c7ed0d-cef4-4292-9728-7ff028b2ba7e,Domperidone Plus 344,Cipla,True,10mg,syrup
+9b24dc1c-fddf-4188-9574-76a752e09982,27bbce8b-66c7-429d-acec-5cc40ad1d7e9,Levocetirizine Plus 345,Glenmark,False,40mg,capsule
+3e07602d-ef6f-4555-9b9b-4c9ef8228943,a953aee1-b70e-4312-b0f2-1fafa8bd5383,Amlodipine Plus 346,Zydus,True,100mg,syrup
+7f6e74f4-8b61-4632-8269-431806e36ab2,7a832121-3395-4ab7-9983-23e334aa04d2,Ondansetron Plus 347,Dr. Reddy's,True,100mg,syrup
+81a5783c-569b-4448-93fd-8dcf46c52c2c,c0435b23-f357-4d96-bc0f-8c5970b09f1e,Bisoprolol Plus 348,Glenmark,False,10mg,syrup
+4c3fea93-a328-4d94-87c0-f137992b7910,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 349,Sun Pharma,False,250mg,tablet
+02dbc899-f818-4aaf-b134-f46bc6ece019,412796be-56b0-4d1b-b55d-228c9bbfdb9d,Rabeprazole Plus 350,Zydus,False,40mg,syrup
+55e49957-f4a1-4574-be56-5749e2a814bb,37c7ed0d-cef4-4292-9728-7ff028b2ba7e,Domperidone Plus 351,Sun Pharma,False,40mg,capsule
+69aaab83-3e0b-49c0-bf85-c2481ee66715,c0435b23-f357-4d96-bc0f-8c5970b09f1e,Bisoprolol Plus 352,Dr. Reddy's,True,10mg,capsule
+6566011b-7fa1-4d67-ad24-37e98c8c62cb,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 353,Sun Pharma,False,500mg,tablet
+255bf1be-e531-41b9-8cdb-6c8eb7e2a776,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 354,Lupin,False,500mg,capsule
+c03e4b13-045d-409a-b51f-737aa0b281ab,b1c42bb4-98e7-4f11-ab12-66b9b91634e6,Clotrimazole Plus 355,Abbott,False,10mg,syrup
+78d166a1-a6ea-4e94-b61f-5a2905acd726,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 356,Sun Pharma,True,650mg,syrup
+2a30cd24-dc6d-4f66-80e6-a12f881a11a3,d6efa1e6-53e9-4915-afe8-746b55428d06,Fluconazole Plus 357,Zydus,False,250mg,syrup
+48673a9b-0516-486e-be36-1ba4ed9d5aa6,66491fdf-17ac-4743-be36-3742d4ea7f96,Levofloxacin Plus 358,Zydus,True,40mg,syrup
+fc166c20-025f-4b9e-9e85-e56e6b39aabb,7a832121-3395-4ab7-9983-23e334aa04d2,Ondansetron Plus 359,Lupin,False,650mg,syrup
+4bffade3-0d46-4ad9-ab14-ac5a87b25486,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 360,Alkem,False,250mg,syrup
+b3a6a9ce-dd2e-47d1-91f3-cc199bcd54c0,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 361,Abbott,False,100mg,tablet
+36a129ed-c701-43ef-b290-5fb140bcbdf8,0722843b-e299-4407-b837-3df6e1715d87,Cyanocobalamin Plus 362,Abbott,True,10mg,tablet
+b6eceab4-6c8c-42e9-9a6d-2d02a6feedd6,66491fdf-17ac-4743-be36-3742d4ea7f96,Levofloxacin Plus 363,Abbott,False,100mg,tablet
+8c5d5af1-df08-41a5-9408-f46ba7c5767a,b26ef324-45f4-40e5-ab90-f5de842a88fd,Artesunate Plus 364,Lupin,True,10mg,tablet
+672740b0-eef4-41a2-8a04-33212894b1a3,2660c6c3-290d-4954-a230-8c538cbfebd7,Loratadine Plus 365,Glenmark,True,250mg,capsule
+03f900ab-a83e-4ab1-adbd-4e8cf1981463,43fd034b-3103-40d6-a31b-87087f08fe4e,Amoxicillin Plus 366,Zydus,True,10mg,tablet
+19cfc449-4d2d-426d-b4c4-da8fdf1870ba,d79f65f5-9b81-4af9-b0b9-64b373d6a516,Ciprofloxacin Plus 367,Alkem,False,10mg,capsule
+420a5b3f-4fc9-42cb-97ea-49b68495290a,5de10187-f4b2-4694-8b47-0be0a14d193b,Doxycycline Plus 368,Mankind,True,100mg,capsule
+0662a344-e479-43b7-8ea1-d6ae8de0e725,e3bcf7e3-e9bb-4190-be5b-90b27e7cfa2f,Esomeprazole Plus 369,Abbott,True,40mg,tablet
+7df29f8b-aabb-4a3b-a04a-bc72525889ad,75b22f3f-ce8f-45d2-980c-6d365831e3d7,Montelukast Plus 370,Torrent,False,250mg,capsule
+b0b71653-2da2-42ea-b7d4-897fb76e1c61,ce64ed7f-f40d-4669-ab96-d4c6a551b8cd,Linezolid Plus 371,Cipla,False,500mg,capsule
+445d1d9c-0c55-40c0-bfa7-dee2d95821f0,8cf907a0-914a-4394-a6d0-f9889e01101a,Telmisartan Plus 372,Cipla,True,500mg,syrup
+bc47d448-765d-43f1-97de-56271d99acf8,43fd034b-3103-40d6-a31b-87087f08fe4e,Amoxicillin Plus 373,Dr. Reddy's,True,650mg,tablet
+76bf63a3-7fb1-42ca-beff-ed825475b1db,9dc1ff5d-2590-4cae-9dd5-1df0888e62af,Diclofenac Plus 374,Sun Pharma,False,10mg,capsule
+a6b69ed5-3e08-4087-8fc4-ec32d7a82f20,66491fdf-17ac-4743-be36-3742d4ea7f96,Levofloxacin Plus 375,Torrent,True,40mg,capsule
+fffcc399-69d0-4380-8251-852b8cb48ae9,0bccc8cc-0d32-4020-8bef-95c478edc444,Aceclofenac Plus 376,Dr. Reddy's,True,100mg,syrup
+10f697dc-0a63-49af-a9b1-6c2c30668a54,f82a97a8-9947-421e-a00e-57e77630d8be,Pantoprazole Plus 377,Glenmark,True,10mg,syrup
+c33fbde8-a0fa-4d79-bf00-ae5953a85751,f58bc71d-670d-418e-bea6-71ee747dca4f,Vitamin D3 Plus 378,Abbott,False,10mg,capsule
+6b311fda-529b-4ca9-8aae-9616775f208c,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 379,Cipla,True,40mg,syrup
+88d4db16-a518-431e-82c0-ce555514fef3,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 380,Abbott,False,250mg,capsule
+073183ec-d85d-419c-9651-b3a7f8f058d8,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 381,Zydus,True,10mg,capsule
+1d789c4e-e24b-4529-8e7e-de5019c6e1ce,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 382,Mankind,False,40mg,syrup
+0fbdfcf5-c4c4-43de-84e0-04a2b79dbb76,7a832121-3395-4ab7-9983-23e334aa04d2,Ondansetron Plus 383,Cipla,True,500mg,syrup
+972212d5-55c1-4920-ab0c-d7f180e91380,a87a3923-67b3-4dd0-a9fc-a2651fcb6d8b,Insulin Human Plus 384,Mankind,False,10mg,tablet
+1ec00041-ed7c-4fec-b45d-d834ba18ae18,f645b47d-320d-45b8-875a-f99a61abb519,Omeprazole Plus 385,Alkem,False,40mg,capsule
+c555c654-328d-4ce4-900f-ea87efd7afd3,c0435b23-f357-4d96-bc0f-8c5970b09f1e,Bisoprolol Plus 386,Torrent,True,650mg,syrup
+7babba2c-479a-4882-b9c1-7016bcf13712,90590b46-a093-4065-bea3-22535338c34b,Hydroxychloroquine Plus 387,Dr. Reddy's,True,10mg,syrup
+2d107e09-46ed-4bdc-9289-16661df48dac,08b4b6bd-21d6-45e8-95b3-1595a5a86ca1,Magnesium Hydroxide Plus 388,Torrent,True,10mg,syrup
+8d790ce4-b8d1-4b61-9586-75260fe25d42,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 389,Dr. Reddy's,False,100mg,syrup
+7127f6df-771a-4bd4-81ae-bedcd4e53eb0,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 390,Glenmark,False,650mg,syrup
+dc375030-8da5-4a98-9608-13482aea1f9d,a953aee1-b70e-4312-b0f2-1fafa8bd5383,Amlodipine Plus 391,Abbott,False,500mg,tablet
+c2869da9-4f78-48bf-b494-aab9ec6b2904,96fce000-cc81-4028-a171-e752d7a11572,Metronidazole Plus 392,Abbott,True,10mg,capsule
+09effd12-6ea4-4f27-89b0-086b0459e5ed,7a10bc04-0557-4786-b511-5c94991de048,Fexofenadine Plus 393,Dr. Reddy's,False,40mg,capsule
+e1236222-2362-47fd-9d10-48177b6c93fb,90590b46-a093-4065-bea3-22535338c34b,Hydroxychloroquine Plus 394,Glenmark,True,100mg,syrup
+885fcf0e-9390-411e-a474-3aac14fa590d,9e55524d-50b9-45b6-9cde-c3450fd66aed,Cefixime Plus 395,Dr. Reddy's,False,250mg,syrup
+9e0696eb-173a-4379-ade9-f7cfc5e97665,9e19c5f1-2b7f-4db2-9d5e-197ed73cdf65,Cefuroxime Plus 396,Abbott,True,250mg,capsule
+e0b877af-4057-405b-99b7-c89ba913c200,76a39933-bd21-4e06-91e9-4a1b42247cb5,Glimepiride Plus 397,Zydus,True,650mg,capsule
+439cfc2c-fb65-46d4-8358-b7efb10c1196,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 398,Abbott,False,500mg,capsule
+a8eff1fe-2f36-4160-8ae4-5aca70b55123,3d1acc09-06e3-4b2f-b33d-cb3b1934d48a,Ambroxol Plus 399,Alkem,True,250mg,capsule
+c0f1df34-d20a-455c-b396-3c579c0aeeb5,43fd034b-3103-40d6-a31b-87087f08fe4e,Amoxicillin Plus 400,Glenmark,True,650mg,syrup
+6a1c4aa7-5580-450d-a83a-8d7f9a76c87d,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 401,Mankind,True,40mg,capsule
+d01c867e-f16a-489a-9dc9-a7ed66744695,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 402,Lupin,True,650mg,syrup
+201849d2-946f-421a-8c7d-edb80fcb2eee,412796be-56b0-4d1b-b55d-228c9bbfdb9d,Rabeprazole Plus 403,Abbott,False,250mg,syrup
+87cc7d7b-eaf2-48e9-bd20-069d27897d6e,08b4b6bd-21d6-45e8-95b3-1595a5a86ca1,Magnesium Hydroxide Plus 404,Zydus,False,40mg,capsule
+6685fe89-5f3f-479d-842c-90f6afc5411f,f645b47d-320d-45b8-875a-f99a61abb519,Omeprazole Plus 405,Cipla,False,650mg,syrup
+659f0415-5883-4982-afef-289104bf5ad5,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 406,Mankind,True,500mg,tablet
+4f646b3e-0f79-401e-9ba3-cf1164bf4d8e,a4664740-ec2e-4a46-9f14-c6452da1eb35,Dextromethorphan Plus 407,Sun Pharma,False,100mg,capsule
+37ee1800-327e-4572-84f6-98818c5798fb,75b22f3f-ce8f-45d2-980c-6d365831e3d7,Montelukast Plus 408,Dr. Reddy's,False,10mg,syrup
+4fea2b76-abc1-499e-af0b-8200266428d5,d6efa1e6-53e9-4915-afe8-746b55428d06,Fluconazole Plus 409,Lupin,True,10mg,capsule
+e86d2cd1-6de6-481c-a5b3-d979a6b5c54c,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 410,Lupin,False,250mg,syrup
+09be8452-8179-46fb-bad4-d233f274cc46,1652061b-9f8f-4f69-b42c-bf2536844105,Nitrofurantoin Plus 411,Mankind,True,250mg,syrup
+46500a92-08b6-469d-838a-4533e40a00b2,d79f65f5-9b81-4af9-b0b9-64b373d6a516,Ciprofloxacin Plus 412,Lupin,True,250mg,tablet
+b3c0c036-78c1-45ff-ab54-70512416a89e,a953aee1-b70e-4312-b0f2-1fafa8bd5383,Amlodipine Plus 413,Sun Pharma,True,100mg,syrup
+d95d2119-11d3-4250-aed0-e6015dcc6e45,08b4b6bd-21d6-45e8-95b3-1595a5a86ca1,Magnesium Hydroxide Plus 414,Abbott,True,10mg,tablet
+63c6d62f-9af3-44d3-bd67-9f821b953bc7,a87a3923-67b3-4dd0-a9fc-a2651fcb6d8b,Insulin Human Plus 415,Dr. Reddy's,False,10mg,syrup
+cc6c3c0b-c865-4af5-9142-42cba137cf16,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 416,Abbott,True,650mg,capsule
+57c91513-ec91-4454-8179-66ab49de1090,75b22f3f-ce8f-45d2-980c-6d365831e3d7,Montelukast Plus 417,Cipla,True,100mg,capsule
+199114a6-db06-4358-85e0-f883b85f77f3,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 418,Alkem,False,100mg,capsule
+5e886129-df4b-499e-bf3e-dc67d3d82bd9,47f15adb-b2fe-4a50-8d84-25decac6a7e4,Clopidogrel Plus 419,Sun Pharma,False,500mg,tablet
+8011eaa4-2aeb-452d-bfbf-e7143cdb1718,2e1945d3-7e94-4048-8640-37776799e756,Cetirizine Plus 420,Alkem,True,100mg,capsule
+d03fb6e6-1a70-4abb-a0ce-8e06ccea7d74,2660c6c3-290d-4954-a230-8c538cbfebd7,Loratadine Plus 421,Sun Pharma,True,250mg,capsule
+a0152cdd-9cf2-410d-8821-b4da5e94810a,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 422,Dr. Reddy's,False,40mg,capsule
+407ac6cc-bacd-41c1-ba19-1c6d102cd224,5f569565-9868-499f-b652-cfb12c2c9e83,Tramadol Plus 423,Mankind,False,650mg,tablet
+dc26bdda-1797-4d62-b91d-20c424b2f88f,8ae2b8bc-46ad-4578-808e-de16c0345524,Ivermectin Plus 424,Zydus,False,10mg,syrup
+f009527d-e6fd-470d-b874-c3691114fbdb,d79f65f5-9b81-4af9-b0b9-64b373d6a516,Ciprofloxacin Plus 425,Alkem,False,40mg,tablet
+f0632af9-db02-41d9-8377-32c758ba478f,2c63adc9-c2c7-4065-8c08-8501edb1e5ca,Calcium Carbonate Plus 426,Dr. Reddy's,False,500mg,syrup
+30de8cd8-380d-44de-b9f3-aaf480ebed57,d64325fd-3dc8-4af3-831d-515c07c34582,Zinc Sulphate Plus 427,Alkem,True,650mg,syrup
+30217546-8194-4b2a-a7ca-b7bdc6de91f6,43fd034b-3103-40d6-a31b-87087f08fe4e,Amoxicillin Plus 428,Sun Pharma,False,10mg,tablet
+36314b72-082f-4fbc-814d-1ede9a3284aa,5337ff7f-5be9-41ef-bdef-fc3794dad024,Rosuvastatin Plus 429,Zydus,True,500mg,capsule
+7e9dbacf-b18d-490b-a596-21c5234d481b,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 430,Alkem,True,40mg,capsule
+c7ce331b-2ee2-4ccc-a6b7-d15e88fa726b,a953aee1-b70e-4312-b0f2-1fafa8bd5383,Amlodipine Plus 431,Zydus,True,650mg,syrup
+64e730b4-b0f1-4123-850d-2333e1f10b56,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 432,Alkem,True,40mg,tablet
+0a0400cb-ab53-4e0c-8362-c5be577a6a8f,09b7fe99-9ce7-47b2-9d2d-10294b402164,Azithromycin Plus 433,Torrent,False,500mg,syrup
+3f1f9bec-2e09-42bb-91e3-9891b3c81c45,e3bcf7e3-e9bb-4190-be5b-90b27e7cfa2f,Esomeprazole Plus 434,Dr. Reddy's,True,500mg,tablet
+bd536cf3-6d56-4b9c-a96b-c9966e7f117e,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 435,Zydus,False,100mg,syrup
+60961b13-8ec1-448f-80b9-c7a4d98e00e5,98520093-14a0-4150-b5bc-b5ffbc95e891,Ticagrelor Plus 436,Mankind,True,10mg,tablet
+6e17aca5-cdd6-4301-84f1-ac54adf26cb4,27bbce8b-66c7-429d-acec-5cc40ad1d7e9,Levocetirizine Plus 437,Dr. Reddy's,True,500mg,tablet
+dd46e0a0-8f9f-4813-a60f-72cc57b960a3,a4664740-ec2e-4a46-9f14-c6452da1eb35,Dextromethorphan Plus 438,Dr. Reddy's,True,100mg,tablet
+37994223-2784-4889-a956-c8489c533b3a,0722843b-e299-4407-b837-3df6e1715d87,Cyanocobalamin Plus 439,Mankind,True,40mg,capsule
+60d2dfda-54d1-446a-bb08-e06705980ff8,30dda595-9d18-48f2-aae9-bbe14b044a37,Naproxen Plus 440,Alkem,True,500mg,capsule
+6aaa2159-8972-4593-8a9e-591bdf6d5721,5de10187-f4b2-4694-8b47-0be0a14d193b,Doxycycline Plus 441,Sun Pharma,False,100mg,tablet
+c5f3b384-4a63-422d-8730-e2d3d1d18d5f,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 442,Glenmark,True,10mg,capsule
+18394548-056c-4fea-9ebe-d38ef9d71124,c58ae13e-08fe-455f-865c-41e6dacbab7d,Aspirin Plus 443,Mankind,True,250mg,tablet
+0caba7eb-7dc4-4374-bf96-a38d79562977,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 444,Glenmark,False,100mg,capsule
+56694f60-e0da-4b62-bd46-d3fd78e15a99,a4664740-ec2e-4a46-9f14-c6452da1eb35,Dextromethorphan Plus 445,Glenmark,True,100mg,capsule
+de7a5b94-001a-433f-9766-bed5824c79ed,8ae2b8bc-46ad-4578-808e-de16c0345524,Ivermectin Plus 446,Sun Pharma,False,650mg,capsule
+bf88ebfe-e14d-448a-b788-728e8492bf1a,7a10bc04-0557-4786-b511-5c94991de048,Fexofenadine Plus 447,Sun Pharma,True,500mg,tablet
+25918cea-7814-48f3-bb37-51f4b24b8944,0d3ac8c3-8b20-4f84-8d56-68da58bc59d8,Metformin Plus 448,Sun Pharma,True,650mg,capsule
+e84635ac-7d1a-417f-ada0-1bb3e47c6326,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 449,Lupin,True,10mg,tablet
+5cee0bb2-84d9-44c7-8c15-31bfcf9a2882,a953aee1-b70e-4312-b0f2-1fafa8bd5383,Amlodipine Plus 450,Lupin,True,10mg,capsule
+0b44957e-dc3a-45a5-b632-0a87ebf5ecd0,165e0fe5-7cba-401f-b251-a5a78a7948ec,Ferrous Ascorbate Plus 451,Dr. Reddy's,False,650mg,capsule
+3e8e4e10-d152-489b-88e1-ef56ab948f5c,9dc1ff5d-2590-4cae-9dd5-1df0888e62af,Diclofenac Plus 452,Lupin,False,650mg,tablet
+7f39b0b3-70f4-497d-aac0-0a1930f96a30,9dc1ff5d-2590-4cae-9dd5-1df0888e62af,Diclofenac Plus 453,Dr. Reddy's,True,100mg,capsule
+ab228158-ced8-4384-9700-1f082b6ffe23,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 454,Cipla,True,40mg,capsule
+1b985905-812b-4cd8-a5a5-3f560d5d76cd,8ae2b8bc-46ad-4578-808e-de16c0345524,Ivermectin Plus 455,Torrent,True,250mg,syrup
+5bc88126-4fd2-42e0-ab4e-d89e9241aaa9,09b7fe99-9ce7-47b2-9d2d-10294b402164,Azithromycin Plus 456,Alkem,True,500mg,syrup
+61e6f470-99fb-4768-843d-f070ef19473d,9354d01b-05a9-4d87-8cb1-b552c7c35ed3,Folic Acid Plus 457,Glenmark,True,10mg,capsule
+f58a71db-297a-47d5-a224-65792e61ff9b,a4664740-ec2e-4a46-9f14-c6452da1eb35,Dextromethorphan Plus 458,Zydus,True,100mg,tablet
+60fc5e27-e700-4ec2-bd90-1a09f958a3b4,6420aea7-159b-482c-9093-19ac760fcb97,Ibuprofen Plus 459,Cipla,True,100mg,capsule
+41e74fe7-50ab-4f17-8fae-1ed1714606d2,30dda595-9d18-48f2-aae9-bbe14b044a37,Naproxen Plus 460,Glenmark,False,40mg,capsule
+50268685-ee19-48ca-afe2-09d2d1c1c842,b21c5a4c-7198-4623-abb0-8fb229a34527,Pregabalin Plus 461,Dr. Reddy's,False,500mg,tablet
+c53d4373-958e-444d-a38c-6d0fd920ecf1,09b7fe99-9ce7-47b2-9d2d-10294b402164,Azithromycin Plus 462,Torrent,False,40mg,capsule
+98844310-d69e-4552-be99-e5c8a260ee11,27bbce8b-66c7-429d-acec-5cc40ad1d7e9,Levocetirizine Plus 463,Mankind,True,100mg,capsule
+bf0a1217-24f7-455a-999e-d4672e46b61a,585602b2-2a95-4346-a63f-0c57c5e3bd7f,Paracetamol Plus 464,Abbott,False,650mg,syrup
+00ac1ed9-0c22-463e-b390-d36753315a05,c540e169-5da6-4057-9f52-e6eea518310d,Teneligliptin Plus 465,Abbott,True,650mg,syrup
+7536e6dc-9b9f-4852-9a99-331e6b4d0929,5f569565-9868-499f-b652-cfb12c2c9e83,Tramadol Plus 466,Zydus,False,650mg,capsule
+2f76e18c-b9c0-46c9-b05f-24e7f919cf85,f645b47d-320d-45b8-875a-f99a61abb519,Omeprazole Plus 467,Cipla,False,500mg,capsule
+89ebfc6c-7a15-470f-a42f-e20f8b7aa5e7,60b69b3a-5e6c-4139-8c1b-af82c97c63ba,Atorvastatin Plus 468,Dr. Reddy's,True,100mg,syrup
+0cfffd6b-bdd2-42fc-a4c7-a55eb5dbca25,d4551004-686d-4065-a370-90f8408e1957,Atenolol Plus 469,Dr. Reddy's,False,10mg,capsule
+ac8fa7bc-46b1-44b9-99c9-2074a9951cc6,3d1acc09-06e3-4b2f-b33d-cb3b1934d48a,Ambroxol Plus 470,Sun Pharma,True,10mg,syrup
+88aae41c-2418-478a-96a9-d027eaac5d9f,90590b46-a093-4065-bea3-22535338c34b,Hydroxychloroquine Plus 471,Lupin,True,100mg,tablet
+33c60f4f-8631-4f72-bf39-fb58a71d4d1b,2e1945d3-7e94-4048-8640-37776799e756,Cetirizine Plus 472,Torrent,True,10mg,tablet
+efabd1dd-2c37-4927-8066-c9f4a20dad50,b26ef324-45f4-40e5-ab90-f5de842a88fd,Artesunate Plus 473,Mankind,True,100mg,capsule
+5e30610a-9e85-4a3e-a2c8-7f6d7b3e1265,75b22f3f-ce8f-45d2-980c-6d365831e3d7,Montelukast Plus 474,Glenmark,True,500mg,capsule
+6306236e-09bc-4ca6-895d-21ad20a4c390,e3bcf7e3-e9bb-4190-be5b-90b27e7cfa2f,Esomeprazole Plus 475,Lupin,True,40mg,capsule
+5e3ddd07-982a-4544-a0e1-dc0b24fa9f27,98520093-14a0-4150-b5bc-b5ffbc95e891,Ticagrelor Plus 476,Cipla,False,40mg,syrup
+41b1d59b-b8d6-4203-abb7-32785b1f7a01,c0435b23-f357-4d96-bc0f-8c5970b09f1e,Bisoprolol Plus 477,Abbott,False,250mg,syrup
+c84d9f5d-5319-4565-9c55-fa0e323a185c,b1c42bb4-98e7-4f11-ab12-66b9b91634e6,Clotrimazole Plus 478,Dr. Reddy's,True,650mg,capsule
+beee6751-08da-44d7-94ef-5ea4de14f60e,b1c42bb4-98e7-4f11-ab12-66b9b91634e6,Clotrimazole Plus 479,Lupin,True,250mg,tablet

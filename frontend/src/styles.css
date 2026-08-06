@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* Class-based dark mode toggle (ThemeContext adds/removes .dark on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Deep emerald primary -- true emerald scale, not generic Tailwind green */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+
+  --animate-slide-up: slide-up 0.2s ease-out forwards;
+  --animate-float-in: float-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes slide-up {
+    0% { transform: translateY(1rem); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes float-in {
+    0% { transform: translateY(10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+a { color: inherit; }
+
+/* Premium scrollbar, matching pharmacy side */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { border-radius: 9999px; background-color: rgb(203 213 225); }
+.dark ::-webkit-scrollbar-thumb { background-color: rgb(51 65 85); }
+::-webkit-scrollbar-thumb:hover { background-color: rgb(148 163 184); }
+.dark ::-webkit-scrollbar-thumb:hover { background-color: rgb(71 85 105); }
+
+input[type="date"] { color-scheme: light dark; }
+
+@layer components {
+  .app-shell {
+    @apply min-h-screen flex flex-col text-slate-900 dark:text-slate-200 transition-colors duration-200;
+    background: #f8fafc;
+  }
+  .dark .app-shell { background: #020617; }
+
+  /* Floating navbar -- detached pill bar with glass blur, not a full-bleed
+     bar pinned to the viewport edge. */
+  .topbar-wrap { @apply sticky top-0 z-30 px-3 pt-3 sm:px-5 sm:pt-4 relative; }
+  .topbar {
+    @apply flex items-center justify-between gap-4 px-4 sm:px-5 py-2.5 rounded-2xl mx-auto max-w-6xl
+      bg-white/75 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-slate-800/80
+      shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-8px_rgba(15,23,42,0.12)]
+      dark:shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-8px_rgba(0,0,0,0.4)];
+  }
+  .topbar .brand { @apply flex items-center gap-2 font-bold text-lg tracking-tight text-slate-900 dark:text-white no-underline; }
+  .topbar .brand-mark {
+    @apply h-8 w-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center
+      text-white font-bold text-base shadow-md shadow-brand-500/25;
+  }
+  .topbar nav { @apply flex items-center gap-1 text-sm; }
+  .topbar nav a {
+    @apply relative flex items-center gap-1.5 px-3 py-2 rounded-xl font-medium text-slate-500 dark:text-slate-400
+      hover:bg-slate-900/5 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-slate-200
+      no-underline transition-colors;
+  }
+  .topbar nav a.active {
+    @apply bg-gradient-to-br from-brand-500 to-brand-600 text-white hover:from-brand-500 hover:to-brand-600 hover:text-white
+      shadow-sm shadow-brand-500/30;
+  }
+  .icon-btn {
+    @apply p-2.5 rounded-xl border border-slate-200/80 dark:border-slate-800 text-slate-500 dark:text-slate-400
+      hover:bg-slate-900/5 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-slate-200 transition-colors;
+  }
+
+  .page { @apply flex-1 w-full max-w-3xl mx-auto px-5 py-7 pb-16; }
+  .page.page-wide { @apply max-w-5xl; }
+
+  .card {
+    @apply bg-white/80 dark:bg-slate-900/70 backdrop-blur-sm rounded-xl p-5
+      shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-200;
+    border: 1.5px solid rgb(226 232 240 / 0.9);
+  }
+  .dark .card { border-color: rgb(30 41 59 / 0.9); }
+
+  .stack { @apply flex flex-col gap-4; }
+  .row { @apply flex gap-4 items-center; }
+  .row.wrap { @apply flex-wrap; }
+  .spread { @apply flex justify-between items-center; }
+
+  h1 { @apply text-2xl font-bold tracking-tight m-0 mb-1 text-slate-900 dark:text-white; }
+  h2 { @apply text-lg font-semibold m-0 mb-3 text-slate-900 dark:text-white; }
+  p.muted { @apply text-slate-500 dark:text-slate-400 text-sm mt-1 mb-0; }
+
+  input, select, button { font-family: inherit; }
+
+  .input {
+    @apply w-full px-3.5 py-3 rounded-xl border border-slate-200 dark:border-slate-800
+      bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 text-[15px]
+      placeholder:text-slate-400 dark:placeholder:text-slate-500
+      focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-shadow;
+  }
+
+  .btn {
+    @apply px-4.5 py-2.5 rounded-xl border-0 bg-brand-500 text-white font-semibold text-[15px]
+      cursor-pointer shadow-sm shadow-brand-500/15 hover:bg-brand-600 transition-colors
+      disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn.secondary {
+    @apply bg-transparent text-brand-700 dark:text-brand-400 border border-brand-600 dark:border-brand-700
+      hover:bg-brand-50 dark:hover:bg-brand-950/30;
+  }
+
+  .link-btn {
+    @apply bg-transparent border-0 text-brand-700 dark:text-brand-400 font-semibold cursor-pointer p-0 text-sm hover:underline;
+  }
+
+  .toggle-group {
+    @apply inline-flex border border-slate-200 dark:border-slate-800 rounded-full p-1 bg-white dark:bg-slate-900;
+  }
+  .toggle-group button {
+    @apply border-0 bg-transparent px-4.5 py-2 rounded-full font-semibold text-sm cursor-pointer
+      text-slate-500 dark:text-slate-400 transition-colors;
+  }
+  .toggle-group button.active { @apply bg-brand-500 text-white; }
+
+  .badge { @apply inline-block px-2.5 py-1 rounded-full text-xs font-semibold; }
+  .badge.gold { @apply bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400; }
+  .badge.teal { @apply bg-brand-100 text-brand-700 dark:bg-brand-950/40 dark:text-brand-400; }
+  .badge.green { @apply bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400; }
+  .badge.red { @apply bg-rose-100 text-rose-700 dark:bg-rose-950/40 dark:text-rose-400; }
+
+  .medicine-row {
+    @apply flex justify-between items-center gap-3 px-4 py-3.5 rounded-xl
+      border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-colors;
+  }
+  .medicine-row .name { @apply font-semibold text-[15px] text-slate-900 dark:text-white; }
+  .medicine-row .meta { @apply text-slate-500 dark:text-slate-400 text-[13px] mt-0.5; }
+  .medicine-row .price { @apply font-bold text-lg text-brand-700 dark:text-brand-400; }
+  .medicine-row .distance { @apply text-slate-500 dark:text-slate-400 text-[13px] text-right; }
+
+  .disclaimer {
+    @apply bg-amber-50 dark:bg-amber-950/30 text-amber-800 dark:text-amber-400 rounded-xl px-4 py-3 text-[13px];
+  }
+
+  /* Integrated medical disclaimer -- reads as a calm inline note, not a
+     blocking warning banner. */
+  .medical-alert {
+    @apply flex items-start gap-3 rounded-2xl px-4 py-3.5 text-[13px] leading-relaxed;
+    background: rgb(255 251 235 / 0.5);
+    border: 1.5px solid rgb(253 230 138 / 0.7);
+  }
+  .dark .medical-alert {
+    background: rgb(120 53 15 / 0.15);
+    border-color: rgb(120 53 15 / 0.4);
+  }
+  .medical-alert p { @apply text-amber-800/90 dark:text-amber-400/90 m-0; }
+  .medical-alert .icon-badge { @apply h-8 w-8 rounded-lg bg-amber-100 text-amber-700 dark:bg-amber-950/50 dark:text-amber-400; }
+
+  /* Branded vs. generic comparison grid */
+  .med-compare-grid { @apply grid grid-cols-1 sm:grid-cols-2 gap-3; }
+  .med-card {
+    @apply relative bg-white/85 dark:bg-slate-900/75 backdrop-blur-sm rounded-2xl p-4
+      shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-150;
+    border: 1.5px solid rgb(226 232 240 / 0.9);
+  }
+  .dark .med-card { border-color: rgb(30 41 59 / 0.9); }
+  .med-card:hover { @apply shadow-md -translate-y-0.5; }
+  .med-card.generic { border-color: rgb(16 185 129 / 0.4); background: rgb(236 253 245 / 0.6); }
+  .dark .med-card.generic { background: rgb(6 78 59 / 0.15); border-color: rgb(16 185 129 / 0.35); }
+  .med-card .name { @apply font-semibold text-[15px] text-slate-900 dark:text-white; }
+  .med-card .meta { @apply text-slate-500 dark:text-slate-400 text-[13px] mt-0.5; }
+
+  .savings-tag {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold
+      bg-brand-600 text-white;
+  }
+
+  .med-card .med-meta-grid {
+    @apply grid grid-cols-2 gap-x-3 gap-y-1.5 mt-3 pt-3 text-[12px];
+    border-top: 1px solid rgb(226 232 240 / 0.7);
+  }
+  .dark .med-card .med-meta-grid { border-top-color: rgb(30 41 59 / 0.7); }
+  .med-meta-grid dt { @apply text-slate-400 dark:text-slate-500; }
+  .med-meta-grid dd { @apply m-0 font-semibold text-slate-700 dark:text-slate-200; }
+
+  .cta-group { @apply flex flex-col sm:flex-row gap-2.5 mt-1; }
+
+  .error-text { @apply text-rose-600 dark:text-rose-400 text-[13px]; }
+
+  /* Activity hub tabs */
+  .tab-bar { @apply flex items-center gap-1 overflow-x-auto pb-1; scrollbar-width: none; }
+  .tab-bar::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    @apply shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold cursor-pointer
+      text-slate-500 dark:text-slate-400 hover:bg-slate-900/5 dark:hover:bg-white/5 transition-colors border-0 bg-transparent;
+  }
+  .tab-btn.active { @apply bg-brand-600 text-white hover:bg-brand-600; }
+  .tab-btn .count-pill {
+    @apply px-1.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-900/10 dark:bg-white/15;
+  }
+  .tab-btn.active .count-pill { @apply bg-white/25; }
+
+  /* Reservation "order pass" card */
+  .pass-card {
+    @apply relative bg-white/85 dark:bg-slate-900/75 backdrop-blur-sm rounded-2xl pl-5 pr-4 py-4 overflow-hidden
+      shadow-[0_1px_2px_rgba(15,23,42,0.04)];
+    border: 1.5px solid rgb(226 232 240 / 0.9);
+  }
+  .dark .pass-card { border-color: rgb(30 41 59 / 0.9); }
+  .pass-card::before { content: ""; @apply absolute left-0 top-0 bottom-0 w-1.5 bg-slate-300; }
+  .dark .pass-card::before { @apply bg-slate-700; }
+  .pass-card.status-pending::before { @apply bg-amber-400; }
+  .pass-card.status-picked_up::before { @apply bg-brand-500; }
+  .pass-card.status-cancelled::before { @apply bg-rose-400; }
+
+  .status-pill { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[12px] font-semibold; }
+  .status-pill.status-pending { @apply bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400; }
+  .status-pill.status-picked_up { @apply bg-brand-50 text-brand-700 dark:bg-brand-950/40 dark:text-brand-400; }
+  .status-pill.status-cancelled { @apply bg-rose-50 text-rose-600 dark:bg-rose-950/40 dark:text-rose-400; }
+
+  .pickup-code {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-lg font-mono font-bold text-[15px] tracking-[0.15em]
+      bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900;
+  }
+
+  /* Activity timeline (Recent searches) */
+  .timeline { @apply relative flex flex-col; }
+  .timeline-item { @apply relative flex items-start gap-3.5 py-3; }
+  .timeline-item::before {
+    content: "";
+    @apply absolute left-[7px] top-9 bottom-0 w-px bg-slate-200;
+  }
+  .dark .timeline-item::before { @apply bg-slate-800; }
+  .timeline-item:last-child::before { display: none; }
+  .timeline-dot { @apply relative z-10 h-3.5 w-3.5 rounded-full bg-brand-500 mt-1.5 shrink-0 ring-4 ring-white dark:ring-slate-900; }
+
+  .auth-wrap {
+    @apply min-h-screen grid lg:grid-cols-2 bg-slate-50 dark:bg-slate-950;
+  }
+
+  /* Left hero panel -- deep emerald mesh gradient */
+  .auth-panel {
+    @apply hidden lg:flex flex-col justify-between p-12 gap-8
+      text-white relative overflow-hidden;
+    background:
+      radial-gradient(circle at 15% 20%, rgb(16 185 129 / 0.35), transparent 45%),
+      radial-gradient(circle at 85% 15%, rgb(52 211 153 / 0.25), transparent 40%),
+      radial-gradient(circle at 75% 80%, rgb(4 120 87 / 0.4), transparent 50%),
+      linear-gradient(160deg, #064e3b 0%, #022c22 65%, #020617 100%);
+  }
+  .auth-panel::before {
+    content: "";
+    @apply absolute -right-24 -top-24 h-96 w-96 rounded-full bg-brand-400/20 blur-3xl pointer-events-none;
+  }
+  .auth-panel::after {
+    content: "";
+    @apply absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-brand-500/15 blur-3xl pointer-events-none;
+  }
+  .auth-panel > * { @apply relative z-10; }
+  .auth-panel-brand { @apply flex items-center gap-2 font-bold text-xl; }
+  .auth-panel-mark {
+    @apply h-9 w-9 rounded-lg bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center
+      text-white font-bold shadow-lg shadow-brand-500/30;
+  }
+  .auth-panel-copy { @apply max-w-sm; }
+  .auth-panel-copy h2 { @apply text-3xl font-bold text-white mb-3 leading-tight; }
+  .auth-panel-copy p { @apply text-brand-100/80 text-[15px] leading-relaxed; }
+  .auth-panel-foot { @apply text-brand-200/60 text-xs; }
+
+  .auth-pill-badge {
+    @apply inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[13px] font-semibold w-fit
+      bg-white/10 text-brand-50 backdrop-blur-md;
+    border: 1px solid rgb(255 255 255 / 0.15);
+  }
+
+  /* Floating glass feature-card mockup */
+  .auth-mockup-card {
+    @apply relative rounded-2xl p-4 backdrop-blur-xl w-fit;
+    background: rgb(255 255 255 / 0.08);
+    border: 1px solid rgb(255 255 255 / 0.18);
+    box-shadow: 0 20px 40px -16px rgb(0 0 0 / 0.4);
+    animation: float-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards, auth-mockup-float 5s ease-in-out infinite;
+  }
+  @keyframes auth-mockup-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .auth-mockup-row { @apply flex items-center gap-3; }
+  .auth-mockup-icon {
+    @apply h-10 w-10 rounded-xl flex items-center justify-center shrink-0;
+    background: rgb(255 255 255 / 0.12);
+  }
+
+  .auth-trust-stats { @apply grid grid-cols-3 gap-4 pt-6; border-top: 1px solid rgb(255 255 255 / 0.12); }
+  .auth-trust-stat { @apply flex flex-col gap-0.5; }
+  .auth-trust-stat .value { @apply text-xl font-extrabold text-white leading-none; }
+  .auth-trust-stat .label { @apply text-[11.5px] text-brand-100/70 leading-tight mt-1; }
+
+  .auth-form-wrap {
+    @apply flex items-center justify-center px-6 py-12 relative;
+    background: radial-gradient(ellipse 60% 50% at 50% 40%, rgb(16 185 129 / 0.08), transparent 70%);
+  }
+  .dark .auth-form-wrap { background: radial-gradient(ellipse 60% 50% at 50% 40%, rgb(16 185 129 / 0.06), transparent 70%); }
+  .auth-card {
+    @apply w-full max-w-[400px] rounded-2xl p-7;
+    border: 1.5px solid rgb(226 232 240 / 0.8);
+    box-shadow: 0 1px 2px rgb(15 23 42 / 0.04), 0 25px 50px -18px rgb(148 163 184 / 0.5);
+  }
+  .dark .auth-card { border-color: rgb(30 41 59 / 0.9); box-shadow: 0 1px 2px rgb(0 0 0 / 0.2), 0 25px 50px -18px rgb(0 0 0 / 0.5); }
+  .auth-card .brand { @apply text-brand-600 dark:text-brand-400 font-bold text-2xl mb-1; }
+
+  /* Icon-leading inputs */
+  .input-icon-wrap { @apply relative; }
+  .input-icon-wrap svg.leading-icon {
+    @apply absolute pointer-events-none text-slate-400 dark:text-slate-500;
+    left: 14px; top: 50%; transform: translateY(-50%);
+  }
+  .input-icon-wrap .input { @apply pl-10; }
+  .input-icon-wrap .input.pr-icon { @apply pr-10; }
+  .input-icon-wrap .trailing-icon-btn {
+    @apply absolute bg-transparent border-0 cursor-pointer text-slate-400 dark:text-slate-500
+      hover:text-slate-700 dark:hover:text-slate-200 p-1;
+    right: 8px; top: 50%; transform: translateY(-50%);
+  }
+
+  .auth-row-between { @apply flex items-center justify-between text-[13px]; }
+  .auth-checkbox-label { @apply flex items-center gap-2 text-slate-600 dark:text-slate-300 cursor-pointer select-none; }
+
+  .auth-divider { @apply flex items-center gap-3 text-[12px] text-slate-400 dark:text-slate-500 my-1; }
+  .auth-divider::before, .auth-divider::after { content: ""; @apply flex-1 h-px bg-slate-200; }
+  .dark .auth-divider::before, .dark .auth-divider::after { @apply bg-slate-800; }
+
+  .btn-social {
+    @apply w-full flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl text-[14px] font-semibold cursor-pointer
+      bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 transition-colors;
+    border: 1.5px solid rgb(226 232 240 / 0.9);
+  }
+  .dark .btn-social { border-color: rgb(30 41 59 / 0.9); }
+  .btn-social:hover { @apply bg-slate-50 dark:bg-slate-800; }
+
+  .auth-bottom-link {
+    @apply block text-center text-[14px] text-slate-500 dark:text-slate-400 mt-1;
+  }
+
+  .dash-grid { @apply grid gap-4; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .dash-tile { @apply no-underline block h-full; }
+  .dash-tile .card { @apply h-full transition-all duration-200; }
+  .dash-tile:hover .card {
+    @apply shadow-lg -translate-y-1;
+    border-color: rgb(16 185 129 / 0.55);
+  }
+
+  /* Dashboard hero search -- floating glass panel */
+  .hero-search {
+    @apply relative rounded-[28px] p-6 sm:p-8 overflow-hidden
+      bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl
+      shadow-[0_1px_1px_rgba(15,23,42,0.04),0_20px_40px_-16px_rgba(15,23,42,0.18)]
+      dark:shadow-[0_1px_1px_rgba(0,0,0,0.3),0_20px_40px_-16px_rgba(0,0,0,0.5)];
+    border: 1.5px solid rgb(255 255 255 / 0.8);
+  }
+  .dark .hero-search { border-color: rgb(51 65 85 / 0.6); }
+  .hero-search::before {
+    content: "";
+    @apply absolute -top-24 -right-16 h-72 w-72 rounded-full pointer-events-none;
+    background: radial-gradient(circle, rgb(16 185 129 / 0.16), transparent 70%);
+  }
+  .hero-search::after {
+    content: "";
+    @apply absolute -bottom-20 -left-10 h-56 w-56 rounded-full pointer-events-none;
+    background: radial-gradient(circle, rgb(5 150 105 / 0.1), transparent 70%);
+  }
+  .hero-search > * { @apply relative; }
+  .hero-search .input {
+    @apply py-4 text-base rounded-2xl shadow-sm border-slate-200/70 dark:border-slate-700/70
+      focus:ring-brand-500/40 focus:ring-[3px];
+  }
+  .hero-search .btn { @apply py-4 px-6 rounded-2xl; }
+
+  .search-tags { @apply flex flex-wrap items-center gap-2 mt-4; }
+  .search-tags .tag-label { @apply text-xs font-medium text-slate-400 dark:text-slate-500 mr-1; }
+  .search-tag {
+    @apply px-3.5 py-1.5 rounded-full text-[13px] font-medium cursor-pointer border-0
+      bg-slate-900/[0.04] dark:bg-white/[0.06] text-slate-600 dark:text-slate-300
+      hover:bg-brand-500 hover:text-white transition-colors duration-150;
+  }
+
+  /* Colored icon badge used for decorative (non-interactive) icons, e.g.
+     inside quick-action tiles and section headers -- distinct from
+     .icon-btn, which always implies a clickable action. */
+  .icon-badge {
+    @apply h-11 w-11 shrink-0 rounded-xl flex items-center justify-center
+      bg-brand-100 text-brand-700 dark:bg-brand-950/50 dark:text-brand-400;
+  }
+  .icon-badge.on-dark { @apply bg-white/15 text-white; }
+
+  .section-header { @apply flex items-center gap-3 mb-1; }
+  .section-header .icon-badge { @apply h-9 w-9 rounded-lg; }
+  .section-header h2 { @apply mb-0; }
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-wide text-brand-600 dark:text-brand-400 mb-1;
+  }
+
+  /* Bento grid -- asymmetric feature layout for the dashboard */
+  .bento-grid { @apply grid grid-cols-1 md:grid-cols-12 gap-4 items-stretch; }
+  .bento-span-7 { @apply md:col-span-7 flex flex-col; }
+  .bento-span-5 { @apply md:col-span-5; }
+  .bento-col { @apply flex flex-col gap-4; }
+
+  /* Featured gradient card (Upload Prescription) */
+  .bento-feature {
+    @apply relative overflow-hidden rounded-[28px] p-6 sm:p-7 text-white flex flex-col flex-1
+      shadow-[0_20px_40px_-16px_rgba(5,150,105,0.45)];
+    background: linear-gradient(135deg, #059669 0%, #047857 55%, #022c22 130%);
+  }
+  .bento-feature::before {
+    content: "";
+    @apply absolute -top-10 -right-10 h-64 w-64 rounded-full pointer-events-none;
+    background: radial-gradient(circle, rgb(255 255 255 / 0.14), transparent 70%);
+  }
+  .bento-feature::after {
+    content: "";
+    @apply absolute inset-0 pointer-events-none opacity-[0.06];
+    background-image: radial-gradient(rgb(255 255 255) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+  .bento-feature > * { @apply relative; }
+
+  .dropzone {
+    @apply relative mt-5 flex-1 min-h-[132px] rounded-2xl flex flex-col items-center justify-center
+      gap-2 text-center px-4 cursor-pointer transition-colors duration-150;
+    border: 1.5px dashed rgb(255 255 255 / 0.35);
+    background: rgb(255 255 255 / 0.06);
+  }
+  .dropzone:hover, .dropzone.drag-active {
+    background: rgb(255 255 255 / 0.12);
+    border-color: rgb(255 255 255 / 0.6);
+  }
+
+  /* Store-locator split screen (All Pharmacies) */
+  .locator-shell { @apply grid grid-cols-1 lg:grid-cols-5 gap-5 items-start; }
+  .locator-sidebar { @apply lg:col-span-2 flex flex-col gap-4 lg:max-h-[calc(100vh-140px)]; }
+  .locator-map-pane { @apply lg:col-span-3 lg:sticky lg:top-[104px]; }
+  .locator-list { @apply flex flex-col gap-3 overflow-y-auto pr-1 lg:max-h-[calc(100vh-320px)]; }
+
+  .filter-bar { @apply flex items-center gap-2 overflow-x-auto pb-1; scrollbar-width: none; }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .filter-pill {
+    @apply shrink-0 px-3.5 py-2 rounded-full text-[13px] font-semibold cursor-pointer whitespace-nowrap
+      bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 transition-colors duration-150;
+    border: 1.5px solid rgb(226 232 240 / 0.9);
+  }
+  .dark .filter-pill { border-color: rgb(30 41 59 / 0.9); }
+  .filter-pill.active {
+    @apply bg-brand-600 text-white;
+    border-color: theme(colors.brand.600);
+  }
+
+  /* Upgraded pharmacy card */
+  .pharmacy-card {
+    @apply relative bg-white/85 dark:bg-slate-900/75 backdrop-blur-sm rounded-2xl p-4
+      shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-150 cursor-pointer;
+    border: 1.5px solid rgb(226 232 240 / 0.9);
+  }
+  .dark .pharmacy-card { border-color: rgb(30 41 59 / 0.9); }
+  .pharmacy-card:hover, .pharmacy-card.active {
+    @apply shadow-lg -translate-y-0.5;
+    border-color: rgb(16 185 129 / 0.55);
+  }
+  .pharmacy-card .pc-badges { @apply flex flex-wrap items-center gap-1.5 mt-2; }
+
+  .pc-badge {
+    @apply inline-flex items-center gap-1 px-2 py-1 rounded-lg text-[11px] font-semibold;
+  }
+  .pc-badge.distance { @apply bg-brand-50 text-brand-700 dark:bg-brand-950/40 dark:text-brand-400; }
+  .pc-badge.open { @apply bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400; }
+  .pc-badge.closed { @apply bg-rose-50 text-rose-600 dark:bg-rose-950/40 dark:text-rose-400; }
+  .pc-badge.rating { @apply bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400; }
+  .pc-badge.generic { @apply bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300; }
+
+  /* Custom emerald map pin badge -- injected as raw HTML into a Leaflet
+     divIcon, so these must be plain classes Tailwind can statically find
+     in this file (no dynamic class construction). */
+  .map-pin {
+    @apply flex items-center gap-1 px-2.5 py-1 rounded-full bg-brand-600 text-white
+      text-[11px] font-bold shadow-lg whitespace-nowrap;
+    border: 2px solid white;
+  }
+  .map-pin.map-pin-muted { @apply bg-slate-500; }
+  .dark .map-pin { border-color: #0f172a; }
+
+  /* "You are here" marker -- a pulsing blue dot, distinct from emerald
+     pharmacy pins so the user's own position never reads as a pharmacy. */
+  .user-location-marker { @apply relative flex items-center justify-center; width: 22px; height: 22px; }
+  .user-location-dot {
+    @apply relative rounded-full;
+    width: 14px; height: 14px;
+    background: #2563eb;
+    border: 3px solid white;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.35);
+  }
+  .dark .user-location-dot { border-color: #0f172a; }
+  .user-location-pulse {
+    @apply absolute rounded-full;
+    width: 22px; height: 22px;
+    background: rgba(37, 99, 235, 0.35);
+    animation: user-location-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  @keyframes user-location-ping {
+    0% { transform: scale(0.6); opacity: 0.8; }
+    100% { transform: scale(1.8); opacity: 0; }
+  }
+
+  /* Toasts */
+  .toast-stack {
+    @apply fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-[90vw] sm:max-w-sm;
+  }
+  .toast {
+    @apply flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-lg text-sm font-medium
+      bg-white dark:bg-slate-900 border animate-slide-up;
+  }
+  .toast-close { @apply ml-auto text-current opacity-60 hover:opacity-100 bg-transparent border-0 cursor-pointer p-0; }
+  .toast-success { @apply border-brand-200 dark:border-brand-900/40 text-brand-800 dark:text-brand-400; }
+  .toast-error { @apply border-rose-200 dark:border-rose-900/40 text-rose-700 dark:text-rose-400; }
+  .toast-info { @apply border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300; }
+
+  /* Skeleton loaders */
+  .skeleton { @apply animate-pulse bg-slate-200 dark:bg-slate-800 rounded-lg; }
+  .skeleton-row {
+    @apply flex justify-between items-center gap-3 px-4 py-3.5 rounded-xl
+      border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900;
+  }
+
+  /* Empty state */
+  .empty-state { @apply flex flex-col items-center text-center gap-2 py-8 text-slate-400 dark:text-slate-500; }
+  .empty-state svg { @apply text-slate-300 dark:text-slate-700 mb-1; }
+
+  /* Mobile nav -- anchored to the floating topbar-wrap, not the viewport,
+     so it tracks the pill bar regardless of its exact height. */
+  .mobile-menu {
+    @apply sm:hidden absolute left-3 right-3 top-full mt-2 z-30 rounded-2xl overflow-hidden
+      bg-white/90 dark:bg-slate-900/90 backdrop-blur-md
+      border border-white/60 dark:border-slate-800/80 shadow-xl animate-slide-up;
+  }
+  .mobile-menu a, .mobile-menu button {
+    @apply flex items-center gap-3 px-5 py-3.5 text-sm font-medium w-full text-left
+      text-slate-600 dark:text-slate-300 hover:bg-slate-900/5 dark:hover:bg-white/5 no-underline;
+  }
+  .mobile-menu a.active { @apply text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/20; }
+}
+
+/* Leaflet popups in dark mode */
+.dark .leaflet-popup-content-wrapper,
+.dark .leaflet-popup-tip {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+.dark .leaflet-container { background: #0f172a; }

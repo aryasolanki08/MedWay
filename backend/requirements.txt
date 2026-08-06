@@ -1,0 +1,13 @@
+Django==5.0.6
+djangorestframework==3.15.1
+djangorestframework-simplejwt==5.3.1
+django-cors-headers==4.3.1
+python-dotenv==1.0.1
+google-auth==2.56.2   # verifies "Sign in with Google" ID tokens
+requests==2.34.2      # transport used by google-auth's token verification
+razorpay==2.0.1        # payment for home-delivery orders (orders app)
+
+# Prescription-photo OCR (catalog/prescription-ocr/). Pulls in its own
+# dependencies automatically -- torch, opencv-python-headless, Pillow,
+# numpy, scikit-image, etc. -- no need to pin those separately.
+easyocr==1.7.2

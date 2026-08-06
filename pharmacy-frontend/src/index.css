@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* Class-based dark mode toggle (ThemeContext adds/removes .dark on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Deep emerald primary -- true emerald scale, matching the customer portal */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+
+  --animate-slide-up: slide-up 0.2s ease-out forwards;
+  --animate-float-in: float-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes slide-up {
+    0% { transform: translateY(1rem); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes float-in {
+    0% { transform: translateY(10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  margin: 0;
+}
+
+a { color: inherit; }
+
+/* Custom print styles for POS Invoice/Receipt */
+@media print {
+  /* Hide topbar and any chrome */
+  aside, header, .topbar-wrap {
+    display: none !important;
+  }
+
+  /* Reset layout padding and margins */
+  main {
+    padding-left: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Hide all components inside main page wrappers except the invoice layout */
+  main div.space-y-6 > *:not(#print-area) {
+    display: none !important;
+  }
+
+  /* Style receipt content */
+  #print-area {
+    display: block !important;
+    background: white !important;
+    color: black !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+  }
+}
+
+/* Premium scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { border-radius: 9999px; background-color: rgb(203 213 225); }
+.dark ::-webkit-scrollbar-thumb { background-color: rgb(51 65 85); }
+::-webkit-scrollbar-thumb:hover { background-color: rgb(148 163 184); }
+.dark ::-webkit-scrollbar-thumb:hover { background-color: rgb(71 85 105); }
+
+input[type="date"] { color-scheme: light dark; }
+
+@layer components {
+  .app-shell {
+    @apply min-h-screen flex flex-col text-slate-900 dark:text-slate-200 transition-colors duration-200;
+    background: #f8fafc;
+  }
+  .dark .app-shell { background: #020617; }
+
+  /* Floating navbar -- detached pill bar with glass blur, matching the
+     customer portal, replacing the old fixed sidebar. */
+  .topbar-wrap { @apply sticky top-0 z-30 px-3 pt-3 sm:px-5 sm:pt-4 relative; }
+  .topbar {
+    @apply flex items-center justify-between gap-4 px-4 sm:px-5 py-2.5 rounded-2xl mx-auto max-w-7xl
+      bg-white/75 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-slate-800/80
+      shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-8px_rgba(15,23,42,0.12)]
+      dark:shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-8px_rgba(0,0,0,0.4)];
+  }
+  .topbar .brand { @apply flex items-center gap-2 font-bold text-lg tracking-tight text-slate-900 dark:text-white no-underline; }
+  .topbar .brand-mark {
+    @apply h-8 w-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center
+      text-white font-bold text-base shadow-md shadow-brand-500/25;
+  }
+  .topbar nav { @apply flex items-center gap-1 text-sm; }
+  .topbar nav a {
+    @apply relative flex items-center gap-1.5 px-3 py-2 rounded-xl font-medium text-slate-500 dark:text-slate-400
+      hover:bg-slate-900/5 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-slate-200
+      no-underline transition-colors;
+  }
+  .topbar nav a.active {
+    @apply bg-gradient-to-br from-brand-500 to-brand-600 text-white hover:from-brand-500 hover:to-brand-600 hover:text-white
+      shadow-sm shadow-brand-500/30;
+  }
+  .icon-btn {
+    @apply p-2.5 rounded-xl border border-slate-200/80 dark:border-slate-800 text-slate-500 dark:text-slate-400
+      hover:bg-slate-900/5 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-slate-200 transition-colors;
+  }
+
+  .page { @apply flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-7 pb-16; }
+  .page.page-narrow { @apply max-w-3xl; }
+
+  .card {
+    @apply bg-white/80 dark:bg-slate-900/70 backdrop-blur-sm rounded-xl p-5
+      shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-200;
+    border: 1.5px solid rgb(226 232 240 / 0.9);
+  }
+  .dark .card { border-color: rgb(30 41 59 / 0.9); }
+
+  h1 { @apply text-2xl font-bold tracking-tight m-0 mb-1 text-slate-900 dark:text-white; }
+  h2 { @apply text-lg font-semibold m-0 mb-3 text-slate-900 dark:text-white; }
+  p.muted { @apply text-slate-500 dark:text-slate-400 text-sm mt-1 mb-0; }
+
+  input, select, textarea, button { font-family: inherit; }
+
+  .input {
+    @apply w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800
+      bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 text-[14px]
+      placeholder:text-slate-400 dark:placeholder:text-slate-500
+      focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-500 transition-shadow;
+  }
+
+  .btn {
+    @apply px-4.5 py-2.5 rounded-xl border-0 bg-brand-500 text-white font-semibold text-[14px]
+      cursor-pointer shadow-sm shadow-brand-500/15 hover:bg-brand-600 transition-colors
+      disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2;
+  }
+  .btn.secondary {
+    @apply bg-transparent text-brand-700 dark:text-brand-400 border border-brand-600 dark:border-brand-700
+      hover:bg-brand-50 dark:hover:bg-brand-950/30;
+  }
+  .btn.neutral {
+    @apply bg-slate-900 dark:bg-slate-950 text-white border border-transparent dark:border-slate-800
+      hover:bg-slate-800 dark:hover:bg-slate-900 shadow-none;
+  }
+  .btn.ghost {
+    @apply bg-transparent text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800
+      shadow-none hover:bg-slate-100 dark:hover:bg-slate-800;
+  }
+  .btn.danger {
+    @apply bg-rose-500 hover:bg-rose-600 shadow-rose-500/15;
+  }
+
+  .link-btn {
+    @apply bg-transparent border-0 text-brand-700 dark:text-brand-400 font-semibold cursor-pointer p-0 text-sm hover:underline;
+  }
+
+  .badge { @apply inline-block px-2.5 py-1 rounded-full text-xs font-semibold; }
+  .badge.gold { @apply bg-amber-100 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400; }
+  .badge.teal { @apply bg-brand-100 text-brand-700 dark:bg-brand-950/40 dark:text-brand-400; }
+  .badge.green { @apply bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400; }
+  .badge.red { @apply bg-rose-100 text-rose-700 dark:bg-rose-950/40 dark:text-rose-400; }
+  .badge.slate { @apply bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300; }
+
+  .error-text { @apply text-rose-600 dark:text-rose-400 text-[13px]; }
+
+  /* Modal overlay + panel, shared by Inventory/Purchases/Billing dialogs */
+  .modal-overlay {
+    @apply fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-slate-900/50 dark:bg-slate-950/70;
+  }
+  .modal-panel {
+    @apply w-full bg-white dark:bg-slate-900 rounded-2xl shadow-2xl
+      max-h-[90vh] overflow-y-auto;
+    border: 1.5px solid rgb(226 232 240 / 0.9);
+  }
+  .dark .modal-panel { border-color: rgb(30 41 59 / 0.9); }
+  .modal-header {
+    @apply flex items-center justify-between px-6 py-4 border-b border-slate-100 dark:border-slate-800 sticky top-0
+      bg-white dark:bg-slate-900 rounded-t-2xl z-10;
+  }
+
+  /* Auth split-screen shared with the customer portal */
+  .auth-wrap { @apply min-h-screen grid lg:grid-cols-2 bg-slate-50 dark:bg-slate-950; }
+
+  .auth-panel {
+    @apply hidden lg:flex flex-col justify-between p-12 gap-8 text-white relative overflow-hidden;
+    background:
+      radial-gradient(circle at 15% 20%, rgb(16 185 129 / 0.35), transparent 45%),
+      radial-gradient(circle at 85% 15%, rgb(52 211 153 / 0.25), transparent 40%),
+      radial-gradient(circle at 75% 80%, rgb(4 120 87 / 0.4), transparent 50%),
+      linear-gradient(160deg, #064e3b 0%, #022c22 65%, #020617 100%);
+  }
+  .auth-panel::before {
+    content: "";
+    @apply absolute -right-24 -top-24 h-96 w-96 rounded-full bg-brand-400/20 blur-3xl pointer-events-none;
+  }
+  .auth-panel::after {
+    content: "";
+    @apply absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-brand-500/15 blur-3xl pointer-events-none;
+  }
+  .auth-panel > * { @apply relative z-10; }
+  .auth-panel-brand { @apply flex items-center gap-2 font-bold text-xl; }
+  .auth-panel-mark {
+    @apply h-9 w-9 rounded-lg bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center
+      text-white font-bold shadow-lg shadow-brand-500/30;
+  }
+  .auth-panel-copy { @apply max-w-sm; }
+  .auth-panel-copy h2 { @apply text-3xl font-bold text-white mb-3 leading-tight; }
+  .auth-panel-copy p { @apply text-brand-100/80 text-[15px] leading-relaxed; }
+  .auth-panel-foot { @apply text-brand-200/60 text-xs; }
+
+  .auth-pill-badge {
+    @apply inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[13px] font-semibold w-fit
+      bg-white/10 text-brand-50 backdrop-blur-md;
+    border: 1px solid rgb(255 255 255 / 0.15);
+  }
+
+  .auth-trust-stats { @apply grid grid-cols-3 gap-4 pt-6; border-top: 1px solid rgb(255 255 255 / 0.12); }
+  .auth-trust-stat { @apply flex flex-col gap-0.5; }
+  .auth-trust-stat .value { @apply text-xl font-extrabold text-white leading-none; }
+  .auth-trust-stat .label { @apply text-[11.5px] text-brand-100/70 leading-tight mt-1; }
+
+  /* Floating glass feature-card mockup, used in the auth hero panel */
+  .auth-mockup-card {
+    @apply relative rounded-2xl p-4 backdrop-blur-xl w-fit;
+    background: rgb(255 255 255 / 0.08);
+    border: 1px solid rgb(255 255 255 / 0.18);
+    box-shadow: 0 20px 40px -16px rgb(0 0 0 / 0.4);
+    animation: float-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards, auth-mockup-float 5s ease-in-out infinite;
+  }
+  @keyframes auth-mockup-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .auth-mockup-row { @apply flex items-center gap-3; }
+  .auth-mockup-icon {
+    @apply h-10 w-10 rounded-xl flex items-center justify-center shrink-0;
+    background: rgb(255 255 255 / 0.12);
+  }
+
+  .auth-divider { @apply flex items-center gap-3 text-[12px] text-slate-400 dark:text-slate-500 my-1; }
+  .auth-divider::before, .auth-divider::after { content: ""; @apply flex-1 h-px bg-slate-200; }
+  .dark .auth-divider::before, .dark .auth-divider::after { @apply bg-slate-800; }
+
+  .btn-social {
+    @apply w-full flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl text-[14px] font-semibold cursor-pointer
+      bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 transition-colors;
+    border: 1.5px solid rgb(226 232 240 / 0.9);
+  }
+  .dark .btn-social { border-color: rgb(30 41 59 / 0.9); }
+  .btn-social:hover { @apply bg-slate-50 dark:bg-slate-800; }
+
+  .auth-form-wrap {
+    @apply flex items-center justify-center px-6 py-12 relative;
+    background: radial-gradient(ellipse 60% 50% at 50% 40%, rgb(16 185 129 / 0.08), transparent 70%);
+  }
+  .dark .auth-form-wrap { background: radial-gradient(ellipse 60% 50% at 50% 40%, rgb(16 185 129 / 0.06), transparent 70%); }
+  .auth-card {
+    @apply w-full max-w-[420px] rounded-2xl p-7;
+    border: 1.5px solid rgb(226 232 240 / 0.8);
+    background: white;
+    box-shadow: 0 1px 2px rgb(15 23 42 / 0.04), 0 25px 50px -18px rgb(148 163 184 / 0.5);
+  }
+  .dark .auth-card {
+    background: rgb(15 23 42 / 1);
+    border-color: rgb(30 41 59 / 0.9);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.2), 0 25px 50px -18px rgb(0 0 0 / 0.5);
+  }
+  .auth-card .brand { @apply text-brand-600 dark:text-brand-400 font-bold text-2xl mb-1; }
+
+  .input-icon-wrap { @apply relative; }
+  .input-icon-wrap svg.leading-icon {
+    @apply absolute pointer-events-none text-slate-400 dark:text-slate-500;
+    left: 14px; top: 50%; transform: translateY(-50%);
+  }
+  .input-icon-wrap .input { @apply pl-10; }
+  .input-icon-wrap .input.pr-icon { @apply pr-10; }
+  .input-icon-wrap .trailing-icon-btn {
+    @apply absolute bg-transparent border-0 cursor-pointer text-slate-400 dark:text-slate-500
+      hover:text-slate-700 dark:hover:text-slate-200 p-1;
+    right: 8px; top: 50%; transform: translateY(-50%);
+  }
+
+  .auth-bottom-link { @apply block text-center text-[14px] text-slate-500 dark:text-slate-400 mt-1; }
+
+  /* Toasts */
+  .toast-stack { @apply fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-[90vw] sm:max-w-sm; }
+  .toast {
+    @apply flex items-start gap-2.5 px-4 py-3 rounded-xl shadow-lg text-sm font-medium
+      bg-white dark:bg-slate-900 border animate-slide-up;
+  }
+  .toast-close { @apply ml-auto text-current opacity-60 hover:opacity-100 bg-transparent border-0 cursor-pointer p-0.5; }
+  .toast-success { @apply border-brand-200 dark:border-brand-900/40 text-brand-800 dark:text-brand-400; }
+  .toast-error { @apply border-rose-200 dark:border-rose-900/40 text-rose-700 dark:text-rose-400; }
+  .toast-warning { @apply border-amber-200 dark:border-amber-900/40 text-amber-700 dark:text-amber-400; }
+  .toast-info { @apply border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300; }
+
+  .skeleton { @apply animate-pulse bg-slate-200 dark:bg-slate-800 rounded-lg; }
+
+  .empty-state { @apply flex flex-col items-center text-center gap-2 py-8 text-slate-400 dark:text-slate-500; }
+  .empty-state svg { @apply text-slate-300 dark:text-slate-700 mb-1; }
+
+  /* Mobile nav -- anchored to the floating topbar-wrap */
+  .mobile-menu {
+    @apply sm:hidden absolute left-3 right-3 top-full mt-2 z-30 rounded-2xl overflow-hidden
+      bg-white/90 dark:bg-slate-900/90 backdrop-blur-md
+      border border-white/60 dark:border-slate-800/80 shadow-xl animate-slide-up;
+  }
+  .mobile-menu a, .mobile-menu button {
+    @apply flex items-center gap-3 px-5 py-3.5 text-sm font-medium w-full text-left
+      text-slate-600 dark:text-slate-300 hover:bg-slate-900/5 dark:hover:bg-white/5 no-underline border-0 bg-transparent cursor-pointer;
+  }
+  .mobile-menu a.active { @apply text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/20; }
+}
+
+/* Glassmorphism utility (kept for existing usages, e.g. glass-panel toasts) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}

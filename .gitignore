@@ -1,0 +1,9 @@
+# Local AI-assistant/editor session state -- not part of the project.
+.claude/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+
+# Scratch working directories used during development sessions.
+.scratch/

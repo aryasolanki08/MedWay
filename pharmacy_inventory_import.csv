@@ -1,0 +1,143 @@
+name,salt_composition,manufacturer,category,mrp,selling_price,purchase_price,stock_quantity,batch_number,expiry_date,reorder_threshold
+Dolo 650,Paracetamol,Micro Labs,Analgesic,43.52,43.52,43.52,160,USER-SIDE-SYNC,2028-08-06,10
+Crocin Advance,Paracetamol,GSK,Analgesic,61.2,61.2,61.2,161,USER-SIDE-SYNC,2028-08-06,10
+Calpol,Paracetamol,GSK,Analgesic,38.08,38.08,38.08,160,USER-SIDE-SYNC,2028-08-06,10
+Paracetamol IP,Paracetamol,Generic Pharma Co,Analgesic,16.32,16.32,16.32,160,USER-SIDE-SYNC,2028-08-06,10
+Brufen,Ibuprofen,Abbott,NSAID,54.4,54.4,54.4,161,USER-SIDE-SYNC,2028-08-06,10
+Ibugesic,Ibuprofen,Cipla,NSAID,47.25,47.25,47.25,165,USER-SIDE-SYNC,2028-08-06,10
+Ibuprofen IP,Ibuprofen,Generic Pharma Co,NSAID,20.09,20.09,20.09,168,USER-SIDE-SYNC,2028-08-06,10
+Voveran,Diclofenac,Novartis,NSAID,50.45,50.45,50.45,171,USER-SIDE-SYNC,2028-08-06,10
+Diclofenac IP,Diclofenac,Generic Pharma Co,NSAID,18.42,18.42,18.42,174,USER-SIDE-SYNC,2028-08-06,10
+Ecosprin,Aspirin,USV,NSAID,23.66,23.66,23.66,180,USER-SIDE-SYNC,2028-08-06,10
+Aspirin IP,Aspirin,Generic Pharma Co,NSAID,10.49,10.49,10.49,185,USER-SIDE-SYNC,2028-08-06,10
+Cetzine,Cetirizine,Dr. Reddy's,Antihistamine,26.16,26.16,26.16,190,USER-SIDE-SYNC,2028-08-06,10
+Alerid,Cetirizine,Cipla,Antihistamine,28.81,28.81,28.81,197,USER-SIDE-SYNC,2028-08-06,10
+Cetirizine IP,Cetirizine,Generic Pharma Co,Antihistamine,10.48,10.48,10.48,204,USER-SIDE-SYNC,2028-08-06,10
+Xyzal,Levocetirizine,Sanofi,Antihistamine,124.36,124.36,124.36,210,USER-SIDE-SYNC,2028-08-06,10
+Levocet,Levocetirizine,Dr. Reddy's,Antihistamine,59.07,59.07,59.07,211,USER-SIDE-SYNC,2028-08-06,10
+Levocetirizine IP,Levocetirizine,Generic Pharma Co,Antihistamine,23.89,23.89,23.89,217,USER-SIDE-SYNC,2028-08-06,10
+Pantop,Pantoprazole,Aristo,Antacid/PPI,120.76,120.76,120.76,223,USER-SIDE-SYNC,2028-08-06,10
+Pantocid,Pantoprazole,Sun Pharma,Antacid/PPI,115.29,115.29,115.29,229,USER-SIDE-SYNC,2028-08-06,10
+Pantoprazole IP,Pantoprazole,Generic Pharma Co,Antacid/PPI,27.18,27.18,27.18,237,USER-SIDE-SYNC,2028-08-06,10
+Omez,Omeprazole,Dr. Reddy's,Antacid/PPI,88.4,88.4,88.4,245,USER-SIDE-SYNC,2028-08-06,10
+Omeprazole IP,Omeprazole,Generic Pharma Co,Antacid/PPI,20.4,20.4,20.4,252,USER-SIDE-SYNC,2028-08-06,10
+Razo,Rabeprazole,Dr. Reddy's,Antacid/PPI,149.6,149.6,149.6,252,USER-SIDE-SYNC,2028-08-06,10
+Rabeprazole IP,Rabeprazole,Generic Pharma Co,Antacid/PPI,34.0,34.0,34.0,252,USER-SIDE-SYNC,2028-08-06,10
+Mox,Amoxicillin,Sun Pharma,Antibiotic,88.4,88.4,88.4,252,USER-SIDE-SYNC,2028-08-06,10
+Amoxicillin IP,Amoxicillin,Generic Pharma Co,Antibiotic,38.08,38.08,38.08,252,USER-SIDE-SYNC,2028-08-06,10
+Augmentin 625,Amoxicillin-Clavulanate,GSK,Antibiotic,285.6,285.6,285.6,252,USER-SIDE-SYNC,2028-08-06,10
+Amoxyclav 625,Amoxicillin-Clavulanate,Cipla,Antibiotic,204.34,204.34,204.34,246,USER-SIDE-SYNC,2028-08-06,10
+Amoxicillin-Clavulanate IP,Amoxicillin-Clavulanate,Generic Pharma Co,Antibiotic,88.78,88.78,88.78,240,USER-SIDE-SYNC,2028-08-06,10
+Azithral 500,Azithromycin,Alembic,Antibiotic,150.8,150.8,150.8,235,USER-SIDE-SYNC,2028-08-06,10
+Azee 500,Azithromycin,Cipla,Antibiotic,143.95,143.95,143.95,235,USER-SIDE-SYNC,2028-08-06,10
+Azithromycin IP,Azithromycin,Generic Pharma Co,Antibiotic,61.69,61.69,61.69,235,USER-SIDE-SYNC,2028-08-06,10
+Ciplox 500,Ciprofloxacin,Cipla,Antibiotic,116.53,116.53,116.53,235,USER-SIDE-SYNC,2028-08-06,10
+Ciprofloxacin IP,Ciprofloxacin,Generic Pharma Co,Antibiotic,41.13,41.13,41.13,235,USER-SIDE-SYNC,2028-08-06,10
+Taxim-O 200,Cefixime,Alkem,Antibiotic,191.93,191.93,191.93,235,USER-SIDE-SYNC,2028-08-06,10
+Cefixime IP,Cefixime,Generic Pharma Co,Antibiotic,75.42,75.42,75.42,228,USER-SIDE-SYNC,2028-08-06,10
+Flagyl 400,Metronidazole,Sanofi,Antibiotic,48.05,48.05,48.05,222,USER-SIDE-SYNC,2028-08-06,10
+Metrogyl 400,Metronidazole,JB Chemicals,Antibiotic,44.03,44.03,44.03,216,USER-SIDE-SYNC,2028-08-06,10
+Metronidazole IP,Metronidazole,Generic Pharma Co,Antibiotic,19.33,19.33,19.33,210,USER-SIDE-SYNC,2028-08-06,10
+Glycomet 500,Metformin,USV,Antidiabetic,55.23,55.23,55.23,210,USER-SIDE-SYNC,2028-08-06,10
+Glucophage 500,Metformin,Abbott,Antidiabetic,75.94,75.94,75.94,210,USER-SIDE-SYNC,2028-08-06,10
+Metformin IP,Metformin,Generic Pharma Co,Antidiabetic,24.85,24.85,24.85,210,USER-SIDE-SYNC,2028-08-06,10
+Amlodac 5,Amlodipine,Zydus,Antihypertensive,48.32,48.32,48.32,210,USER-SIDE-SYNC,2028-08-06,10
+Amlong 5,Amlodipine,Micro Labs,Antihypertensive,52.47,52.47,52.47,210,USER-SIDE-SYNC,2028-08-06,10
+Amlodipine IP,Amlodipine,Generic Pharma Co,Antihypertensive,16.57,16.57,16.57,210,USER-SIDE-SYNC,2028-08-06,10
+Telma 40,Telmisartan,Glenmark,Antihypertensive,150.33,150.33,150.33,212,USER-SIDE-SYNC,2028-08-06,10
+Telmisartan IP,Telmisartan,Generic Pharma Co,Antihypertensive,54.09,54.09,54.09,214,USER-SIDE-SYNC,2028-08-06,10
+Atorva 20,Atorvastatin,Zydus,Statin,161.7,161.7,161.7,219,USER-SIDE-SYNC,2028-08-06,10
+Storvas 20,Atorvastatin,Sun Pharma,Statin,181.91,181.91,181.91,219,USER-SIDE-SYNC,2028-08-06,10
+Atorvastatin IP,Atorvastatin,Generic Pharma Co,Statin,60.64,60.64,60.64,219,USER-SIDE-SYNC,2028-08-06,10
+Rosuvas 10,Rosuvastatin,Sun Pharma,Statin,202.12,202.12,202.12,219,USER-SIDE-SYNC,2028-08-06,10
+Rosuvastatin IP,Rosuvastatin,Generic Pharma Co,Statin,74.11,74.11,74.11,219,USER-SIDE-SYNC,2028-08-06,10
+Limcee,Ascorbic Acid,Abbott,Vitamin,40.42,40.42,40.42,219,USER-SIDE-SYNC,2028-08-06,10
+Celin 500,Ascorbic Acid,GSK,Vitamin,43.12,43.12,43.12,219,USER-SIDE-SYNC,2028-08-06,10
+Vitamin C IP,Ascorbic Acid,Generic Pharma Co,Vitamin,20.2,20.2,20.2,225,USER-SIDE-SYNC,2028-08-06,10
+Shelcal 500,Calcium + Vitamin D3,Torrent,Supplement,147.92,147.92,147.92,231,USER-SIDE-SYNC,2028-08-06,10
+Calcimax,Calcium + Vitamin D3,Kopran,Supplement,127.46,127.46,127.46,237,USER-SIDE-SYNC,2028-08-06,10
+Calcium+D3 IP,Calcium + Vitamin D3,Generic Pharma Co,Supplement,40.13,40.13,40.13,242,USER-SIDE-SYNC,2028-08-06,10
+Electral,ORS,FDC,Electrolyte,26.66,26.66,26.66,246,USER-SIDE-SYNC,2028-08-06,10
+ORS-L,ORS,Beacons Pharma,Electrolyte,23.89,23.89,23.89,250,USER-SIDE-SYNC,2028-08-06,10
+ORS IP,ORS,Generic Pharma Co,Electrolyte,13.21,13.21,13.21,254,USER-SIDE-SYNC,2028-08-06,10
+Domstal 10,Domperidone,Torrent,Antiemetic,45.99,45.99,45.99,256,USER-SIDE-SYNC,2028-08-06,10
+Domperidone IP,Domperidone,Generic Pharma Co,Antiemetic,18.29,18.29,18.29,259,USER-SIDE-SYNC,2028-08-06,10
+Emeset 4,Ondansetron,Cipla,Antiemetic,58.41,58.41,58.41,261,USER-SIDE-SYNC,2028-08-06,10
+Ondansetron IP,Ondansetron,Generic Pharma Co,Antiemetic,23.21,23.21,23.21,263,USER-SIDE-SYNC,2028-08-06,10
+Montair 10,Montelukast,Cipla,Antiallergic,180.11,180.11,180.11,261,USER-SIDE-SYNC,2028-08-06,10
+Montelukast IP,Montelukast,Generic Pharma Co,Antiallergic,70.76,70.76,70.76,261,USER-SIDE-SYNC,2028-08-06,10
+MedWay Personal,ORS,MedWay,Electrolyte,20.0,20.0,20.0,10,USER-SIDE-SYNC,2028-08-06,10
+Amlodipine 5mg,Amlodipine,Cipla,Antihypertensive,34.16,34.16,34.16,10,USER-SIDE-SYNC,2028-08-06,10
+Amoxicillin 500mg,Amoxicillin,Ranbaxy,Antibiotic,57.32,57.32,57.32,10,USER-SIDE-SYNC,2028-08-06,10
+Amoxicillin 500mg Capsule,Amoxicillin,Alembic,Antibiotic,56.63,56.63,56.63,30,USER-SIDE-SYNC,2028-08-06,10
+Amoxicillin Clavulanate 625mg,Amoxicillin + Clavulanic Acid,GSK,,174.4,174.4,174.4,10,USER-SIDE-SYNC,2028-08-06,10
+Amoxiclav 625mg,Amoxicillin + Clavulanic Acid,Alkem,,151.17,151.17,151.17,20,USER-SIDE-SYNC,2028-08-06,10
+Aspirin 350mg,Aspirin,Reckitt,NSAID,17.56,17.56,17.56,10,USER-SIDE-SYNC,2028-08-06,10
+Aspirin 75mg,Aspirin,USV,NSAID,18.89,18.89,18.89,10,USER-SIDE-SYNC,2028-08-06,10
+Aspirin Atorvastatin 75/10,Aspirin + Atorvastatin,USV,,73.8,73.8,73.8,10,USER-SIDE-SYNC,2028-08-06,10
+Atorvastatin 20mg,Atorvastatin,Zydus,Statin,80.84,80.84,80.84,30,USER-SIDE-SYNC,2028-08-06,10
+Azithromycin 500mg,Azithromycin,Alembic,Antibiotic,91.16,91.16,91.16,10,USER-SIDE-SYNC,2028-08-06,10
+Bisoprolol 5mg,Bisoprolol,Merck,,87.34,87.34,87.34,10,USER-SIDE-SYNC,2028-08-06,10
+Calcium 500mg Vitamin D3,Calcium + Vitamin D3,Torrent,Supplement,119.87,119.87,119.87,20,USER-SIDE-SYNC,2028-08-06,10
+Cefixime 200mg,Cefixime,FDC,Antibiotic,115.43,115.43,115.43,10,USER-SIDE-SYNC,2028-08-06,10
+Cefixime 200mg Forte,Cefixime,Alkem,Antibiotic,116.25,116.25,116.25,10,USER-SIDE-SYNC,2028-08-06,10
+Cetirizine 10mg,Cetirizine,GSK,Antihistamine,17.08,17.08,17.08,12,USER-SIDE-SYNC,2028-08-06,10
+Cetirizine 10mg Tablet,Cetirizine,Cipla,Antihistamine,17.43,17.43,17.43,12,USER-SIDE-SYNC,2028-08-06,10
+Chlorpheniramine 4mg,Chlorpheniramine,GSK,,13.79,13.79,13.79,10,USER-SIDE-SYNC,2028-08-06,10
+Ciprofloxacin 500mg,Ciprofloxacin,Ranbaxy,Antibiotic,60.1,60.1,60.1,16,USER-SIDE-SYNC,2028-08-06,10
+Clopidogrel 75mg,Clopidogrel,Sun Pharma,,51.59,51.59,51.59,12,USER-SIDE-SYNC,2028-08-06,10
+Cough Syrup Ambroxol,Ambroxol,Alkem,,63.45,63.45,63.45,10,USER-SIDE-SYNC,2028-08-06,10
+Diclofenac 100mg,Diclofenac,Novartis,NSAID,48.74,48.74,48.74,10,USER-SIDE-SYNC,2028-08-06,10
+Dolo 650,20,Alpha,,12.0,12.0,12.0,10,USER-SIDE-SYNC,2028-08-06,10
+Domperidone 10mg,Domperidone,Torrent,Antiemetic,26.42,26.42,26.42,10,USER-SIDE-SYNC,2028-08-06,10
+Doxycycline 100mg,Doxycycline,Cipla,,48.98,48.98,48.98,10,USER-SIDE-SYNC,2028-08-06,10
+Fexofenadine 120mg,Fexofenadine,Sanofi,,133.94,133.94,133.94,10,USER-SIDE-SYNC,2028-08-06,10
+Folic Acid 5mg,Folic Acid,Abbott,,12.84,12.84,12.84,10,USER-SIDE-SYNC,2028-08-06,10
+Gliclazide 60mg MR,Gliclazide,Servier,,135.67,135.67,135.67,16,USER-SIDE-SYNC,2028-08-06,10
+Glimepiride 2mg,Glimepiride,Sanofi,,75.53,75.53,75.53,10,USER-SIDE-SYNC,2028-08-06,10
+Human Insulin 30/70,Human Insulin,Novo Nordisk,,182.78,182.78,182.78,10,USER-SIDE-SYNC,2028-08-06,10
+Ibuprofen 400mg,Ibuprofen,Abbott,NSAID,37.72,37.72,37.72,30,USER-SIDE-SYNC,2028-08-06,10
+Ibuprofen 400mg + Paracetamol 325mg,Ibuprofen + Paracetamol,Sanofi,,30.18,30.18,30.18,10,USER-SIDE-SYNC,2028-08-06,10
+Ibuprofen Paracetamol Tablet,Ibuprofen + Paracetamol,J&J,,33.62,33.62,33.62,20,USER-SIDE-SYNC,2028-08-06,10
+Levocetirizine 5mg,Levocetirizine,Dr Reddy's,Antihistamine,25.94,25.94,25.94,10,USER-SIDE-SYNC,2028-08-06,10
+Levocetirizine Montelukast Syrup,Levocetirizine + Montelukast,Cipla,,86.12,86.12,86.12,30,USER-SIDE-SYNC,2028-08-06,10
+Levofloxacin 500mg,Levofloxacin,Cipla,,99.0,99.0,99.0,16,USER-SIDE-SYNC,2028-08-06,10
+Loratadine 10mg,Loratadine,Cipla,,33.19,33.19,33.19,30,USER-SIDE-SYNC,2028-08-06,10
+Losartan 50mg,Losartan,Unichem,,68.36,68.36,68.36,10,USER-SIDE-SYNC,2028-08-06,10
+Mefenamic Acid 250mg,Mefenamic Acid + Dicyclomine,Blue Cross,,43.21,43.21,43.21,16,USER-SIDE-SYNC,2028-08-06,10
+Metformin 500mg,Metformin,USV,Antidiabetic,30.96,30.96,30.96,10,USER-SIDE-SYNC,2028-08-06,10
+Metformin SR 500mg,Metformin,Franco-Indian,Antidiabetic,41.22,41.22,41.22,10,USER-SIDE-SYNC,2028-08-06,10
+Metoprolol 25mg XR,Metoprolol,Sun Pharma,,59.35,59.35,59.35,12,USER-SIDE-SYNC,2028-08-06,10
+Metronidazole 400mg,Metronidazole,Sanofi,Antibiotic,41.53,41.53,41.53,10,USER-SIDE-SYNC,2028-08-06,10
+Montelukast 10mg,Montelukast,Cipla,Antiallergic,82.46,82.46,82.46,20,USER-SIDE-SYNC,2028-08-06,10
+Montelukast Levocetirizine,Montelukast + Levocetirizine,Cipla,,140.17,140.17,140.17,10,USER-SIDE-SYNC,2028-08-06,10
+Multivitamin Ginseng Capsule,Multivitamin + Ginseng,Sun Pharma,,199.53,199.53,199.53,12,USER-SIDE-SYNC,2028-08-06,10
+Multivitamin Minerals Tablet,Multivitamin + Minerals,Alkem,,107.01,107.01,107.01,30,USER-SIDE-SYNC,2028-08-06,10
+Multivitamin Zinc Tablet,Multivitamin + Zinc,Apex Labs,,91.97,91.97,91.97,10,USER-SIDE-SYNC,2028-08-06,10
+Nimesulide 100mg,Nimesulide,Dr Reddy's,,29.77,29.77,29.77,10,USER-SIDE-SYNC,2028-08-06,10
+Norfloxacin Tinidazole,Norfloxacin + Tinidazole,Cipla,,72.14,72.14,72.14,10,USER-SIDE-SYNC,2028-08-06,10
+Omeprazole 20mg,Omeprazole,Cipla,Antacid/PPI,35.84,35.84,35.84,12,USER-SIDE-SYNC,2028-08-06,10
+Ondansetron 4mg,Ondansetron,Cipla,Antiemetic,32.94,32.94,32.94,10,USER-SIDE-SYNC,2028-08-06,10
+Pantoprazole 40mg,Pantoprazole,Sun Pharma,Antacid/PPI,53.18,53.18,53.18,10,USER-SIDE-SYNC,2028-08-06,10
+Paracetamol 500mg,Paracetamol,Apex Labs,Analgesic,21.63,21.63,21.63,22,USER-SIDE-SYNC,2028-08-06,10
+Paracetamol 650mg,Paracetamol,Micro Labs,Analgesic,25.6,25.6,25.6,10,USER-SIDE-SYNC,2028-08-06,10
+Paracetamol Compound,Paracetamol + Propyphenazone + Caffeine,Piramal,,20.0,20.0,20.0,10,USER-SIDE-SYNC,2028-08-06,10
+Pheniramine 25mg,Pheniramine,Sanofi,,10.3,10.3,10.3,10,USER-SIDE-SYNC,2028-08-06,10
+Rabeprazole 20mg,Rabeprazole,Sun Pharma,Antacid/PPI,58.16,58.16,58.16,10,USER-SIDE-SYNC,2028-08-06,10
+Ranitidine 150mg,Ranitidine,GSK,,24.25,24.25,24.25,10,USER-SIDE-SYNC,2028-08-06,10
+Rosuvastatin 10mg,Rosuvastatin,Sun Pharma,Statin,125.11,125.11,125.11,10,USER-SIDE-SYNC,2028-08-06,10
+Salbutamol Inhaler,Salbutamol,Cipla,,131.27,131.27,131.27,10,USER-SIDE-SYNC,2028-08-06,10
+Sitagliptin 100mg,Sitagliptin,MSD,,411.57,411.57,411.57,16,USER-SIDE-SYNC,2028-08-06,10
+Sitagliptin Metformin 50/500,Sitagliptin + Metformin,MSD,,242.0,242.0,242.0,16,USER-SIDE-SYNC,2028-08-06,10
+Telmisartan 40mg,Telmisartan,Glenmark,Antihypertensive,98.57,98.57,98.57,10,USER-SIDE-SYNC,2028-08-06,10
+Tramadol 37.5mg,Tramadol + Paracetamol,Janssen,,74.77,74.77,74.77,10,USER-SIDE-SYNC,2028-08-06,10
+Vildagliptin Metformin 50/500,Vildagliptin + Metformin,Novartis,,192.84,192.84,192.84,30,USER-SIDE-SYNC,2028-08-06,10
+Vitamin B-Complex C,Vitamin B-Complex + Vitamin C,Pfizer,,38.88,38.88,38.88,12,USER-SIDE-SYNC,2028-08-06,10
+Vitamin B1 B6 B12,Vitamin B1 + B6 + B12,Merck,,49.91,49.91,49.91,30,USER-SIDE-SYNC,2028-08-06,10
+Vitamin C 500mg,Vitamin C,Abbott,,28.3,28.3,28.3,10,USER-SIDE-SYNC,2028-08-06,10
+Vitamin D3 60000 IU Sachet,Vitamin D3,Cadila,,34.69,34.69,34.69,10,USER-SIDE-SYNC,2028-08-06,10
+Vitamin E 400mg,Vitamin E,Merck,,55.54,55.54,55.54,10,USER-SIDE-SYNC,2028-08-06,10
+Voglibose 0.3mg,Voglibose,Lupin,,48.43,48.43,48.43,10,USER-SIDE-SYNC,2028-08-06,10
+para,para,,,12.0,12.0,12.0,104,USER-SIDE-SYNC,2028-08-06,10
+Dolo,Dolo,,,14.0,14.0,14.0,10,USER-SIDE-SYNC,2028-08-06,10
+Aceclofenac 100mg,Aceclofenac + Paracetamol,Ipca Labs,,58.59,58.59,58.59,10,USER-SIDE-SYNC,2028-08-06,10

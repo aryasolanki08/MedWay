@@ -1,0 +1,61 @@
+id,name,category
+6f7d8146-8496-4dae-8640-35b2ce59850f,Paracetamol,Analgesic
+c94ef66d-acc4-4ef2-99a9-e0e75b189621,Ibuprofen,NSAID
+5dc93c03-f60c-45bd-a201-432ca5277f75,Diclofenac,NSAID
+2732853e-244b-40c3-8ba8-4c52e008079c,Aceclofenac,NSAID
+81c14410-4f55-4a00-a8e9-c16689683a76,Naproxen,NSAID
+c14949d5-87a1-40c2-84d0-43cd1e116cd3,Aspirin,Antiplatelet
+d16fb945-60e8-4f15-86c7-f45664edb25e,Amoxicillin,Antibiotic
+dcbf2171-e4e4-4efc-aa70-c2296a58479a,Azithromycin,Antibiotic
+979db6ba-8bb4-46f5-b4f1-fe8bf00ec50f,Cefixime,Antibiotic
+f4f42fc3-7101-481c-ad72-acf76055b507,Cefuroxime,Antibiotic
+f391e8e7-5e4d-4f8c-b941-0c4c636f69cf,Ciprofloxacin,Antibiotic
+4b64a555-d59b-4925-b536-1abbf5375871,Levofloxacin,Antibiotic
+cc06739a-1858-4097-a332-8b7793dafb07,Doxycycline,Antibiotic
+6d842164-d688-4daa-826e-e1d5bd960a13,Metronidazole,Antibiotic
+88ba6907-1d32-4986-8037-46845694442d,Pantoprazole,Proton Pump Inhibitor
+994eb9bf-d296-4343-89f3-45b122c15f8f,Omeprazole,Proton Pump Inhibitor
+c8d52d18-5b07-49eb-aba2-009de5de7d3d,Rabeprazole,Proton Pump Inhibitor
+3fbca0fc-393e-4d1c-93b6-9f73172959c9,Esomeprazole,Proton Pump Inhibitor
+ba244b68-55bf-4833-8dbb-e325d60565b0,Cetirizine,Antihistamine
+3fde6ba0-8fc1-4bb8-8f16-6e616c1d74cf,Levocetirizine,Antihistamine
+e4f286bc-0436-4445-a0de-c650e84d6dd2,Fexofenadine,Antihistamine
+ad287d16-6b07-4195-a434-7a7d89a9c7c5,Loratadine,Antihistamine
+4b853d9b-2a3b-4d8f-8f06-8b69be9fc185,Montelukast,Leukotriene Antagonist
+f84eb30f-6975-4c27-a4f5-f32b3e889855,Salbutamol,Bronchodilator
+f43467dd-3532-46ac-beb4-5c31fca3d29b,Ambroxol,Expectorant
+4632f71d-06ad-49e6-8e81-2da784f794ce,Dextromethorphan,Antitussive
+10ef817e-7b9c-4b09-99cc-0086dbddb28b,Metformin,Antidiabetic
+f9f910cf-ae45-4b6d-b2c6-7ea130036c04,Glimepiride,Antidiabetic
+0b3b9e33-2d90-4b9b-95d6-8004368fd446,Sitagliptin,Antidiabetic
+89b56aff-1b62-4449-9866-2d4a96755266,Teneligliptin,Antidiabetic
+64664f8e-656c-4962-b619-ae38b91255b1,Insulin Human,Antidiabetic
+4077202f-802c-4031-8bc6-69f2523eef5c,Amlodipine,Antihypertensive
+216253e1-db15-4c90-815c-2de6994ce388,Telmisartan,Antihypertensive
+9e36c8a4-85ff-477d-8ac3-e554d6feb98a,Losartan,Antihypertensive
+e554d6cd-1a0d-44c6-9644-859d8e28b1fd,Atenolol,Beta Blocker
+5d81b506-48e5-442f-b3c9-6e30129483ab,Bisoprolol,Beta Blocker
+723a8bab-a0bb-43ce-a0ba-0635c2cfed4f,Atorvastatin,Statin
+39a872b5-9b4e-4611-af84-ae01ef23c061,Rosuvastatin,Statin
+4f401523-e63f-4c8a-890a-dc4ddf6067aa,Clopidogrel,Antiplatelet
+9c0ca03b-28f8-4623-a0d9-6d2fb7270fdd,Ticagrelor,Antiplatelet
+1fb6d014-87e7-497e-8533-e08128530bc6,Ferrous Ascorbate,Iron Supplement
+2518a6ef-75d2-4dae-a827-66aede49cdb2,Calcium Carbonate,Mineral Supplement
+feeb79af-4e88-4953-ac10-0e7218a151d0,Vitamin D3,Vitamin
+aea857c3-7a49-4c9a-8252-e0df4a83986f,Cyanocobalamin,Vitamin
+cc057f95-699d-478c-9dc0-d24024459d47,Folic Acid,Vitamin
+90c3b1f6-b96f-4996-a08f-99e1568bf034,Zinc Sulphate,Mineral Supplement
+72588f85-c0df-4d74-a644-6f268c4b973d,Magnesium Hydroxide,Antacid
+6e393652-f723-4b03-8516-d8285eddd8d7,Ondansetron,Antiemetic
+a863444a-9276-49c0-9350-26b0e065534a,Domperidone,Antiemetic
+d4b26f8a-ef3b-4d7c-9a54-0c69c37c4efd,Tramadol,Analgesic
+35cd32df-a274-407d-ab4d-37f6cbec0729,Pregabalin,Neuropathic Pain
+08cf3a82-c8d3-493c-87d6-11ad72be0e71,Gabapentin,Neuropathic Pain
+ff9f1bf3-d6e4-48bc-998d-9618b11963f6,Fluconazole,Antifungal
+a313e325-e8d3-40d8-b8f0-b0fa63369f5e,Clotrimazole,Antifungal
+2f651123-18ac-4ced-a349-0f44dd3d1d22,Albendazole,Anthelmintic
+670ba6e5-b6a9-437b-9d4e-91966d619939,Ivermectin,Antiparasitic
+4f9c1723-dc72-41d6-86a8-15dbabfce40a,Hydroxychloroquine,Antimalarial
+f0d3292c-5491-4f44-9456-9b3754c47f3a,Artesunate,Antimalarial
+4ea58eb8-d573-454e-8f92-83aebcab3854,Nitrofurantoin,Antibiotic
+7570c244-0cfd-4fb6-b266-d887749e2fdd,Linezolid,Antibiotic
