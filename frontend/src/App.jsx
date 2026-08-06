@@ -1,6 +1,7 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { useAuth } from "./context/AuthContext.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Welcome from "./pages/Welcome.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
@@ -20,16 +21,29 @@ function Protected({ children }) {
   return children;
 }
 
+// Public marketing landing at "/" -- once logged in, "/" is the app
+// dashboard instead (same path, different content), matching how most
+// consumer apps treat their root URL.
+function Home() {
+  const { user, loading } = useAuth();
+  if (loading) return null;
+  return user ? <Dashboard /> : <Welcome />;
+}
+
 export default function App() {
   const { user } = useAuth();
+  const location = useLocation();
+  const showAppNavbar = user && location.pathname !== "/welcome";
 
   return (
     <div className="app-shell">
-      {user && <Navbar />}
+      {showAppNavbar && <Navbar />}
       <Routes>
+        <Route path="/welcome" element={<Welcome />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/" element={<Protected><Dashboard /></Protected>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Protected><Dashboard /></Protected>} />
         <Route path="/search" element={<Protected><SearchResults /></Protected>} />
         <Route path="/assistant" element={<Protected><Assistant /></Protected>} />
         <Route path="/history" element={<Protected><History /></Protected>} />
