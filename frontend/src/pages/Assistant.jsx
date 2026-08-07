@@ -19,7 +19,7 @@ export default function Assistant() {
   const [consultBusy, setConsultBusy] = useState(false);
 
   const ask = async (e) => {
-    e?.preventDefault();
+    if (typeof e !== "string") e?.preventDefault();
     const term = typeof e === "string" ? e : symptom;
     if (!term.trim()) return;
     setSymptom(term);

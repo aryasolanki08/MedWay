@@ -13,7 +13,6 @@ import {
   ArrowRight,
   Sun,
   Moon,
-  Sparkles,
   TrendingUp,
   Package,
   Receipt,
@@ -157,7 +156,7 @@ const Landing = () => {
                 </Link>
                 <Link
                   to="/signup"
-                  className="btn"
+                  className="rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-5 py-2.5 shadow-sm shadow-emerald-500/20 transition-colors"
                 >
                   Get Started
                 </Link>
@@ -176,9 +175,9 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
             
-            {/* Sparkle Badge */}
+            {/* Pill Badge */}
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-100/80 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-semibold tracking-wide animate-pulse">
-              <Sparkles className="h-3.5 w-3.5" />
+              <span aria-hidden>&#10022;</span>
               <span>Pharmacy Management, Redefined</span>
             </div>
 
@@ -194,14 +193,14 @@ const Landing = () => {
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-2">
               <Link
                 to={user ? "/dashboard" : "/signup"}
-                className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-center px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/15 hover:shadow-emerald-500/25 transition-all duration-200 flex items-center justify-center gap-2 group"
+                className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-center px-8 py-4 rounded-full shadow-lg shadow-emerald-500/15 hover:shadow-emerald-500/25 transition-all duration-200 flex items-center justify-center gap-2 group"
               >
                 <span>{user ? "Go to Dashboard" : "Start Free Trial"}</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
                 href="#simulator"
-                className="w-full sm:w-auto border border-slate-300 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 text-slate-700 dark:text-slate-300 font-semibold px-8 py-4 rounded-xl text-center transition-colors flex items-center justify-center gap-2"
+                className="w-full sm:w-auto border border-slate-300 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 text-slate-700 dark:text-slate-300 font-semibold px-8 py-4 rounded-full text-center transition-colors flex items-center justify-center gap-2"
               >
                 <span>Try Live POS Demo</span>
               </a>
@@ -245,7 +244,7 @@ const Landing = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-xs text-slate-400 dark:text-slate-500 font-medium uppercase tracking-wider">Today's Revenue</h3>
-                    <p className="text-2xl font-extrabold text-slate-955 dark:text-white mt-1">₹4,850.25</p>
+                    <p className="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">&#8377;4,850.25</p>
                   </div>
                   <div className="h-10 w-10 rounded-lg bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
                     <TrendingUp className="h-5 w-5" />
@@ -309,7 +308,7 @@ const Landing = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 hover:bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-black/20 hover:-translate-y-1">
+            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(15,23,42,0.06)]" style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
               <div className="h-12 w-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Receipt className="h-6 w-6" />
               </div>
@@ -320,7 +319,7 @@ const Landing = () => {
             </div>
 
             {/* Feature 2 */}
-            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 hover:bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-black/20 hover:-translate-y-1">
+            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(15,23,42,0.06)]" style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
               <div className="h-12 w-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Package className="h-6 w-6" />
               </div>
@@ -331,7 +330,7 @@ const Landing = () => {
             </div>
 
             {/* Feature 3 */}
-            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 hover:bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-black/20 hover:-translate-y-1">
+            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(15,23,42,0.06)]" style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
               <div className="h-12 w-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <TrendingUp className="h-6 w-6" />
               </div>
@@ -342,7 +341,7 @@ const Landing = () => {
             </div>
 
             {/* Feature 4 */}
-            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 hover:bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-black/20 hover:-translate-y-1">
+            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(15,23,42,0.06)]" style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
               <div className="h-12 w-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Users className="h-6 w-6" />
               </div>
@@ -353,7 +352,7 @@ const Landing = () => {
             </div>
 
             {/* Feature 5 */}
-            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 hover:bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-black/20 hover:-translate-y-1">
+            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(15,23,42,0.06)]" style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
               <div className="h-12 w-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Shield className="h-6 w-6" />
               </div>
@@ -364,7 +363,7 @@ const Landing = () => {
             </div>
 
             {/* Feature 6 */}
-            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 hover:bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-black/20 hover:-translate-y-1">
+            <div className="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 dark:hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(15,23,42,0.06)]" style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
               <div className="h-12 w-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Clock className="h-6 w-6" />
               </div>
@@ -431,7 +430,7 @@ const Landing = () => {
                         >
                           <Minus className="h-3.5 w-3.5" />
                         </button>
-                        <span className="w-8 text-center text-sm font-semibold text-slate-850 dark:text-white">
+                        <span className="w-8 text-center text-sm font-semibold text-slate-800 dark:text-white">
                           {item.qty}
                         </span>
                         <button
@@ -473,7 +472,7 @@ const Landing = () => {
                     activeItems.map(item => (
                       <div key={item.id} className="flex justify-between text-xs items-center">
                         <div className="min-w-0 flex-1 pr-4">
-                          <p className="font-bold text-slate-850 dark:text-slate-200 truncate">{item.name}</p>
+                          <p className="font-bold text-slate-800 dark:text-slate-200 truncate">{item.name}</p>
                           <p className="text-[10px] text-slate-400 mt-0.5">
                             {item.qty} × ₹{item.price.toFixed(2)}
                           </p>
@@ -598,13 +597,13 @@ const Landing = () => {
             <div className="flex flex-col justify-between p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/20">
               <div>
                 <h3 className="font-bold text-lg text-slate-900 dark:text-white">Solo Starter</h3>
-                <p className="text-xs text-slate-400 dark:text-slate-505 mt-1">Perfect for local single-chemist shops</p>
+                <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Perfect for local single-chemist shops</p>
                 <div className="mt-6 flex items-baseline gap-1">
                   <span className="text-3xl font-black text-slate-900 dark:text-white">₹0</span>
-                  <span className="text-xs text-slate-505">/ forever</span>
+                  <span className="text-xs text-slate-500">/ forever</span>
                 </div>
                 
-                <ul className="mt-8 space-y-3.5 text-xs text-slate-650 dark:text-slate-450">
+                <ul className="mt-8 space-y-3.5 text-xs text-slate-600 dark:text-slate-400">
                   <li className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-emerald-500 shrink-0" />
                     <span>Up to 150 items catalog</span>
@@ -627,7 +626,7 @@ const Landing = () => {
               <div className="mt-8 pt-4">
                 <Link
                   to={user ? "/dashboard" : "/signup"}
-                  className="w-full block bg-white dark:bg-slate-900 border border-slate-350 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-center font-semibold py-2.5 rounded-xl text-xs transition-colors"
+                  className="w-full block bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-center font-semibold py-2.5 rounded-xl text-xs transition-colors"
                 >
                   {user ? "Go to Dashboard" : "Sign Up Free"}
                 </Link>
@@ -641,16 +640,16 @@ const Landing = () => {
               </span>
               <div>
                 <h3 className="font-bold text-lg text-slate-900 dark:text-white">Smart Pharmacy</h3>
-                <p className="text-xs text-slate-450 dark:text-slate-505 mt-1">For growing pharmacies & medical clinics</p>
+                <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">For growing pharmacies & medical clinics</p>
                 <div className="mt-6 flex items-baseline gap-1">
                   <span className="text-3xl font-black text-slate-900 dark:text-white">₹3,200</span>
-                  <span className="text-xs text-slate-505">/ month</span>
+                  <span className="text-xs text-slate-500">/ month</span>
                 </div>
                 
-                <ul className="mt-8 space-y-3.5 text-xs text-slate-650 dark:text-slate-400">
+                <ul className="mt-8 space-y-3.5 text-xs text-slate-600 dark:text-slate-400">
                   <li className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-emerald-500 shrink-0" />
-                    <span className="font-semibold text-slate-850 dark:text-slate-300">Unlimited items catalog</span>
+                    <span className="font-semibold text-slate-800 dark:text-slate-300">Unlimited items catalog</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-emerald-500 shrink-0" />
@@ -658,7 +657,7 @@ const Landing = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-emerald-500 shrink-0" />
-                    <span className="font-semibold text-slate-850 dark:text-slate-300">Expiry & low stock automated alerts</span>
+                    <span className="font-semibold text-slate-800 dark:text-slate-300">Expiry & low stock automated alerts</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-emerald-500 shrink-0" />
@@ -685,16 +684,16 @@ const Landing = () => {
             <div className="flex flex-col justify-between p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/20">
               <div>
                 <h3 className="font-bold text-lg text-slate-900 dark:text-white">Clinic Network</h3>
-                <p className="text-xs text-slate-400 dark:text-slate-505 mt-1">Multi-branch pharmacy consolidated ledger</p>
+                <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Multi-branch pharmacy consolidated ledger</p>
                 <div className="mt-6 flex items-baseline gap-1">
                   <span className="text-3xl font-black text-slate-900 dark:text-white">₹7,300</span>
-                  <span className="text-xs text-slate-505">/ month</span>
+                  <span className="text-xs text-slate-500">/ month</span>
                 </div>
                 
-                <ul className="mt-8 space-y-3.5 text-xs text-slate-650 dark:text-slate-450">
+                <ul className="mt-8 space-y-3.5 text-xs text-slate-600 dark:text-slate-400">
                   <li className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-emerald-500 shrink-0" />
-                    <span className="font-semibold text-slate-850 dark:text-slate-300">Consolidated multi-branch sync</span>
+                    <span className="font-semibold text-slate-800 dark:text-slate-300">Consolidated multi-branch sync</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-emerald-500 shrink-0" />
@@ -710,7 +709,7 @@ const Landing = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-emerald-500 shrink-0" />
-                    <span className="font-semibold text-slate-850 dark:text-slate-300">Dedicated 24/7 account manager</span>
+                    <span className="font-semibold text-slate-800 dark:text-slate-300">Dedicated 24/7 account manager</span>
                   </li>
                 </ul>
               </div>
@@ -718,7 +717,7 @@ const Landing = () => {
               <div className="mt-8 pt-4">
                 <a
                   href="mailto:sales@medwaymedicals.com?subject=Enterprise Inquiry"
-                  className="w-full block bg-white dark:bg-slate-900 border border-slate-350 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-center font-semibold py-2.5 rounded-xl text-xs transition-colors"
+                  className="w-full block bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-center font-semibold py-2.5 rounded-xl text-xs transition-colors"
                 >
                   Contact Sales
                 </a>
@@ -776,12 +775,11 @@ const Landing = () => {
       </section>
 
       {/* 8. CALL TO ACTION BANNER */}
-      <section className="py-20 bg-gradient-to-br from-emerald-600 to-teal-700 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+      <section className="py-20 bg-gradient-to-br from-emerald-700 to-emerald-600 text-white relative overflow-hidden">
         <div className="absolute top-[-50%] right-[-20%] w-[60%] aspect-square rounded-full bg-white/10 blur-[120px] pointer-events-none" />
 
         <div className="max-w-4xl mx-auto px-6 text-center space-y-8 relative">
-          <h2 className="text-3xl md:text-5xl font-black leading-tight">
+          <h2 className="text-3xl md:text-5xl font-black leading-tight text-white">
             Ready to upgrade your pharmacy workspace?
           </h2>
           <p className="text-sm md:text-base text-emerald-100 max-w-xl mx-auto leading-relaxed">
@@ -791,7 +789,7 @@ const Landing = () => {
           <div className="pt-2">
             <Link
               to={user ? "/dashboard" : "/signup"}
-              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-955 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all duration-200 text-sm group"
+              className="inline-flex items-center gap-2 bg-[#0F172A] hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all duration-200 text-sm group"
             >
               <span>{user ? "Go to Dashboard" : "Get Started Now"}</span>
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -880,7 +878,7 @@ const Landing = () => {
               </h3>
               <button
                 onClick={() => setShowInvoiceModal(false)}
-                className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-505 dark:text-slate-400 transition-colors text-xs font-semibold px-2.5"
+                className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 transition-colors text-xs font-semibold px-2.5"
               >
                 Close
               </button>
@@ -960,7 +958,7 @@ const Landing = () => {
                         />
                       ))}
                     </div>
-                    <span className="text-[7px] text-slate-450 tracking-[2px] font-mono">MW-SIMULATOR-POS-BILL</span>
+                    <span className="text-[7px] text-slate-400 tracking-[2px] font-mono">MW-SIMULATOR-POS-BILL</span>
                   </div>
                 </div>
 

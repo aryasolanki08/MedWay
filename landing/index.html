@@ -3,45 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MedWay -- Choose Your Portal</title>
+  <title>MedWay</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2220%22 font-size=%2220%22>%F0%9F%92%8A</text></svg>" />
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
     :root {
-      --brand-50: #ecfdf5;
-      --brand-100: #d1fae5;
-      --brand-200: #a7f3d0;
       --brand-400: #34d399;
-      --brand-500: #10b981;
-      --brand-600: #059669;
+      --brand-500: #22c55e;
       --brand-700: #047857;
-      --brand-900: #064e3b;
       --bg: #f8fafc;
       --surface: #ffffff;
       --text: #0f172a;
       --muted: #475569;
       --border: #e2e8f0;
     }
-
     @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #020617;
-        --surface: #0f172a;
-        --text: #f1f5f9;
-        --muted: #94a3b8;
-        --border: #1e293b;
-      }
-    }
-    :root[data-theme="dark"] {
-      --bg: #020617; --surface: #0f172a; --text: #f1f5f9; --muted: #94a3b8; --border: #1e293b;
-    }
-    :root[data-theme="light"] {
-      --bg: #f8fafc; --surface: #ffffff; --text: #0f172a; --muted: #475569; --border: #e2e8f0;
+      :root { --bg: #020617; --surface: #0f172a; --text: #f1f5f9; --muted: #94a3b8; --border: #1e293b; }
     }
 
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       min-height: 100vh;
@@ -53,192 +34,57 @@
       align-items: center;
       justify-content: center;
       padding: 2rem 1.25rem;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.5rem;
     }
     .brand-mark {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 0.85rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 1rem;
       background: linear-gradient(135deg, var(--brand-400), var(--brand-700));
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
-      box-shadow: 0 8px 24px -8px rgba(16, 185, 129, 0.55);
+      font-size: 1.6rem;
+      box-shadow: 0 12px 28px -10px rgba(34, 197, 94, 0.55);
+      margin-bottom: 1.25rem;
     }
-    .brand-name {
-      font-weight: 800;
-      font-size: 1.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    h1 {
-      font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin: 1.25rem 0 0.5rem;
-      text-align: center;
-    }
-    p.subtitle {
-      color: var(--muted);
-      text-align: center;
-      max-width: 34rem;
-      margin: 0 0 2.75rem;
-      font-size: 1.05rem;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      width: 100%;
-      max-width: 56rem;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 1.25rem;
-      padding: 2rem;
-      text-decoration: none;
-      color: var(--text);
-      display: flex;
-      flex-direction: column;
-      gap: 0.9rem;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .card:hover, .card:focus-visible {
-      transform: translateY(-4px);
-      border-color: var(--brand-400);
-      box-shadow: 0 20px 40px -20px rgba(16, 185, 129, 0.45);
-    }
-    .card-icon {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 0.9rem;
-      background: var(--brand-100);
-      color: var(--brand-700);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-    }
-    @media (prefers-color-scheme: dark) {
-      .card-icon { background: rgba(16, 185, 129, 0.18); color: var(--brand-400); }
-    }
-    :root[data-theme="dark"] .card-icon { background: rgba(16, 185, 129, 0.18); color: var(--brand-400); }
-
-    .card h2 {
-      margin: 0;
-      font-size: 1.3rem;
-      font-weight: 700;
-    }
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-    .card .cta {
-      margin-top: auto;
+    p { color: var(--muted); font-size: 0.95rem; margin: 0.35rem 0 1.5rem; }
+    a.continue {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      font-weight: 600;
-      color: var(--brand-600);
-      font-size: 0.92rem;
+      background: var(--brand-500);
+      color: white;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.85rem 1.5rem;
+      border-radius: 0.9rem;
+      text-decoration: none;
+      box-shadow: 0 12px 28px -10px rgba(34, 197, 94, 0.55);
     }
-    @media (prefers-color-scheme: dark) {
-      .card .cta { color: var(--brand-400); }
-    }
-    :root[data-theme="dark"] .card .cta { color: var(--brand-400); }
-    .card .cta svg { transition: transform 0.18s ease; }
-    .card:hover .cta svg { transform: translateX(3px); }
-
-    footer {
-      margin-top: 3rem;
-      color: var(--muted);
-      font-size: 0.8rem;
-      text-align: center;
-    }
-    footer a { color: var(--brand-600); text-decoration: none; }
-    @media (prefers-color-scheme: dark) { footer a { color: var(--brand-400); } }
-    :root[data-theme="dark"] footer a { color: var(--brand-400); }
   </style>
 </head>
 <body>
-  <div class="brand">
-    <div class="brand-mark">💊</div>
-    <div class="brand-name">MedWay</div>
-  </div>
-  <h1>Who's this for?</h1>
-  <p class="subtitle">
-    One platform, two portals -- find and reserve medicines as a customer,
-    or manage stock, billing and sales as a pharmacy.
-  </p>
-
-  <div class="cards">
-    <a class="card" id="customer-link" href="#">
-      <div class="card-icon">🔍</div>
-      <h2>I'm a Customer</h2>
-      <p>
-        Search medicines, compare live prices across nearby pharmacies,
-        reserve for pickup, track price drops, and get medicine info --
-        all backed by real pharmacy stock data.
-      </p>
-      <span class="cta">
-        Go to Customer Portal
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </span>
-    </a>
-
-    <a class="card" id="pharmacy-link" href="#">
-      <div class="card-icon">🏥</div>
-      <h2>I'm a Pharmacy</h2>
-      <p>
-        Manage inventory, billing, purchases and sales analytics for your
-        store -- and publish your real stock so customers can find and
-        reserve it.
-      </p>
-      <span class="cta">
-        Go to Pharmacy Portal
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </span>
-    </a>
-  </div>
-
-  <footer>
-    Running locally? Customer portal defaults to
-    <a id="customer-url-label" href="#">localhost:5173</a>, pharmacy portal to
-    <a id="pharmacy-url-label" href="#">localhost:5174</a>.
-    Override with <code>?customer=&lt;url&gt;&amp;pharmacy=&lt;url&gt;</code>.
-  </footer>
+  <div class="brand-mark">💊</div>
+  <p id="status">Taking you to MedWay&hellip;</p>
+  <a class="continue" id="continue-link" href="#">Continue to MedWay</a>
 
   <script>
-    // Zero-build static page: portal URLs default to the local dev ports
-    // used by frontend/ (customer) and pharmacy-frontend/ (pharmacy), and
-    // can be overridden via query params so the same file works once each
-    // app is deployed to a real domain.
+    // Zero-build redirect shim: the project's single entry point always
+    // opens the scroll-driven MedWay landing (frontend's /welcome), which
+    // is itself the chooser between the customer and pharmacy portals --
+    // see components/welcome/CTASection.jsx. Portal URLs default to the
+    // local dev ports and can be overridden (and are forwarded through)
+    // via ?customer=<url>&pharmacy=<url> so the same static file works
+    // once each app is deployed to a real domain.
     const params = new URLSearchParams(window.location.search);
     const customerUrl = params.get("customer") || "http://localhost:5173";
-    const pharmacyUrl = params.get("pharmacy") || "http://localhost:5174";
 
-    for (const [id, url] of [["customer-link", customerUrl], ["pharmacy-link", pharmacyUrl]]) {
-      document.getElementById(id).href = url;
-    }
-    document.getElementById("customer-url-label").textContent = customerUrl.replace(/^https?:\/\//, "");
-    document.getElementById("customer-url-label").href = customerUrl;
-    document.getElementById("pharmacy-url-label").textContent = pharmacyUrl.replace(/^https?:\/\//, "");
-    document.getElementById("pharmacy-url-label").href = pharmacyUrl;
+    const target = new URL(customerUrl.replace(/\/$/, "") + "/welcome");
+    const pharmacyOverride = params.get("pharmacy");
+    if (pharmacyOverride) target.searchParams.set("pharmacy", pharmacyOverride);
+
+    document.getElementById("continue-link").href = target.toString();
+    window.location.replace(target.toString());
   </script>
 </body>
 </html>

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { LayoutDashboard, Stethoscope, History, User, LogOut, Sun, Moon, Menu, X, BarChart3, Store, Package, ShoppingCart } from "lucide-react";
+import { LayoutDashboard, Stethoscope, History, User, LogOut, Sun, Moon, Menu, X, BarChart3, Store, Package, ShoppingCart, MessageCircle } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
 import { useCart } from "../context/CartContext.jsx";
 import NotificationBell from "./NotificationBell.jsx";
+import AskAnythingModal from "./AskAnythingModal.jsx";
 
 const navItems = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -23,6 +24,7 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [askOpen, setAskOpen] = useState(false);
 
   const doLogout = () => { logout(); navigate("/login"); };
 
@@ -96,6 +98,17 @@ export default function Navbar() {
           </div>
         )}
       </header>
+
+      <button
+        className="ask-fab"
+        onClick={() => setAskOpen(true)}
+        aria-label="Ask anything"
+        title="Ask anything"
+      >
+        <MessageCircle className="h-6 w-6" />
+      </button>
+
+      {askOpen && <AskAnythingModal onClose={() => setAskOpen(false)} />}
     </div>
   );
 }

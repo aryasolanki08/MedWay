@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from . import consult
+from . import chatbot, consult
 from .matching import match_symptom
 from .reference_data import DISCLAIMER
 
@@ -74,3 +74,27 @@ def assistant_consult(request):
             "disclaimer": DISCLAIMER,
         }
     )
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def assistant_chat(request):
+    """General 'Ask anything' chatbot, backing the navbar button. Free-form
+    Q&A via Gemini (see chatbot.py) -- separate from assistant_query/
+    assistant_consult above, which are constrained to real catalog data.
+    The frontend resends prior turns as `history` on every call since this
+    endpoint is stateless server-side.
+    """
+    message = (request.data.get("message") or "").strip()
+    history = request.data.get("history") or []
+
+    if not message:
+        return Response({"detail": "message is required"}, status=400)
+    if not isinstance(history, list):
+        return Response({"detail": "history must be a list"}, status=400)
+
+    reply, error = chatbot.ask_gemini(message, history)
+    if error:
+        return Response({"detail": error}, status=503)
+
+    return Response({"reply": reply})

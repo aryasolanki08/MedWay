@@ -2,6 +2,7 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { useAuth } from "./context/AuthContext.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Welcome from "./pages/Welcome.jsx";
+import Landing from "./pages/Landing.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
@@ -23,11 +24,14 @@ function Protected({ children }) {
 
 // Public marketing landing at "/" -- once logged in, "/" is the app
 // dashboard instead (same path, different content), matching how most
-// consumer apps treat their root URL.
+// consumer apps treat their root URL. "/welcome" is the separate
+// scroll-driven MedWay-wide chooser (either portal); this Landing page is
+// the customer portal's own front door once someone has picked a side,
+// same role as pharmacy-frontend's Landing.jsx on that portal.
 function Home() {
   const { user, loading } = useAuth();
   if (loading) return null;
-  return user ? <Dashboard /> : <Welcome />;
+  return user ? <Dashboard /> : <Landing />;
 }
 
 export default function App() {

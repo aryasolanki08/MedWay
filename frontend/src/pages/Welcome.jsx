@@ -1,4 +1,5 @@
 import { motion, useScroll, useSpring } from "framer-motion";
+import { pharmacyPortalUrl } from "../utils/pharmacyUrl.js";
 import HeroSection from "../components/welcome/HeroSection.jsx";
 import DiscoverySection from "../components/welcome/DiscoverySection.jsx";
 import ComparisonSection from "../components/welcome/ComparisonSection.jsx";
@@ -31,6 +32,12 @@ export default function Welcome() {
           MedWay
         </a>
         <nav className="flex items-center gap-3">
+          <a
+            href={pharmacyPortalUrl()}
+            className="hidden sm:inline text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors px-3 py-2"
+          >
+            Pharmacy portal
+          </a>
           <a href="/login" className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors px-3 py-2">
             Log in
           </a>
