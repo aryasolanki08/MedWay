@@ -1,20 +1,14 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Bookmark, BookmarkCheck, Clock, Ticket, Search, Navigation, XCircle, Trash2, LayoutGrid } from "lucide-react";
+import { Bookmark, BookmarkCheck, Clock, Search, Trash2, LayoutGrid } from "lucide-react";
 import client from "../api/client";
 import ConfirmModal from "../components/ConfirmModal.jsx";
-import PickupCodeBadge from "../components/PickupCodeBadge.jsx";
 import { useToast } from "../context/ToastContext.jsx";
 import { relativeTime } from "../utils/relativeTime.js";
-import { notifyNotificationsChanged } from "../utils/notificationBus.js";
-
-const STATUS_LABEL = { pending: "Pending Pickup", picked_up: "Picked Up", cancelled: "Cancelled" };
-const STATUS_DOT = { pending: "🟡", picked_up: "🟢", cancelled: "🔴" };
 
 const TABS = [
   { key: "all", label: "All Activity", icon: LayoutGrid },
   { key: "saved", label: "Saved Medicines", icon: Bookmark },
-  { key: "reservations", label: "Reservations", icon: Ticket },
   { key: "log", label: "Search Log", icon: Clock },
 ];
 
@@ -23,10 +17,8 @@ export default function History() {
   const toast = useToast();
   const [history, setHistory] = useState([]);
   const [saved, setSaved] = useState([]);
-  const [reservations, setReservations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState("all");
-  const [confirmCancel, setConfirmCancel] = useState(null);
   const [confirmClear, setConfirmClear] = useState(false);
 
   const load = () => {
@@ -34,12 +26,10 @@ export default function History() {
     Promise.all([
       client.get("/customer/history/"),
       client.get("/customer/saved/"),
-      client.get("/customer/reservations/"),
     ])
-      .then(([h, s, r]) => {
+      .then(([h, s]) => {
         setHistory(h.data.results ?? h.data);
         setSaved(s.data.results ?? s.data);
-        setReservations(r.data.results ?? r.data);
       })
       .catch(() => toast.error("Couldn't load your history."))
       .finally(() => setLoading(false));
@@ -65,18 +55,7 @@ export default function History() {
       .catch(() => toast.error("Couldn't remove that medicine."));
   };
 
-  const cancelReservation = (id) => {
-    client.post(`/customer/reservations/${id}/cancel/`)
-      .then(() => { load(); toast.info("Reservation cancelled"); notifyNotificationsChanged(); })
-      .catch(() => toast.error("Couldn't cancel that reservation."));
-  };
-
-  const pendingCount = useMemo(() => reservations.filter((r) => r.status === "pending").length, [reservations]);
-
-  const directionsUrl = (pharmacy) => `https://www.openstreetmap.org/directions?to=${pharmacy.lat}%2C${pharmacy.lng}`;
-
   const showSaved = tab === "all" || tab === "saved";
-  const showReservations = tab === "all" || tab === "reservations";
   const showLog = tab === "all" || tab === "log";
 
   if (loading) {
@@ -84,7 +63,7 @@ export default function History() {
       <div className="page page-wide stack">
         <div>
           <h1>Activity hub</h1>
-          <p className="muted">Saved medicines, reservations, and your search log in one place.</p>
+          <p className="muted">Saved medicines and your search log in one place.</p>
         </div>
         <div className="card stack">
           {[0, 1].map((i) => (
@@ -105,12 +84,12 @@ export default function History() {
     <div className="page page-wide stack" style={{ gap: 22 }}>
       <div>
         <h1>Activity hub</h1>
-        <p className="muted">Saved medicines, reservations, and your search log in one place.</p>
+        <p className="muted">Saved medicines and your search log in one place.</p>
       </div>
 
       <div className="tab-bar">
         {TABS.map(({ key, label, icon: Icon }) => {
-          const count = key === "saved" ? saved.length : key === "reservations" ? reservations.length : null;
+          const count = key === "saved" ? saved.length : null;
           return (
             <button key={key} className={`tab-btn${tab === key ? " active" : ""}`} onClick={() => setTab(key)}>
               <Icon className="h-4 w-4" />
@@ -120,67 +99,6 @@ export default function History() {
           );
         })}
       </div>
-
-      {showReservations && (
-        <div className="stack" style={{ gap: 12 }}>
-          <div className="section-header">
-            <div className="icon-badge"><Ticket className="h-4 w-4" /></div>
-            <h2>Reservations{pendingCount > 0 && <span className="muted" style={{ fontWeight: 500, fontSize: 13, marginLeft: 8 }}>{pendingCount} pending</span>}</h2>
-          </div>
-
-          {reservations.length === 0 && (
-            <div className="card empty-state">
-              <Ticket className="h-7 w-7" />
-              <p className="muted" style={{ marginTop: 0 }}>No reservations yet. Reserve a medicine from any search result.</p>
-            </div>
-          )}
-
-          <div className="stack" style={{ gap: 10 }}>
-            {reservations.map((r) => (
-              <div key={r.id} className={`pass-card status-${r.status}`}>
-                <div className="row spread wrap" style={{ gap: 12, alignItems: "flex-start" }}>
-                  <div>
-                    <div className="row" style={{ gap: 8 }}>
-                      <span className="name">{r.stock_detail?.medicine_name}</span>
-                      <span className={`status-pill status-${r.status}`}>
-                        {STATUS_DOT[r.status]} {STATUS_LABEL[r.status]} at {r.stock_detail?.pharmacy?.name}
-                      </span>
-                    </div>
-                    <div className="meta" style={{ marginTop: 2 }}>
-                      Qty {r.quantity} · ₹{r.reserved_price} each · reserved {relativeTime(r.created_at)}
-                    </div>
-
-                    {r.status === "pending" && (
-                      <div style={{ marginTop: 12 }}>
-                        <PickupCodeBadge code={r.pickup_code} />
-                      </div>
-                    )}
-                  </div>
-
-                  {r.status === "pending" && (
-                    <div className="row" style={{ gap: 8, flexShrink: 0 }}>
-                      <button
-                        className="icon-btn"
-                        title="Get directions"
-                        onClick={() => window.open(directionsUrl(r.stock_detail.pharmacy), "_blank")}
-                      >
-                        <Navigation className="h-4 w-4" />
-                      </button>
-                      <button
-                        className="btn secondary"
-                        style={{ color: "#dc2626", borderColor: "#fecaca" }}
-                        onClick={() => setConfirmCancel(r)}
-                      >
-                        <span className="row" style={{ gap: 6 }}><XCircle className="h-4 w-4" /> Cancel</span>
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
 
       {showSaved && (
         <div className="stack" style={{ gap: 12 }}>
@@ -285,20 +203,10 @@ export default function History() {
         </div>
       )}
 
-      {confirmCancel && (
-        <ConfirmModal
-          title="Cancel this reservation?"
-          body={`${confirmCancel.stock_detail?.medicine_name} at ${confirmCancel.stock_detail?.pharmacy?.name} will be released back to stock.`}
-          confirmLabel="Cancel reservation"
-          onConfirm={() => cancelReservation(confirmCancel.id)}
-          onClose={() => setConfirmCancel(null)}
-        />
-      )}
-
       {confirmClear && (
         <ConfirmModal
           title="Clear your entire search log?"
-          body="This removes all recent searches. Saved medicines and reservations aren't affected."
+          body="This removes all recent searches. Saved medicines aren't affected."
           confirmLabel="Clear history"
           onConfirm={clearAllHistory}
           onClose={() => setConfirmClear(false)}

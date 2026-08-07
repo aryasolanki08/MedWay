@@ -59,77 +59,79 @@ const Layout = ({ children }) => {
   return (
     <div className="app-shell">
       <div className="topbar-wrap">
-        <header className="topbar">
-          <Link to="/dashboard" className="brand">
+        <div className="topbar-row">
+          <Link to="/dashboard" className="brand-standalone">
             <span className="brand-mark">M</span>
             MedWay <span className="text-brand-500">Medicals</span>
           </Link>
 
-          <nav className="hidden lg:flex">
-            {navItems.map(({ to, label, icon: Icon }) => (
-              <Link key={to} to={to} className={location.pathname === to ? 'active' : ''}>
-                <Icon className="h-4 w-4" />
-                <span>{label}</span>
-              </Link>
-            ))}
-          </nav>
-
-          <div className="row flex items-center" style={{ gap: 8 }}>
-            {location.pathname !== '/billing' && (
-              <button
-                onClick={() => navigate('/billing')}
-                className="hidden sm:flex items-center gap-2 bg-slate-900 dark:bg-slate-950 text-white border border-transparent dark:border-slate-800 hover:bg-slate-800 dark:hover:bg-slate-900 px-4 py-2 rounded-xl text-sm font-semibold shadow-sm transition-all duration-150"
-              >
-                <PlusCircle className="h-4 w-4" />
-                <span>Quick Bill</span>
-                <kbd className="hidden md:inline-block bg-slate-800 dark:bg-slate-900 text-[10px] px-1.5 py-0.5 rounded ml-1 font-mono uppercase">
-                  F2
-                </kbd>
-              </button>
-            )}
-
-            <button className="icon-btn" onClick={toggleTheme} aria-label="Toggle theme">
-              {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </button>
-
-            <button
-              className="icon-btn hidden lg:flex"
-              onClick={doLogout}
-              aria-label="Log out"
-              title={`${user?.user?.username || ''} · Log out`}
-            >
-              <LogOut className="h-4 w-4" />
-            </button>
-
-            <button
-              className="icon-btn lg:hidden"
-              onClick={() => setMenuOpen((v) => !v)}
-              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            >
-              {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-            </button>
-          </div>
-
-          {menuOpen && (
-            <div className="mobile-menu">
+          <header className="topbar">
+            <nav className="hidden lg:flex">
               {navItems.map(({ to, label, icon: Icon }) => (
-                <Link
-                  key={to}
-                  to={to}
-                  className={location.pathname === to ? 'active' : ''}
-                  onClick={() => setMenuOpen(false)}
-                >
+                <Link key={to} to={to} className={location.pathname === to ? 'active' : ''}>
                   <Icon className="h-4 w-4" />
-                  {label}
+                  <span>{label}</span>
                 </Link>
               ))}
-              <button onClick={doLogout}>
+            </nav>
+
+            <div className="row flex items-center shrink-0" style={{ gap: 8 }}>
+              {location.pathname !== '/billing' && (
+                <button
+                  onClick={() => navigate('/billing')}
+                  className="hidden sm:flex items-center gap-2 bg-slate-900 dark:bg-slate-950 text-white border border-transparent dark:border-slate-800 hover:bg-slate-800 dark:hover:bg-slate-900 px-4 py-2 rounded-xl text-sm font-semibold shadow-sm transition-all duration-150"
+                >
+                  <PlusCircle className="h-4 w-4" />
+                  <span>Quick Bill</span>
+                  <kbd className="hidden md:inline-block bg-slate-800 dark:bg-slate-900 text-[10px] px-1.5 py-0.5 rounded ml-1 font-mono uppercase">
+                    F2
+                  </kbd>
+                </button>
+              )}
+
+              <button className="icon-btn" onClick={toggleTheme} aria-label="Toggle theme">
+                {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              </button>
+
+              <button
+                className="icon-btn hidden lg:flex"
+                onClick={doLogout}
+                aria-label="Log out"
+                title={`${user?.user?.username || ''} · Log out`}
+              >
                 <LogOut className="h-4 w-4" />
-                {user?.user?.username || 'Account'} · Log out
+              </button>
+
+              <button
+                className="icon-btn lg:hidden"
+                onClick={() => setMenuOpen((v) => !v)}
+                aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              >
+                {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
               </button>
             </div>
-          )}
-        </header>
+
+            {menuOpen && (
+              <div className="mobile-menu">
+                {navItems.map(({ to, label, icon: Icon }) => (
+                  <Link
+                    key={to}
+                    to={to}
+                    className={location.pathname === to ? 'active' : ''}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <Icon className="h-4 w-4" />
+                    {label}
+                  </Link>
+                ))}
+                <button onClick={doLogout}>
+                  <LogOut className="h-4 w-4" />
+                  {user?.user?.username || 'Account'} · Log out
+                </button>
+              </div>
+            )}
+          </header>
+        </div>
       </div>
 
       {/* Page header strip */}

@@ -30,74 +30,76 @@ export default function Navbar() {
 
   return (
     <div className="topbar-wrap">
-      <header className="topbar">
-        <Link to="/" className="brand">
+      <div className="topbar-row">
+        <Link to="/" className="brand-standalone">
           <span className="brand-mark">M</span>
           MedWay
         </Link>
 
-        <nav className="hidden sm:flex">
-          {navItems.map(({ to, label, icon: Icon }) => (
-            <Link key={to} to={to} className={location.pathname === to ? "active" : ""}>
-              <Icon className="h-4 w-4" />
-              <span>{label}</span>
-            </Link>
-          ))}
-        </nav>
-
-        <div className="row" style={{ gap: 8 }}>
-          <Link to="/checkout" className="icon-btn" aria-label="Cart" style={{ position: "relative" }}>
-            <ShoppingCart className="h-4 w-4" />
-            {count > 0 && (
-              <span
-                className="badge gold"
-                style={{ position: "absolute", top: -6, right: -6, fontSize: 10, padding: "1px 5px", lineHeight: 1.4 }}
-              >
-                {count}
-              </span>
-            )}
-          </Link>
-          <NotificationBell />
-          <button className="icon-btn" onClick={toggleTheme} aria-label="Toggle theme">
-            {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-          </button>
-          <button
-            className="icon-btn hidden sm:flex"
-            onClick={doLogout}
-            aria-label="Log out"
-            title={`${user?.username} · Log out`}
-          >
-            <LogOut className="h-4 w-4" />
-          </button>
-          <button
-            className="icon-btn sm:hidden"
-            onClick={() => setMenuOpen((v) => !v)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-          >
-            {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-          </button>
-        </div>
-
-        {menuOpen && (
-          <div className="mobile-menu">
+        <header className="topbar">
+          <nav className="hidden xl:flex">
             {navItems.map(({ to, label, icon: Icon }) => (
-              <Link
-                key={to}
-                to={to}
-                className={location.pathname === to ? "active" : ""}
-                onClick={() => setMenuOpen(false)}
-              >
+              <Link key={to} to={to} className={location.pathname === to ? "active" : ""}>
                 <Icon className="h-4 w-4" />
-                {label}
+                <span>{label}</span>
               </Link>
             ))}
-            <button onClick={doLogout}>
+          </nav>
+
+          <div className="row shrink-0" style={{ gap: 8 }}>
+            <Link to="/checkout" className="icon-btn" aria-label="Cart" style={{ position: "relative" }}>
+              <ShoppingCart className="h-4 w-4" />
+              {count > 0 && (
+                <span
+                  className="badge gold"
+                  style={{ position: "absolute", top: -6, right: -6, fontSize: 10, padding: "1px 5px", lineHeight: 1.4 }}
+                >
+                  {count}
+                </span>
+              )}
+            </Link>
+            <NotificationBell />
+            <button className="icon-btn" onClick={toggleTheme} aria-label="Toggle theme">
+              {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </button>
+            <button
+              className="icon-btn hidden xl:flex"
+              onClick={doLogout}
+              aria-label="Log out"
+              title={`${user?.username} · Log out`}
+            >
               <LogOut className="h-4 w-4" />
-              {user?.username} · Log out
+            </button>
+            <button
+              className="icon-btn xl:hidden"
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+            >
+              {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </button>
           </div>
-        )}
-      </header>
+
+          {menuOpen && (
+            <div className="mobile-menu">
+              {navItems.map(({ to, label, icon: Icon }) => (
+                <Link
+                  key={to}
+                  to={to}
+                  className={location.pathname === to ? "active" : ""}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <Icon className="h-4 w-4" />
+                  {label}
+                </Link>
+              ))}
+              <button onClick={doLogout}>
+                <LogOut className="h-4 w-4" />
+                {user?.username} · Log out
+              </button>
+            </div>
+          )}
+        </header>
+      </div>
 
       <button
         className="ask-fab"

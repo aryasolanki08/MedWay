@@ -87,6 +87,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -115,12 +116,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "medway.wsgi.application"
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+# Set DATABASE_URL (e.g. a free Neon/Supabase Postgres connection string)
+# to use Postgres -- required for any host with an ephemeral filesystem
+# (Render, Railway, etc.), since a local sqlite file there gets wiped on
+# every redeploy/restart. Falls back to the local sqlite file for dev.
+_database_url = os.environ.get("DATABASE_URL", "")
+if _database_url:
+    import dj_database_url
+
+    DATABASES = {"default": dj_database_url.parse(_database_url, conn_max_age=600)}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
 
 AUTH_USER_MODEL = "accounts.User"
 
@@ -137,7 +148,17 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STORAGES = {
+    "staticfiles": {"BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"},
+}
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Required by Django 4+ for any state-changing request (e.g. admin login)
+# arriving over HTTPS on the deployed domain. Comma-separated, e.g.
+# "https://medway-api.onrender.com".
+_csrf_trusted_env = os.environ.get("DJANGO_CSRF_TRUSTED_ORIGINS", "")
+CSRF_TRUSTED_ORIGINS = [o.strip() for o in _csrf_trusted_env.split(",") if o.strip()]
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (

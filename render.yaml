@@ -1,0 +1,74 @@
+# Render Blueprint -- deploys both Django backends from this one repo.
+# In the Render dashboard: New -> Blueprint -> pick this repo/branch, and
+# it reads this file automatically. Free-tier web services sleep after 15
+# minutes idle (cold start ~30-50s on the next request) and have no
+# persistent disk, which is why both DATABASE_URL vars below must point
+# at an external Postgres (e.g. a free Neon/Supabase project) -- see
+# DEPLOY.md for the full walkthrough, including which env vars marked
+# sync: false you need to fill in by hand in the dashboard.
+services:
+  - type: web
+    name: medway-customer-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate --noinput"
+    startCommand: "gunicorn medway.wsgi --log-file -"
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: "false"
+      - key: DJANGO_ALLOWED_HOSTS
+        sync: false
+      - key: DJANGO_CORS_ORIGINS
+        sync: false
+      - key: DJANGO_CSRF_TRUSTED_ORIGINS
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROK_API_KEY
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: PHARMACY_API_BASE_URL
+        sync: false
+      - key: PHARMACY_API_KEY
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+
+  - type: web
+    name: medway-pharmacy-backend
+    runtime: python
+    plan: free
+    rootDir: pharmacy-backend
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate --noinput"
+    startCommand: "gunicorn medway_medicals.wsgi --log-file -"
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: "false"
+      - key: DJANGO_ALLOWED_HOSTS
+        sync: false
+      - key: DJANGO_CORS_ORIGINS
+        sync: false
+      - key: DJANGO_CSRF_TRUSTED_ORIGINS
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: CUSTOMER_API_BASE_URL
+        sync: false
+      - key: CUSTOMER_API_KEY
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false

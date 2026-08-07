@@ -30,12 +30,18 @@ except ImportError:
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-rl&^bb7j(=gvhzh5o_kq)u%to@_y@jmg0)7c7pdb@k02_f&r(a'
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-rl&^bb7j(=gvhzh5o_kq)u%to@_y@jmg0)7c7pdb@k02_f&r(a',
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'true').lower() == 'true'
 
-ALLOWED_HOSTS = ['*']
+# Comma-separated list, e.g. "medway-pharmacy-api.onrender.com". Defaults
+# to "*" only while DEBUG is on -- always set this explicitly in production.
+_allowed_hosts_env = os.environ.get('DJANGO_ALLOWED_HOSTS', '')
+ALLOWED_HOSTS = [h.strip() for h in _allowed_hosts_env.split(',') if h.strip()] or (['*'] if DEBUG else [])
 
 
 # Application definition
@@ -64,6 +70,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  # Add CorsMiddleware at the top
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -95,12 +102,22 @@ WSGI_APPLICATION = 'medway_medicals.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# Set DATABASE_URL (e.g. a free Neon/Supabase Postgres connection string)
+# to use Postgres -- required for any host with an ephemeral filesystem
+# (Render, Railway, etc.), since a local sqlite file there gets wiped on
+# every redeploy/restart. Falls back to the local sqlite file for dev.
+_database_url = os.environ.get('DATABASE_URL', '')
+if _database_url:
+    import dj_database_url
+
+    DATABASES = {'default': dj_database_url.parse(_database_url, conn_max_age=600)}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
 
 
 # Password validation
@@ -138,6 +155,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STORAGES = {
+    'staticfiles': {'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage'},
+}
+
+# Required by Django 4+ for any state-changing request (e.g. admin login)
+# arriving over HTTPS on the deployed domain. Comma-separated.
+_csrf_trusted_env = os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS', '')
+CSRF_TRUSTED_ORIGINS = [o.strip() for o in _csrf_trusted_env.split(',') if o.strip()]
 
 # DRF configuration
 REST_FRAMEWORK = {
@@ -167,14 +193,20 @@ SIMPLE_JWT = {
     'USER_ID_CLAIM': 'user_id',
 }
 
-# CORS configuration
-CORS_ALLOW_ALL_ORIGINS = True  # Enable for development
+# Dev-friendly CORS. Set DJANGO_CORS_ORIGINS in production, e.g.
+# "https://medway-pharmacy.vercel.app".
+CORS_ALLOW_ALL_ORIGINS = DEBUG
+_cors_origins_env = os.environ.get('DJANGO_CORS_ORIGINS', '')
+CORS_ALLOWED_ORIGINS = [o.strip() for o in _cors_origins_env.split(',') if o.strip()] or [
+    'http://localhost:5174',
+    'http://127.0.0.1:5174',
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Razorpay Configuration
-RAZORPAY_KEY_ID = 'rzp_test_placeholder_id'
-RAZORPAY_KEY_SECRET = 'placeholder_secret'
+# Razorpay test-mode keys.
+RAZORPAY_KEY_ID = os.environ.get('RAZORPAY_KEY_ID', 'rzp_test_placeholder_id')
+RAZORPAY_KEY_SECRET = os.environ.get('RAZORPAY_KEY_SECRET', 'placeholder_secret')
 
 # Optional: Google OAuth 2.0 Client ID for "Sign in with Google" (same
 # value the frontend initializes Google Identity Services with, via

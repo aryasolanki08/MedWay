@@ -18,8 +18,11 @@ export default function SearchResults() {
   const [params] = useSearchParams();
   const query = params.get("q") || "";
 
-  // Branded shown by default, per product spec.
-  const [tab, setTab] = useState("branded");
+  // Branded shown by default, per product spec -- unless the caller
+  // already told us which type they clicked (e.g. a specific medicine
+  // card on the Medicine Info page), in which case open on that tab
+  // instead of landing on a "not found" empty state.
+  const [tab, setTab] = useState(params.get("type") === "generic" ? "generic" : "branded");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [coords, setCoords] = useState(null);

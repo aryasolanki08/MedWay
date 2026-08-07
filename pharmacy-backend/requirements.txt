@@ -7,3 +7,11 @@ requests==2.32.3
 openpyxl==3.1.5
 google-auth==2.56.2
 python-dotenv==1.0.1
+
+# Deployment: Postgres support (used when DATABASE_URL is set, e.g. a free
+# Neon/Supabase project -- required on hosts with an ephemeral filesystem),
+# static file serving without a separate CDN, and a production WSGI server.
+dj-database-url==2.3.0
+psycopg[binary]==3.2.3
+whitenoise==6.7.0
+gunicorn==22.0.0

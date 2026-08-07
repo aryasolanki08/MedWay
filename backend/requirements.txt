@@ -7,7 +7,18 @@ google-auth==2.56.2   # verifies "Sign in with Google" ID tokens
 requests==2.34.2      # transport used by google-auth's token verification
 razorpay==2.0.1        # payment for home-delivery orders (orders app)
 
-# Prescription-photo OCR (catalog/prescription-ocr/). Pulls in its own
-# dependencies automatically -- torch, opencv-python-headless, Pillow,
-# numpy, scikit-image, etc. -- no need to pin those separately.
-easyocr==1.7.2
+# Deployment: Postgres support (used when DATABASE_URL is set, e.g. a free
+# Neon/Supabase project -- required on hosts with an ephemeral filesystem),
+# static file serving without a separate CDN, and a production WSGI server.
+dj-database-url==2.3.0
+psycopg[binary]==3.2.3
+whitenoise==6.7.0
+gunicorn==22.0.0
+
+# Prescription-photo OCR local fallback (catalog/ocr.py's 3rd-choice path,
+# only reached if GEMINI_API_KEY is unset/failing). Deliberately NOT
+# installed by default -- pulls in torch/opencv-python-headless/
+# scikit-image (1-2GB+), too heavy for most free hosting tiers. Run
+# `pip install easyocr==1.7.2` yourself if you want this fallback locally;
+# the feature works fine without it as long as GEMINI_API_KEY is set.
+# easyocr==1.7.2

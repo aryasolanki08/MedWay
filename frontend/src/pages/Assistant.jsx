@@ -184,7 +184,19 @@ export default function Assistant() {
 
                   <div className="med-compare-grid">
                     {g.medicines.map((med) => (
-                      <div key={med.medicine_id} className={`med-card${med.is_generic ? " generic" : ""}`}>
+                      <div
+                        key={med.medicine_id}
+                        className={`med-card selectable${med.is_generic ? " generic" : ""}`}
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => navigate(`/search?q=${encodeURIComponent(med.brand_name)}&type=${med.is_generic ? "generic" : "branded"}`)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            navigate(`/search?q=${encodeURIComponent(med.brand_name)}&type=${med.is_generic ? "generic" : "branded"}`);
+                          }
+                        }}
+                      >
                         <div className="row spread" style={{ alignItems: "flex-start", gap: 8 }}>
                           <div>
                             <div className="name">{med.brand_name}</div>
@@ -204,6 +216,9 @@ export default function Assistant() {
                           <dt>Type</dt>
                           <dd>{med.is_generic ? "Generic" : "Branded"}</dd>
                         </dl>
+                        <div className="row text-brand-700 dark:text-brand-400" style={{ gap: 4, marginTop: 10, fontSize: 12, fontWeight: 600 }}>
+                          <ArrowLeftRight className="h-3.5 w-3.5" /> View & compare nearby prices
+                        </div>
                       </div>
                     ))}
                   </div>
