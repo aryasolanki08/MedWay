@@ -7,3 +7,4 @@ Thumbs.db
 
 # Scratch working directories used during development sessions.
 .scratch/
+.deploy_tmp/

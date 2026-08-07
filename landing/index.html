@@ -77,7 +77,7 @@
     // via ?customer=<url>&pharmacy=<url> so the same static file works
     // once each app is deployed to a real domain.
     const params = new URLSearchParams(window.location.search);
-    const customerUrl = params.get("customer") || "http://localhost:5173";
+    const customerUrl = params.get("customer") || "https://medway-customer.vercel.app";
 
     const target = new URL(customerUrl.replace(/\/$/, "") + "/welcome");
     const pharmacyOverride = params.get("pharmacy");
