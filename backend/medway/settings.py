@@ -33,6 +33,12 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "true").lower() == "true"
 # local EasyOCR respectively) -- AI is an enhancement, never a dependency.
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
+# Optional: xAI Grok API key (console.x.ai), used only by the AI voice
+# consult feature (assistant/consult.py) as a second attempt if Gemini's
+# call fails or its free-tier quota is exhausted. Blank means that
+# feature falls back straight to its deterministic template.
+GROK_API_KEY = os.environ.get("GROK_API_KEY", "")
+
 # Optional: Google OAuth 2.0 Client ID (console.cloud.google.com -> APIs &
 # Services -> Credentials -> Create OAuth client ID -> Web application) for
 # "Sign in with Google". Must match the client_id the frontend initializes
