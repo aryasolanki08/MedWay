@@ -249,3 +249,4 @@ for endpoint/page-level detail and the product decisions behind the
 accounts scoped to one pharmacy, an incoming-orders inbox, inventory
 management with batch/expiry tracking, billing, purchase orders, and sales
 analytics. See `pharmacy-frontend/README.md` for page-level detail.
+"# MadWay" 
